@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config>
+  <fileop_plugin_profiles>
+    <profile name="Folder Content">
+      <module guid="e6223b456fa24c74bad28a7199ad62a9"/>
+    </profile>
+    <profile name="AutoSort (A-Z)">
+      <module guid="5cd2138a198641fa95605577cae8c30a">
+        <config>
+          <value name="AllNumToSameFolder" value="1"/>
+          <value name="ForceLowerCase" value="1"/>
+          <value name="NoneAlphanumToSameFolder" value="1"/>
+          <value name="NumFolder" value="0-9"/>
+          <value name="OtherFolder" value="Other"/>
+        </config>
+      </module>
+    </profile>
+    <profile name="Content+AutoSort">
+      <module guid="e6223b456fa24c74bad28a7199ad62a9"/>
+      <module guid="5cd2138a198641fa95605577cae8c30a">
+        <config>
+          <value name="AllNumToSameFolder" value="1"/>
+          <value name="ForceLowerCase" value="1"/>
+          <value name="NoneAlphanumToSameFolder" value="1"/>
+          <value name="NumFolder" value="0-9"/>
+          <value name="OtherFolder" value="Other"/>
+        </config>
+      </module>
+    </profile>
+    <profile name="Unpacker">
+      <module guid="3204987397fe487ba998c27c0205e0ad">
+        <config>
+          <value name="UnpackRAR" value="1"/>
+          <value name="UnpackZIP" value="1"/>
+        </config>
+      </module>
+    </profile>
+  </fileop_plugin_profiles>
+</config>

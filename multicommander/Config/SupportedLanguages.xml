@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <languages>
+    <language name="Chinese (Simplified)" localized="简体中文" langcode="cn" matching="zh-CN"/>
+    <language name="Czech" localized="čeština" langcode="cz" matching="cs, cs-CZ"/>
+    <language name="German" localized="Deutsch" langcode="de" matching="de, de-DE"/>
+    <language name="English" localized="English" langcode="en" matching="en, en-GB, en-US"/>
+    <language name="Spanish" localized="Español" langcode="es" matching="es, es-ES"/>
+    <language name="French" localized="Français" langcode="fr" matching="fr, fr-FR"/>
+    <language name="Hungarian" localized="Magyar" langcode="hu" matching="hu, hu-HU"/>
+    <language name="Japanese" localized="日本語" langcode="jp" matching="ja, ja-JP"/>
+    <language name="Dutch" localized="Nederlands" langcode="nl" matching="nl, nl-NL"/>
+    <language name="Portuguese" localized="Portugal" langcode="pt" matching="pt, pt-PT"/>
+    <language name="Polish" localized="Polski" langcode="pl" matching="pl, pl-PL"/>
+    <language name="Romanian" localized="Română" langcode="ro" matching="ro, ro-RO"/>
+    <language name="Russian" localized="Pусский" langcode="ru" matching="ru, ru-RU"/>
+    <language name="Swedish" localized="Svenska" langcode="se" matching="sv, sv-SE, sv-FI"/>
+    <language name="Chinese (Traditional)" localized="繁體中文" langcode="tw" matching="zh-TW"/>
+    <language name="Norwegian" localized="Norsk" langcode="no" matching="nb-NO"/>
+    <language name="Italian" localized="Italiano" langcode="it" matching="it, it-IT"/>
+    <language name="Lithuanian" localized="Lietuvių" langcode="lt" matching="lt,lt-LT"/>
+	<language name="Korean" localized="한국어" langcode="ko" matching="ko, ko-KR" />
+  </languages>
+</config>

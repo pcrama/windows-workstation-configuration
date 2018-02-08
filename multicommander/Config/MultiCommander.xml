@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<config global="1">
+  <appinfo>
+    <name>MultiCommander</name>
+    <version>7.7.0.2404</version>
+  </appinfo>
+  <modules folder="Extensions"/>
+  <filesystem>
+    <copymodulesprofiles>
+      <profile name="Folder Content">
+        <module guid="e6223b456fa24c74bad28a7199ad62a9"/>
+      </profile>
+      <profile name="AutoSort (A-Z)">
+        <module guid="5cd2138a198641fa95605577cae8c30a">
+          <config>
+            <value name="ForceLowerCase" value="1"/>
+            <value name="AllNumToSameFolder" value="1"/>
+            <value name="NoneAlphanumToSameFolder" value="1"/>
+            <value name="NumFolder" value="0-9"/>
+            <value name="OtherFolder" value="Other"/>
+          </config>
+        </module>
+      </profile>
+      <profile name="Content+AutoSort">
+        <module guid="e6223b456fa24c74bad28a7199ad62a9"/>
+        <module guid="5cd2138a198641fa95605577cae8c30a"/>
+      </profile>
+      <profile name="Unpacker">
+        <module guid="3204987397fe487ba998c27c0205e0ad">
+          <config>
+            <value name="UnpackRAR" value="1"/>
+            <value name="UnpackZIP" value="1"/>
+          </config>
+        </module>
+      </profile>
+    </copymodulesprofiles>
+    <fileoperations>
+      <keepincomplete value="2"/>
+      <keepdate value="1"/>
+      <keepattribute value="1"/>
+      <keepNTFSperm value="0"/>
+      <keepNTFSsubstreams value="0"/>
+      <speedlimit value="128"/>
+    </fileoperations>
+    <confirmation>
+      <overwriting value="1"/>
+      <overwriting_readonly value="1"/>
+      <overwriting_hiddensystem value="1"/>
+      <deleting_folder_ne value="1"/>
+      <deleting_readonly value="1"/>
+      <deleting_hiddensystem value="1"/>
+      <rename_readonly value="1"/>
+    </confirmation>
+    <tweak>
+      <CacheFileItems value="1"/>
+      <CacheIcons value="1"/>
+    </tweak>
+    <queue>
+      <copy value="-1"/>
+      <move value="-1"/>
+      <delete value="-1"/>
+    </queue>
+    <unpack>
+      <defaulttotarget value="0"/>
+    </unpack>
+    <pack>
+      <defaulttotarget value="1"/>
+    </pack>
+    <fslinks>
+      <delete value="2"/>
+      <copymove value="2"/>
+      <foldersizing value="0"/>
+    </fslinks>
+    <browse>
+      <updateparentsize_ondelete value="1"/>
+    </browse>
+  </filesystem>
+  <log>
+    <application>
+      <level value="10"/>
+      <save value="1"/>
+    </application>
+    <filesystem>
+      <level value="10"/>
+      <save value="1"/>
+      <copy value="1"/>
+      <move value="1"/>
+      <delete value="1"/>
+      <rename value="1"/>
+      <mkdir value="1"/>
+      <extended value="1"/>
+    </filesystem>
+    <filesystemscanning>
+      <show value="0"/>
+      <save value="0"/>
+    </filesystemscanning>
+    <logwindow>
+      <font FontName="Courier New" SizePt="9" Style=""/>
+      <color background="$COLOR_WINDOW" foreground="$COLOR_WINDOWTEXT"/>
+    </logwindow>
+  </log>
+  <system>
+    <language primary="en" secondary="en"/>
+    <settingsmod>8c86f4eff556499da0c8f1d5f60f7b3a</settingsmod>
+    <checkfornewversion value="1"/>
+    <checkunstableversion value="0"/>
+  </system>
+  <aliases>
+    <alias name="c">cd c:\</alias>
+    <alias name="d">cd d:\</alias>
+    <alias name="e">cd e:\</alias>
+    <alias name="f">cd f:\</alias>
+    <alias name="g">@3146babb15934bc6b53872c1c6c1dfc9</alias>
+    <alias name="cu">cd REG:\HKEY_CURRENT_USER\Software</alias>
+    <alias name="lm">cd REG:\HKEY_LOCAL_MACHINE\Software</alias>
+  </aliases>
+  <layout>
+    <tab>
+      <mouse>
+        <dblclick_emptyarea value="a4c2985d9c7e4035a3221cfd600171d0"/>
+      </mouse>
+    </tab>
+    <ShowConfigProfilesAtStartup value="0"/>
+    <filesystem>
+      <kilobyte value="1"/>
+      <mebibyte value="0"/>
+    </filesystem>
+    <showclosebuttonintab value="1"/>
+    <closetabonmiddlebuttonclick value="1"/>
+    <closetabondoubleclick value="0"/>
+    <confirmclosing value="0"/>
+  </layout>
+  <autosendcrashreport value="1"/>
+  <editors>
+    <editor name="Notepad" cmd="notepad.exe" parameters="${filepath}" ext="*"/>
+  </editors>
+</config>

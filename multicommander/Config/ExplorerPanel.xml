@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<config>
+  <appinfo>
+    <name>Explorer Panel</name>
+    <version>3.9</version>
+    <copyright>Mathias Svensson 2014</copyright>
+  </appinfo>
+  <colors>
+    <backgroundhighlight value="1"/>
+    <override_windows_bg value="0">
+      <alternating value="0"/>
+      <active color="ffffe0"/>
+      <inactive color="e6e6fa"/>
+      <active_alt color="fefada"/>
+      <inactive_alt color="e6e6fb"/>
+    </override_windows_bg>
+    <item_specific_bg_color value="0">
+      <use_files_bg value="0"/>
+      <use_folders_bg value="0"/>
+    </item_specific_bg_color>
+    <focusrect value="000000"/>
+    <files>
+      <normal foreground="000000" background="-1"/>
+      <focus foreground="000000" background="-1"/>
+      <selected foreground="000000" background="-1"/>
+      <checked foreground="ff0000" background="-1"/>
+      <checkedfocus foreground="ff0000" background="-1"/>
+    </files>
+    <folders>
+      <normal foreground="000000" background="-1"/>
+      <focus foreground="000000" background="-1"/>
+      <selected foreground="000000" background="-1"/>
+      <checked foreground="ff0000" background="-1"/>
+      <checkedfocus foreground="ff0000" background="-1"/>
+    </folders>
+    <forcefocusrect value="1"/>
+    <special value="1">
+      <autocolor value="1"/>
+      <autocolorvalue value="122"/>
+    </special>
+    <rulebasedoverridecolors value="0"/>
+  </colors>
+  <layout>
+    <GridLines value="0">
+      <VLines value="1"/>
+      <HLines value="1"/>
+    </GridLines>
+    <CheckBoxes value="0"/>
+    <Icons value="1">
+      <Associated value="1"/>
+      <Exe value="1"/>
+      <Link value="1"/>
+      <Overlay value="1"/>
+      <OverlayRemote value="0"/>
+      <ShowAssociatedIcon value="1"/>
+      <ShowExeIcon value="1"/>
+      <ShowLinkIcon value="0"/>
+      <AutoScale value="1"/>
+      <Size value="1"/>
+    </Icons>
+    <CalcFolderSize>
+      <MarkingWithSpace value="1"/>
+    </CalcFolderSize>
+    <ShowFileSizeType value="0"/>
+    <FileSize value="B"/>
+    <FileExt value="X"/>
+    <TagFolders value="0"/>
+    <FolderTagInSize value="1"/>
+    <DisableFocusRect value="0"/>
+    <AutoAdjust value="1"/>
+    <AdjustLongNames value="1"/>
+    <AutoSizeColumns value="1"/>
+    <ForwardUnAssignedKeys value="1"/>
+    <AnyKeySearch value="1"/>
+    <SearchBox value="1"/>
+    <SearchMode value="2"/>
+    <SortNatural value="1"/>
+    <Tooltip value="2"/>
+    <ShowHidden value="0"/>
+    <ShowSystem value="0"/>
+    <DateMode value="1"/>
+    <ShowLinkTargetInName value="1"/>
+    <ShowFreespaceAs value="0"/>
+    <fonts>
+      <FreeSpace FontName="Microsoft Sans Serif" SizePt="8" Style="" Size="11"/>
+      <Path FontName="Microsoft Sans Serif" SizePt="8" Style="" Size="11"/>
+      <FileList FontName="Microsoft Sans Serif" SizePt="8" Style="" Size="8"/>
+      <Status FontName="Microsoft Sans Serif" SizePt="8" Style="" Size="11"/>
+    </fonts>
+    <SelectOnNavigate value="0"/>
+    <UnselectOnSingleSelect value="0"/>
+    <FileCmdToolBar value="1"/>
+    <GlobalDriveBar value="1"/>
+    <DriveBar value="0"/>
+    <DriveBarLabel value="1"/>
+    <DriveBarLabelOnRight value="1"/>
+    <tab/>
+    <default/>
+    <DbgSelection value="0"/>
+    <SelectionRectangle value="1"/>
+    <RememberSelectedOnPathChange value="1"/>
+    <RememberItemInFocusOnPathChange value="1"/>
+    <SearchSubString value="0"/>
+    <AutoSortOnRename value="0"/>
+    <FileSizeDecimals value="1"/>
+    <UnselectWhenStartingFileOp value="1"/>
+    <TooltipDelay value="1000"/>
+    <ContextMenuOnDotDot value="1"/>
+    <TooltipTimeout value="7"/>
+    <showdate value="1"/>
+    <showtime value="1"/>
+    <listmode>
+      <Filename value="1"/>
+    </listmode>
+    <thumbnail>
+      <Filename value="2"/>
+      <Size value="96"/>
+      <WheelZoom value="1"/>
+      <PictureFrame value="1"/>
+      <TextOverlay value="0"/>
+      <ImageText value="1"/>
+    </thumbnail>
+    <thumbnaildetail>
+      <HighlightName value="1"/>
+    </thumbnaildetail>
+    <flatview>
+      <AddPathColumn value="0"/>
+      <IncludeFolders value="0"/>
+    </flatview>
+  </layout>
+  <tweak>
+    <CacheRowData value="0"/>
+  </tweak>
+  <save>
+    <path value="1"/>
+    <onlylocal value="1"/>
+    <sort value="1"/>
+    <onlylocked value="0"/>
+    <itemfocus value="1"/>
+  </save>
+  <selection>
+    <comparefolders>
+      <files value="1"/>
+      <folders value="0"/>
+    </comparefolders>
+  </selection>
+  <mouse>
+    <left>
+      <click value="0"/>
+      <dblclick value="3"/>
+      <clickhold value="0"/>
+      <clickwait value="2"/>
+    </left>
+    <right>
+      <click value="1"/>
+      <dblclick value="6"/>
+      <clickhold value="6"/>
+      <clickwait value="0"/>
+    </right>
+    <middle>
+      <click value="8"/>
+      <dblclick value="0"/>
+      <clickhold value="0"/>
+      <clickwait value="0"/>
+    </middle>
+    <extra1>
+      <click value="10"/>
+      <dblclick value="0"/>
+      <clickhold value="0"/>
+      <clickwait value="0"/>
+    </extra1>
+    <extra2>
+      <click value="11"/>
+      <dblclick value="0"/>
+      <clickhold value="0"/>
+      <clickwait value="0"/>
+    </extra2>
+    <rightbuttondrag value="0"/>
+    <pathfield>
+      <left>
+        <clickitem value="4"/>
+        <ctrlclickitem value="2"/>
+        <ctrlshiftclickitem value="3"/>
+        <ctrlclickanywhere value="0"/>
+      </left>
+      <right>
+        <clickitem value="2"/>
+        <ctrlclickitem value="0"/>
+        <ctrlshiftclickitem value="3"/>
+        <clicknoneitem value="5"/>
+        <clickanywhere value="0"/>
+        <ctrlclickanywhere value="1"/>
+      </right>
+    </pathfield>
+  </mouse>
+</config>

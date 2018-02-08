@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <encoding>
+    <codepage value="-1"/>
+    <createzip>
+      <utf8 value="0"/>
+    </createzip>
+  </encoding>
+</config>

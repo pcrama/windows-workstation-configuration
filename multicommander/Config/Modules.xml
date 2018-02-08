@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <module guid="a4c2985d9c7e4035a3221cfd600171d0" enable="Y" type="APP">
+      <name>Explorer Panel</name>
+      <internal>Y</internal>
+      <autoload>Y</autoload>
+    </module>
+    <module guid="8c86f4eff556499da0c8f1d5f60f7b3a" enable="Y" type="APP">
+      <name>Settings Panel</name>
+      <internal>Y</internal>
+    </module>
+    <module guid="ab5498f9df224968bbde35059daa53b2" enable="Y" type="APP">
+      <name>Workspace</name>
+      <internal>Y</internal>
+    </module>
+    <module guid="bb34636789224963bbde35059dca2365" enable="Y" type="APP">
+      <name>File Search</name>
+      <internal>Y</internal>
+    </module>
+    <module guid="b9eceeba95454f64899bddb05c01fe68" enable="Y" type="FS">
+      <name>FS-Local</name>
+      <internal>Y</internal>
+      <readparam value="48"/>
+      <writeparam value="48"/>
+      <ext/>
+      <byte/>
+    </module>
+    <module guid="39604ae4d2dd416dad6eeb1091c07a3c" enable="Y" type="FS">
+      <name>FS-Zip</name>
+      <internal>Y</internal>
+      <readparam value="0"/>
+      <writeparam value="0"/>
+      <ext>zip,jar</ext>
+      <byte>PK</byte>
+    </module>
+    <module guid="98c29c6101ef4d9cb4531a7e66be4d90" enable="Y" type="FS">
+      <name>FS-TarGZ</name>
+      <internal>Y</internal>
+      <readparam value="0"/>
+      <writeparam value="0"/>
+      <ext>gz,tar,tgz</ext>
+      <byte>*</byte>
+    </module>
+    <module guid="c945212fe4fa4f6dafee340c2d785b63" enable="Y" type="FS">
+      <name>FS-BZip2</name>
+      <internal>Y</internal>
+      <readparam value="0"/>
+      <writeparam value="0"/>
+      <ext>bz2,bzip2</ext>
+      <byte>BZh</byte>
+    </module>
+    <module guid="5cd2138a198641fa95605577cae8c30a" enable="Y" type="CP">
+      <name>Auto Sort</name>
+      <internal>Y</internal>
+    </module>
+    <module guid="e6223b456fa24c74bad28a7199ad62a9" enable="Y" type="CP">
+      <name>Content Copy</name>
+      <internal>Y</internal>
+    </module>
+    <module guid="3204987397fe487ba998c27c0205e0ad" enable="Y" type="CP">
+      <name>Auto Unpack</name>
+      <internal>Y</internal>
+    </module>
+    <module guid="0CC970781498A4EF9AA7139DA448F5744" enable="Y" type="PROP">
+      <name>Extended File Properties</name>
+      <internal>Y</internal>
+    </module>
+    <module guid="62F9075188E44181A9727255C5ECA047" enable="Y" type="FS">
+      <name>FS-Favorites</name>
+      <internal>Y</internal>
+      <readparam value="0"/>
+      <writeparam value="0"/>
+      <ext>fav</ext>
+      <byte/>
+    </module>
+    <module guid="6CDB79611FF14d628C160B7EA6A42952" enable="Y" type="FS">
+      <name>FS-7Zip</name>
+      <path>FS7Zip</path>
+      <filename>FS7Zip.dll</filename>
+      <internal>N</internal>
+      <readparam value="0"/>
+      <writeparam value="0"/>
+      <ext>7z</ext>
+      <byte>7z</byte>
+    </module>
+    <module guid="EF5F4D727A2B4af79C2E603B68D267C9" enable="Y" type="FS">
+      <name>FS-FTP</name>
+      <path>FSFTP</path>
+      <filename>FSFTP.dll</filename>
+      <internal>N</internal>
+      <readparam value="0"/>
+      <writeparam value="0"/>
+      <ext>ftp</ext>
+      <byte/>
+    </module>
+    <module guid="206c86a11b944f2891c72cba6943e5d1" enable="Y" type="APP">
+      <name>FSFTP Script</name>
+      <path>FSFTP</path>
+      <filename>FSFTP.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="1C3ABDCE6DE74E349335B9066144EAA1" enable="Y" type="FS">
+      <name>FS-Portable</name>
+      <path>FSPortable</path>
+      <filename>FSPortable.dll</filename>
+      <internal>N</internal>
+      <readparam value="0"/>
+      <writeparam value="0"/>
+      <ext>wpd</ext>
+      <byte/>
+    </module>
+    <module guid="808459c150fb4f1cb7c574b9c02d0e0c" enable="Y" type="FS">
+      <name>FS-RAR</name>
+      <path>FSRAR</path>
+      <filename>FSRAR.dll</filename>
+      <internal>N</internal>
+      <readparam value="0"/>
+      <writeparam value="0"/>
+      <ext>rar,r??,001</ext>
+      <byte>HEX:526172211A</byte>
+    </module>
+    <module guid="1D4E8D049873416d9828B2A40B72192A" enable="Y" type="PROP">
+      <name>Registry Properties</name>
+      <path>FSRegistry</path>
+      <filename>FSRegistry.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="9D5D8E1B5BE044048F7C65032C1903D3" enable="Y" type="FS">
+      <name>FS-Registry</name>
+      <path>FSRegistry</path>
+      <filename>FSRegistry.dll</filename>
+      <internal>N</internal>
+      <readparam value="0"/>
+      <writeparam value="0"/>
+      <ext>reg</ext>
+      <byte/>
+    </module>
+    <module guid="D8C9BF26B1B74B5D91D0FC4258061466" enable="Y" type="PROP">
+      <name>Audio Properties</name>
+      <path>MCAudioTools</path>
+      <filename>MCAudioTools.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="772ABEF107F74AE584FFE47FA88EB87C" enable="Y" type="APP">
+      <name>Audio Tools</name>
+      <path>MCAudioTools</path>
+      <filename>MCAudioTools.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="ba180b004fe44c4b8bf0c73e655428fc" enable="Y" type="APP">
+      <name>Language Editor</name>
+      <path>MCLanEditor</path>
+      <filename>MCLanEditor.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="00AD745A5DFD49749ED4720590318BBF" enable="Y" type="PROP">
+      <name>Picture Properties</name>
+      <path>MCPictureTools</path>
+      <filename>MCPictureTools.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="6208E77288AA43D086EC1559B7B6FF23" enable="Y" type="APP">
+      <name>Picture Tools</name>
+      <path>MCPictureTools</path>
+      <filename>MCPictureTools.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="949375A072C540F08E36B3ACB5DCF19A" enable="Y" type="APP">
+      <name>MCPictureViewer</name>
+      <path>MCPictureTools</path>
+      <filename>MCPictureTools.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="3A7E1ACD3F12459FBA1561C1480E50B0" enable="Y" type="THUMB">
+      <name>Picture Thumbnail Handler</name>
+      <path>MCPictureTools</path>
+      <filename>MCPictureTools.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="a908b772ba4648faa2d3c76969eaa12d" enable="Y" type="APP">
+      <name>Special Tools</name>
+      <path>MCSpecial</path>
+      <filename>MCSpecial.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="3f93229334d648ab8dcc1eb4f62b8ef7" enable="Y" type="APP">
+      <name>File Utils</name>
+      <path>MCUtils</path>
+      <filename>MCUtils.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="0305E12E5E9B4B2A9278C76F80AC321B" enable="Y" type="PROP">
+      <name>NTFS Properties</name>
+      <path>MCUtils</path>
+      <filename>MCUtils.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="338f59b3448642bf9f3ad7bafb4fae2b" enable="Y" type="APP">
+      <name>Multi Rename</name>
+      <path>MCUtils</path>
+      <filename>MCUtils.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="BF77A286C0304EC1971B1FE56C169897" enable="Y" type="APP">
+      <name>Video Tools</name>
+      <path>MCVideoTools</path>
+      <filename>MCVideoTools.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="815E2560C42E43E0AE398EC78C29F8FC" enable="Y" type="PROP">
+      <name>Video Properties</name>
+      <path>MCVideoTools</path>
+      <filename>MCVideoTools.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="b347c2d9ba7f4d94b3209d5bbf488de3" enable="Y" type="APP">
+      <name>File Checksum Verifier</name>
+      <path>MFTools</path>
+      <filename>MFTools.dll</filename>
+      <internal>N</internal>
+    </module>
+    <module guid="eb565a07cddf4dacabe7cf61982ae6fe" enable="Y" type="APP">
+      <name>File Viewer</name>
+      <path>MultiFileViewer</path>
+      <filename>MultiFileViewer.dll</filename>
+      <internal>N</internal>
+    </module>
+  </modules>
+</config>

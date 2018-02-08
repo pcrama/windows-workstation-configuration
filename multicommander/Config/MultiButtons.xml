@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buttonpanel id="1" rows="4" cols="8">
+  <button row="1" col="1" modifier="none" acceptfiledrop="0" label="#{b,10}" cmdtype="1">
+    <desc>#{b,10}</desc>
+    <command options="0">Core.1186</command>
+  </button>
+  <button row="1" col="2" modifier="none" acceptfiledrop="0" label="#{b,11} (${Core.1300})" icon="${mcpath}\MCIcons.dll" iconidx="7" cmdtype="3">
+    <desc>#{b,11}</desc>
+    <command options="0">MC.Explorer.Refresh</command>
+  </button>
+  <button row="1" col="3" modifier="none" acceptfiledrop="0" label="#{b,12} (${Core.1340})" icon="${mcpath}\MCIcons.dll" iconidx="116" cmdtype="1">
+    <desc>#{b,12}</desc>
+    <command options="0">Core.1340</command>
+  </button>
+  <button row="1" col="4" modifier="none" acceptfiledrop="0" label="#{b,13} (${Core.1350})" icon="${mcpath}\MCIcons.dll" iconidx="98" cmdtype="1">
+    <desc>#{b,13}</desc>
+    <command options="0">Core.1350</command>
+  </button>
+  <button row="1" col="4" modifier="shift" acceptfiledrop="0" label="#{b,13} (${Core.1351})" icon="${mcpath}\MCIcons.dll" iconidx="98" cmdtype="1">
+    <desc>#{b,18}</desc>
+    <command options="0">Core.1351</command>
+  </button>
+  <button row="1" col="5" modifier="none" acceptfiledrop="0" label="#{b,14} (${Core.1360})" icon="${mcpath}\MCIcons.dll" iconidx="109" cmdtype="1">
+    <desc>#{b,14}</desc>
+    <command options="0">Core.1360</command>
+  </button>
+  <button row="1" col="6" modifier="none" acceptfiledrop="0" label="#{b,15} (${Core.1370})" icon="${mcpath}\MCIcons.dll" iconidx="112" cmdtype="1">
+    <desc>#{b,15}</desc>
+    <command options="0">Core.1370</command>
+  </button>
+  <button row="1" col="7" modifier="none" acceptfiledrop="0" label="#{b,16} (${zFileManager.51004})" icon="${mcpath}\MCIcons.dll" iconidx="126" cmdtype="3">
+    <desc>#{b,16}</desc>
+    <command options="0">MC.Explorer.Makedir</command>
+  </button>
+  <button row="1" col="8" modifier="none" acceptfiledrop="0" label="#{b,17} (${Core.1380})" icon="${mcpath}\MCIcons.dll" iconidx="110" cmdtype="1">
+    <desc>#{b,17}</desc>
+    <command options="0">Core.1380</command>
+  </button>
+  <button row="2" col="1" modifier="none" acceptfiledrop="0" label="C:\" icon="%WINDIR%\System32\shell32.dll" iconidx="8" cmdtype="3">
+    <desc>#{b,20} C:\</desc>
+    <command options="0">MC.Explorer.Goto PATH="c:\"</command>
+  </button>
+  <button row="2" col="1" modifier="shift" acceptfiledrop="0" label="C:\ (#{b,21})" icon="%WINDIR%\System32\shell32.dll" iconidx="8" cmdtype="3">
+    <desc>#{b,20} C:\</desc>
+    <command options="0">MC.Explorer.NewBrowser PATH="c:\"</command>
+  </button>
+  <button row="2" col="2" modifier="none" acceptfiledrop="0" label="D:\" icon="%WINDIR%\System32\shell32.dll" iconidx="8" cmdtype="3">
+    <desc>#{b,20} D:\</desc>
+    <command options="0">MC.Explorer.Goto PATH="d:\"</command>
+  </button>
+  <button row="2" col="2" modifier="shift" acceptfiledrop="0" label="D:\ (#{b,21})" icon="%WINDIR%\System32\shell32.dll" iconidx="8" cmdtype="3">
+    <desc>#{b,21} D:\</desc>
+    <command options="0">MC.Explorer.NewBrowser PATH="d:\"</command>
+  </button>
+  <button row="2" col="3" modifier="none" acceptfiledrop="0" label="E:\" icon="%WINDIR%\System32\shell32.dll" iconidx="8" cmdtype="3">
+    <desc>#{b,20} E:\</desc>
+    <command options="0">MC.Explorer.Goto PATH="e:\"</command>
+  </button>
+  <button row="2" col="3" modifier="shift" acceptfiledrop="0" label="E:\ (#{b,21})" icon="%WINDIR%\System32\shell32.dll" iconidx="8" cmdtype="3">
+    <desc>#{b,21} E:\</desc>
+    <command options="0">MC.Explorer.NewBrowser PATH="e:\"</command>
+  </button>
+  <button row="2" col="4" modifier="none" acceptfiledrop="0" label="F:\" icon="%WINDIR%\System32\shell32.dll" iconidx="8" cmdtype="3">
+    <desc>#{b,20} F:\</desc>
+    <command options="0">MC.Explorer.Goto PATH="f:\"</command>
+  </button>
+  <button row="2" col="4" modifier="shift" acceptfiledrop="0" label="F:\ (#{b,21})" icon="%WINDIR%\System32\shell32.dll" iconidx="8" cmdtype="3">
+    <desc>#{b,21} F:\</desc>
+    <command options="0">MC.Explorer.NewBrowser PATH="f:\"</command>
+  </button>
+  <button row="2" col="5" modifier="none" acceptfiledrop="0" label="G:\" icon="%WINDIR%\System32\shell32.dll" iconidx="8" cmdtype="3">
+    <desc>#{b,20} G:\</desc>
+    <command options="0">MC.Explorer.Goto PATH="g:\"</command>
+  </button>
+  <button row="2" col="5" modifier="shift" acceptfiledrop="0" label="G:\ (#{b,21})" icon="%WINDIR%\System32\shell32.dll" iconidx="8" cmdtype="3">
+    <desc>#{b,21} G:\</desc>
+    <command options="0">MC.Explorer.NewBrowser PATH="g:\"</command>
+  </button>
+  <button row="2" col="6" modifier="none" acceptfiledrop="0" label="#{b,100}" icon="%WINDIR%\regedit.exe" iconidx="0" cmdtype="3">
+    <desc>#{b,22} "HKEY_CURRENT_USER\Software"</desc>
+    <command options="0">MC.Explorer.Goto PATH="REG:\HKEY_CURRENT_USER\Software"</command>
+  </button>
+  <button row="2" col="6" modifier="shift" acceptfiledrop="0" label="#{b,101}" icon="%WINDIR%\regedit.exe" iconidx="0" cmdtype="3">
+    <desc>#{b,22} "HKEY_LOCAL_MACHINE\SOFTWARE\"</desc>
+    <command options="0">MC.Explorer.Goto PATH="REG:\HKEY_LOCAL_MACHINE\SOFTWARE\"</command>
+  </button>
+  <button row="2" col="7" modifier="none" acceptfiledrop="0" label="#{b,102}" cmdtype="5">
+    <desc>#{b,102}</desc>
+    <command options="0">MC.Run CMD={FindFirstFile( GetSourceFocusPath() ^ "*.m3u" )} SHELL</command>
+  </button>
+  <button row="2" col="8" modifier="none" acceptfiledrop="1" label="#{b,104}" icon="%WINDIR%\notepad.exe" iconidx="0" cmdtype="2">
+    <desc>#{b,104}</desc>
+    <command options="65536">notepad.exe</command>
+  </button>
+  <button row="3" col="1" modifier="none" acceptfiledrop="0" label="#{b,30}" cmdtype="3">
+    <desc>#{b,30}</desc>
+    <command options="0">MC.Explorer.SetViewFilter FILTER="*.*"</command>
+  </button>
+  <button row="3" col="2" modifier="none" acceptfiledrop="0" label="#{b,31}" cmdtype="3">
+    <desc>#{b,31}</desc>
+    <command options="0">MC.Explorer.SetViewFilter FILTER="-/*"</command>
+  </button>
+  <button row="3" col="2" modifier="shift" acceptfiledrop="0" label="#{b,32}" cmdtype="3">
+    <desc>#{b,32}</desc>
+    <command options="0">MC.Explorer.SetViewFilter FILTER="-*.*"</command>
+  </button>
+  <button row="3" col="3" modifier="none" acceptfiledrop="0" label="#{b,33}" cmdtype="3">
+    <desc>#{b,33}</desc>
+    <command options="0">MC.Explorer.SetViewFilter FILTER="-*.exe -*.com"</command>
+  </button>
+  <button row="3" col="3" modifier="shift" acceptfiledrop="0" label="#{b,34}" cmdtype="3">
+    <desc>#{b,34}</desc>
+    <command options="0">MC.Explorer.SetViewFilter FILTER="*.exe *.com"</command>
+  </button>
+  <button row="3" col="4" modifier="none" acceptfiledrop="0" label="#{b,35}" cmdtype="3">
+    <desc>#{b,35}</desc>
+    <command options="0">MC.Explorer.SetViewFilter FILTER="-*.dll"</command>
+  </button>
+  <button row="3" col="4" modifier="shift" acceptfiledrop="0" label="#{b,36}" cmdtype="3">
+    <desc>#{b,36}</desc>
+    <command options="0">MC.Explorer.SetViewFilter FILTER="*.dll"</command>
+  </button>
+  <button row="3" col="5" modifier="none" acceptfiledrop="0" label="#{b,37}" cmdtype="1">
+    <desc>#{b,37}</desc>
+    <command options="0">zFileManager.40305</command>
+  </button>
+  <button row="3" col="7" modifier="none" acceptfiledrop="0" label="#{b,103}" icon="%WINDIR%\System32\Calc.exe" iconidx="0" cmdtype="2">
+    <desc>#{b,103}</desc>
+    <command options="0">calc.exe</command>
+  </button>
+  <button row="3" col="8" modifier="none" acceptfiledrop="0" label="#{b,105}" cmdtype="3">
+    <desc>#{b,105}</desc>
+    <command options="0">MC.Run CMD="compmgmt.msc" SHELL</command>
+  </button>
+  <button row="3" col="8" modifier="shift" acceptfiledrop="0" label="#{b,108}" cmdtype="3">
+    <desc>#{b,108}</desc>
+    <command options="0">MC.Run CMD="diskmgmt.msc" SHELL</command>
+  </button>
+  <button row="4" col="1" modifier="none" acceptfiledrop="0" label="#{b,46}" cmdtype="1">
+    <desc>#{b,46}</desc>
+    <command options="0">zFileManager.40303</command>
+  </button>
+  <button row="4" col="1" modifier="shift" acceptfiledrop="0" label="#{b,47}" cmdtype="1">
+    <desc>#{b,47}</desc>
+    <command options="0">zFileManager.40304</command>
+  </button>
+  <button row="4" col="2" modifier="none" acceptfiledrop="0" label="#{b,38}" cmdtype="3">
+    <desc>#{b,38}</desc>
+    <command options="0">MC.Explorer.Select FILTER="*.mp3"</command>
+  </button>
+  <button row="4" col="2" modifier="shift" acceptfiledrop="0" label="#{b,39}" cmdtype="3">
+    <desc>#{b,39}</desc>
+    <command options="0">MC.Explorer.Deselect FILTER="*.mp3"</command>
+  </button>
+  <button row="4" col="3" modifier="none" acceptfiledrop="0" label="#{b,40}" cmdtype="3">
+    <desc>#{b,40}</desc>
+    <command options="0">MC.Explorer.Select FILTER="*.jpg *.gif *.bmp *.png *.tiff"</command>
+  </button>
+  <button row="4" col="3" modifier="shift" acceptfiledrop="0" label="#{b,41}" cmdtype="3">
+    <desc>#{b,41}</desc>
+    <command options="0">MC.Explorer.Deselect FILTER="*.jpg *.gif *.bmp *.png *.tiff"</command>
+  </button>
+  <button row="4" col="4" modifier="none" acceptfiledrop="0" label="#{b,42}" cmdtype="3">
+    <desc>#{b,42}</desc>
+    <command options="0">MC.Explorer.Selection.SaveSelectionToMemory NAME="ButtonPanel"</command>
+  </button>
+  <button row="4" col="4" modifier="shift" acceptfiledrop="0" label="#{b,43}" cmdtype="3">
+    <desc>#{b,43}</desc>
+    <command options="0">MC.Explorer.Selection.LoadSelectionFromMemory NAME="ButtonPanel"</command>
+  </button>
+  <button row="4" col="4" modifier="ctrl" acceptfiledrop="0" label="View (example)" cmdtype="3" bgcolor="#a52a00" textcolor="#ffd700">
+    <desc>View file and with large font and highlight the letter a,e,i,o.</desc>
+    <command options="64">MC.DataViewer.View COLOR="#993333" BGCOLOR="002211" FONTSIZE="21" FONT="Arial" HIGHLIGHT="a e i o"</command>
+  </button>
+  <button row="4" col="5" modifier="none" acceptfiledrop="0" label="#{b,44}" cmdtype="3">
+    <desc>#{b,44}</desc>
+    <command options="0">MC.Explorer.Selection.CompareFoldersForMissing FILES FOLDERS</command>
+  </button>
+  <button row="4" col="5" modifier="ctrl" acceptfiledrop="0" label="View Log (example)" cmdtype="3" bgcolor="#a52a00" textcolor="#ffd700">
+    <desc>View file and format ERROR words RED.</desc>
+    <command options="64">MC.DataViewer.View FORMAT_1="ERROR,1,#FFFFBE,#FF0000"</command>
+  </button>
+  <button row="4" col="6" modifier="none" acceptfiledrop="0" label="#{b,45}" cmdtype="3">
+    <desc>#{b,45}</desc>
+    <command options="0">MC.Explorer.Selection.CompareFoldersForDuplicates FILES FOLDERS</command>
+  </button>
+  <button row="4" col="7" modifier="none" acceptfiledrop="0" label="#{b,106}" cmdtype="2">
+    <desc>#{b,106}</desc>
+    <command options="0">taskmgr.exe</command>
+  </button>
+  <button row="4" col="7" modifier="shift" acceptfiledrop="0" label="#{b,107}" cmdtype="2" bgcolor="#a52a00" textcolor="#ffd700">
+    <desc>#{b,107}</desc>
+    <command options="1">taskmgr.exe</command>
+  </button>
+  <button row="4" col="8" modifier="none" acceptfiledrop="0" label="#{b,50}" cmdtype="1">
+    <desc>#{b,50}</desc>
+    <command options="0">Core.1070</command>
+  </button>
+</buttonpanel>

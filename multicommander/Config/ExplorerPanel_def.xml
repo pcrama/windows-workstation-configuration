@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings_layout name="Explorer Panel Settings" use_sections="y" expand_all="y">
+  <section text="#s98">
+
+    <item type="text" text="#s98" value="b" tooltip="#s98" />
+    <item type="chk" key="layout/GridLines" attribute="value" default="0" text="#s200">
+      <item type="chk" key="layout/GridLines/VLines" attribute="value" default="0" text="#s235" />
+      <item type="chk" key="layout/GridLines/HLines" attribute="value" default="0" text="#s236" />
+    </item>
+    <item type="chk" key="layout/TagFolders" attribute="value" default="0" text="#s221" />
+    <item type="chk" key="layout/FolderTagInSize" attribute="value" default="0" text="#s219" />
+    <item type="chk" key="layout/AdjustLongNames" attribute="value"  default="0" text="#s220" />
+    <item type="chk" key="layout/DisableFocusRect" attribute="value" default="0" text="#s222" />
+
+    <item type="text" text="#s109" value="b">
+      <item type="chk" key="layout/CheckBoxes" attribute="value" default="0" text="#s201" tooltip="#s201" />
+      <item type="chk" key="layout/RememberSelectedOnPathChange" attribute="value" default="1" text="#s518" tooltip="#s518" />
+      <item type="chk" key="layout/RememberItemInFocusOnPathChange" attribute="value" default="1" text="#s519" tooltip="#s519" />
+      <item type="chk" key="layout/SelectionRectangle" attribute="value" default="1" text="#s215" tooltip="#s215" />
+      <item type="chk" key="layout/UnselectWhenStartingFileOp" attribute="value" default="1" text="#s335" />
+
+      <item type="text" text="#s110" tooltip="#s110" value="b">
+        <item type="chk" key="layout/UnselectOnSingleSelect" attribute="value" default="0" text="#s121" tooltip="#s121" >
+          <item type="chk" key="layout/SelectOnNavigate" attribute="value" default="0" text="#s120" tooltip="#s120" />
+        </item>
+        <itemx type="chk" key="layout/DbgSelection" attribute="value" default="0" text="(Debug) Show Item State in EXT column" />
+      </item>
+
+    </item>
+
+    <itemX type="text" text="#s107" value="b" />
+
+    <item type="text" text="#s202" value="b">
+      <item type="chk" key="layout/Icons"  attribute="value" default="0" text="#s202" tooltip="#s202">
+        <item type="cmb" key="layout/Icons/Size" attribute="value" value="200" default="1" text="#s285">
+          <option text="#s286" value="1" />
+          <option text="#s288" value="3" />
+          <option text="#s287" value="2" />
+          <option text="#s289" value="4" />
+          <item type="chk" key="layout/Icons/AutoScale"     attribute="value" default="1" text="#s610" tooltip="#s610" restartrequired="1" />
+        </item>
+        <item type="chk" key="layout/Icons/Associated"    attribute="value" default="0" text="#s203" tooltip="#s203" />
+        <item type="chk" key="layout/Icons/Exe"           attribute="value" default="0" text="#s204" tooltip="#s204" />
+        <item type="chk" key="layout/Icons/Link"          attribute="value" default="0" text="#s205" tooltip="#s205" />
+        <item type="chk" key="layout/Icons/Overlay"       attribute="value" default="1" text="#s206" tooltip="#s206" />
+        <item type="chk" key="layout/Icons/OverlayRemote" attribute="value" default="0" text="#s207" tooltip="#s207" />
+
+      </item>
+    </item>
+    <item type="text" text="#s650" value="b">
+      <item type="cmb" key="layout/tab/icon" attribute="value" value="200" default="1" text="#s651" widthgroup="4" >
+        <option text="#s652" value="1" />
+        <option text="#s653" value="2" />
+      </item>
+      <item type="cmb" key="layout/tab/tabnamelook" attribute="value" value="200" default="0" text="#s655" widthgroup="4" >
+        <option text="#s656" value="0" />
+        <option text="#s657" value="1" />
+        <option text="#s658" value="2" />
+      </item>
+      <item type="chk" key="layout/tab/newtabiflocked" attribute="value" default="0" text="#s660" tooltip="#s660" />
+
+      <item type="text" value="b" text="#s460">
+
+        <item type="cmb" key="layout/default/sortby" attribute="value" value="200" default="0" text="#s671" widthgroup="4" >
+          <option text="#g2000" value="0" />
+          <option text="#g2001" value="1" />
+          <option text="#g2002" value="2" />
+          <option text="#g2003" value="3" />
+        </item>
+
+        <item type="cmb" key="layout/default/sortorder" attribute="value" value="200" default="0" text="#s672" widthgroup="4" >
+          <option text="#s675" value="0" />
+          <option text="#s676" value="1" />
+        </item>
+
+        <item type="cmb" key="layout/default/ViewMode"  attribute="value" default="3" text="#s461" value="200" widthgroup="4">
+          <option text="#m110" value="3" />
+          <option text="#m111" value="2" />
+          <option text="#m112" value="4" />
+          <option text="#m113" value="5" />
+        </item>
+        <item type="chk" key="layout/default/FolderTree" attribute="value" default="0" text="#s462" />
+        <item type="edit2" key="layout/default/Path" attribute="value" default="C:\" text="#s247" />
+      </item>
+
+    </item>
+    <item type="text" text="#s106" value="b">
+      <item type="text" text="#s108" value="b" >
+        <item type="chk" key="layout/ShowHidden" attribute="value" default="0" text="#s238" />
+        <item type="chk" key="layout/ShowSystem" attribute="value" default="0" text="#s239" />
+        <itemx type="chk" key="layout/HideOSFiles" attribute="value" default="1" text="#s240" tooltip="#s240" />
+      </item>
+
+      <item type="text" value="b" text="#s525">
+        <item type="text" value="b" text="#s290">
+          <item type="cmb" key="layout/Tooltip" attribute="value" value="200" default="2" text="#s270" widthgroup="2" >
+            <option text="#s271" value="0" />
+            <option text="#s272" value="1" />
+            <option text="#s273" value="2" />
+            <option text="#s274" value="3" />
+          </item>
+
+          <item type="cmb" key="layout/FileExt" attribute="value" value="200" default="0" text="#s230" widthgroup="2">
+            <option text="#s231" value="B" />
+            <option text="#s232" value="F" />
+            <option text="#s233" value="X" />
+            <option text="#s294" value="R" />
+          </item>
+
+          <item type="cmb" key="layout/FileSize" attribute="value" value="200" default="2" text="#s434" widthgroup="2">
+            <option text="#s362" value="A"/>
+            <option text="#s363" value="B"/>
+            <option text="#s364" value="K"/>
+            <option text="#s365" value="M"/>
+            <option text="#s366" value="G"/>
+          </item>
+
+          <item type="cmb" key="layout/ShowFileSizeType" attribute="value" value="200" default="1" text="#s385" widthgroup="2">
+            <option text="#s386" value="0"/>
+            <option text="#s387" value="1"/>
+            <option text="#s388" value="2"/>
+            <option text="#s389" value="3"/>
+          </item>
+
+          <item type="cmb" key="layout/FileSizeDecimals" attribute="value" value="200" default="1" text="#s450" widthgroup="2">
+            <option text="#s451" value="0"/>
+            <option text="#s452" value="1"/>
+            <option text="#s453" value="2"/>
+          </item>
+
+        </item>
+
+        <item type="text" text="#s291" value="b">
+          <item type="cmb" key="layout/listmode/Tooltip" attribute="value" value="220" default="2" text="#s270" widthgroup="2" >
+            <option text="#s271" value="0" />
+            <option text="#s272" value="1" />
+            <option text="#s273" value="2" />
+            <option text="#s274" value="3" />
+          </item>
+          <item type="cmb" key="layout/listmode/Filename" attribute="value" value="220" default="1" text="#s292" widthgroup="2">
+            <option text="#s293" value="1" />
+            <option text="#s294" value="2" />
+            <option text="#s295" value="3" />
+          </item>
+        </item>
+
+        <item type="text" text="#s528" value="b">
+
+          <item type="cmb" key="layout/thumbnail/Size" attribute="value" value="100" default="96" text="#s531">
+            <option text="48x48" value="48" />
+            <option text="96x96" value="96" />
+            <option text="128x128" value="128" />
+            <option text="148x148" value="148" />
+            <option text="196x196" value="196" />
+            <option text="256x256" value="256" />
+          </item>
+          <item type="chk" key="layout/thumbnail/WheelZoom" attribute="value" default="1" text="#s532" />
+          <item type="chk" key="layout/thumbnail/PictureFrame" attribute="value" default="1" text="#s533" />
+          <item type="cmb" key="layout/thumbnail/TextOverlay" attribute="value" value="180" default="0" text="#s551">
+            <option text="#s552" value="0" />
+            <option text="#s553" value="1" />
+            <option text="#s554" value="2" />
+            <option text="#s555" value="3" />
+          </item>
+
+          <item type="text" text="#s530" value="b" >
+            <item type="cmb" key="layout/thumbnail/ScrollMode" attribute="value" value="150" default="V" text="#s542">
+              <option text="#s543" value="H" />
+              <option text="#s544" value="V" />
+            </item>
+            <item type="cmb" key="layout/thumbnail/ImageText" attribute="value" value="150" default="1" text="#s534">
+              <option text="#s535" value="0" />
+              <option text="#s536" value="1" />
+              <optionx text="#s537" value="2" />
+              <item type="cmb" key="layout/thumbnail/Filename" attribute="value" value="220" default="2" text="#s540">
+                <option text="#s293" value="1" />
+                <option text="#s294" value="2" />
+                <option text="#s295" value="3" />
+              </item>
+            </item>
+          </item>
+
+          <item type="text" text="#s529" value="b" >
+            <itemx type="cmb" key="layout/thumbnaildetail/ImageAlign" attribute="value" value="150" default="center" text="Thumbnail Alignment (Test)" >
+              <option text="Top" value="top" />
+              <option text="Center" value="center" />
+              <option text="Bottom" value="bottom" />
+            </itemx>
+            <item type="chk" key="layout/thumbnaildetail/HighlightName" attribute="value" default="1" text="#s545" />
+            <itemx type="edit2" key="layout/thumbnaildetail/DefaultColumnLayout" attribute="value" default="" text="#s546" tooltip="#s546"/>
+          </item>
+
+        </item>
+      </item>
+      <item type="text" text="#s570" value="b">
+        <item type="chk" key="layout/flatview/AddPathColumn" attribute="value" default="0" text="#s571" tooltip="#s571" />
+        <item type="chk" key="layout/flatview/IncludeFolders" attribute="value" default="0" text="#s572" />
+      </item>
+    </item>
+    <item type="text" text="#s105" value="b">
+      <item type="chk" key="layout/ShowLinkTargetInName"  attribute="value" default="1" text="#s216" tooltip="#s216" />
+      <item type="chk" key="layout/AutoSizeColumns" attribute="value" default="0" text="#s223" />
+      <item type="chk" key="layout/AutoSortOnRename" attribute="value" defualt="1" text="#s253" tooltip="#s253" />
+      <item type="chk" key="layout/SortNatural" attribute="value" default="1" text="#s254" tooltip="#s254" />
+      <item type="chk" key="layout/SortLanguageAware" attribute="value" default="0" text="#s252" tooltip="#s252" />
+      <item type="chk" key="layout/SortSeparateFilesFolders" attribute="value" default="1" text="#s276" >
+        <item type="chk" key="layout/SortFoldersByName" attribute="value" default="0" text="#s275"/>
+      </item>
+    </item>
+
+    <itemx type="text" value="b" text="#s104" />
+    <item type="text" text="#s245" value="b">
+      <item type="font" key="layout/fonts/FreeSpace" attribute="value" value="110" default="0" text="#s248" />
+      <item type="font" key="layout/fonts/Path"      attribute="value" value="110" default="0" text="#s247" />
+      <item type="font" key="layout/fonts/FileList"  attribute="value" value="110" default="0" text="#s246" />
+      <item type="font" key="layout/fonts/Status"    attribute="value" value="110" default="0" text="#s249" />
+    </item>
+    <item type="text" text="#s371" value="b">
+
+      <item type="chk" key="layout/showdate" attribute="value" default="1" text="#s372" />
+      <item type="chk" key="layout/showtime" attribute="value" default="1" text="#s373" />
+
+      <item type="text" text="#s378" value="">
+        <item type="radio" key="layout/DateMode" attribute="value" default="1" >
+          <option value="0" text="#s375" tooltip="#s375" />
+          <option value="1" text="#s376" tooltip="#s376" />
+          <option value="2" text="#s377" tooltip="#s377" />
+        </item>
+      </item>
+
+      <item type="chk" key="layout/timeformat_sec" attribute="value" default="0" text="#s380" />
+      <item type="chk" key="layout/timeformat_ms"  attribute="value" default="0" text="#s381" />
+      <item type="chk" key="layout/customdatetimeformat" attribute="value" default="0" text="#s382">
+        <item type="edit" key="layout/customdateformat" attribute="value" default="yyyy-MM-dd" tooltip="#s383" />
+        <item type="edit" key="layout/customtimeformat" attribute="value" default="HH:mm" tooltip="#s384"  />
+      </item>
+    </item>
+
+    <item type="text" value="b" text="#s103">
+      <item type="chk" key="layout/ForwardUnAssignedKeys" attribute="value" default="0" text="#s218" tooltip="#s218" />
+      <item type="chk" key="layout/AnyKeySearch"          attribute="value" default="0" text="#s255">
+        <item type="chk" key="layout/SearchBox"           attribute="value" default="0" text="#s256">
+          <item type="chk" key="layout/SearchSubString" attribute="value" default="0" text="#s264" tooltip="#s264" />
+        </item>
+        <item type="cmb" key="layout/SearchMode"          attribute="value" default="0" text="#s257" value="350">
+          <option text="#s258" value="0"/>
+          <option text="#s259" value="1"/>
+          <option text="#s260" value="2"/>
+        </item>
+      </item>
+
+      <item type="text" value="b" text="#s560">
+        <item type="chk" key="layout/InlineRename/MoveToNextUsingArrowKeys" attribute="value" default="1" text="#s561" tooltip="#s561" >
+          <item type="chk" key="layout/InlineRename/RenameBeforeMovingToNext" attribute="value" default="1" text="#s562" tooltip="#s562" />
+        </item>
+        <item type="chk" key="layout/InlineRename/MoveToNextUsingEnterKey" attribute="value" default="0" text="#s563" tooltip="#s563" />
+        <item type="cmb" key="layout/InlineRename/RenameSimilar"  attribute="value" default="0" text="#s565" value="100" tooltip="#s565">
+          <option text="#s800" value="0"/>
+          <option text="#s802" value="1"/>
+          <option text="#s801" value="2"/>
+        </item>
+      </item>
+
+    </item>
+
+    <item type="text" value="b" text="#s441">
+      <item type="chk" key="layout/FolderTree/ExpandCurrent" attribute="value" default="1" text="#s470" tooltip="#s470"/>
+      <item type="chk" key="layout/FolderTree/ExpandOnHover" attribute="value" default="1" text="#s471" tooltip="#s471"/>
+      <item type="chk" key="layout/FolderTree/AllowFolderColors" attribute="value" default="1" text="#s473" tooltip="#s473"/>
+      <item type="edit2" key="layout/FolderTree/DevicesFilter" attribute="value" default="*" text="#s472" tooltip="#s472" />
+    </item>
+
+    <item type="text" text="#s350" value="b" >
+      <item type="chk" key="save/path" attribute="value" value="80" default="0" text="#s351" >
+        <item type="chk" key="save/onlylocal" attribute="value" value="80" default="0" text="#s352" />
+       </item>
+      <item type="chk" key="save/onlylocked" attribute="value" value="80" default="0" text="#s354" />
+      <item type="chk" key="save/sort" attribute="value" value="80" default="0" text="#s353" />
+      <item type="chk" key="save/itemfocus" attribute="value" value="80" default="1" text="Remember what item is in focus" />
+    </item>
+
+    <!-- Tweaking -->
+    <item type="text" text="#s250" value="b" >
+      <item type="chk" key="layout/RescanAlways" attribute="value" default="0" text="#s600" tooltip="#s600" />
+      <!-- <item type="chk" key="layout/Legacy_OldFileSystemScanning" attribute="value" default="0" text="Use old Filesystem Scanning engine (Used in MC Before v6.4)" />-->
+      <item type="chk" key="layout/RefreshFileColoringOnForceRefresh" attribute="value" default="1" text="#s605" tooltip="#s605" />
+      <item type="chk" key="layout/ContextMenuOnDotDot" attribute="value" default="1" text="#s606" />
+      <item type="chk" key="layout/SendToCmdLineTakeFocus" attribute="value" default="0" text="#s607" />
+      <item type="edit2" key="layout/RowPaddingList" attribute="value" default="1" text="#s603" />
+      <item type="edit2" key="layout/RowPaddingTree" attribute="value" default="1" text="#s604" />
+      <item type="edit2" key="layout/TooltipDelay" attribute="value" default="1000" text="#s601" tooltip="#s601" />
+      <item type="edit2" key="layout/TooltipTimeout" attribute="value" default="7" text="#s602" tooltip="#s602" />
+    </item>
+
+  </section>
+  <section text="#s99">
+    <item type="text" text="#s99" value="b" tooltip="#s99" />
+    <item type="text" text="#s415" value="b">
+      <item type="text" text="#s416" value="b">
+        <item type="chk" key="layout/FileCmdToolBar" attribute="value" default="1" text="#s420" tooltip="#s420" restartrequired="1"/>
+        <item type="chk" key="layout/GlobalDriveBar" attribute="value" default="1" text="#s421" tooltip="#s421" restartrequired="1">
+          <item type="chk" key="layout/GlobalDriveBar/OwnRow" attribute="value" default="0" text="#s422" restartrequired="1"/>
+          <item type="text" text="#s425" value="b">
+            <item type="chk" key="layout/GlobalDriveBar/SpecialFolders" attribute="value" default="0" text="#s426" tooltip="#s426" restartrequired="1" />
+            <item type="chk" key="layout/GlobalDriveBar/VirtualDevices" attribute="value" default="0" text="#s427" tooltip="#s427" restartrequired="1" />
+            <item type="chk" key="layout/GlobalDriveBar/Cloud" attribute="value" default="0" text="#s428" tooltip="#s428" restartrequired="1" />
+          </item>
+        </item>
+      </item>
+      <item type="text" text="#s417" value="b">
+        <item type="chk" key="layout/DriveBar" attribute="value" default="0" text="#s421" tooltip="#s421" restartrequired="1">
+          <item type="chk" key="layout/DriveBarLabel" attribute="value" default="1" text="#s423" restartrequired="1">
+            <item type="chk" key="layout/DriveBarLabelOnRight" attribute="value" default="1" text="#s424" restartrequired="1"/>
+          </item>
+        </item>
+      </item>
+    </item>
+    <item type="text" text="#s430" value="b">
+      <item type="chk" key="layout/devicedropdown"  attribute="value" default="1" text="#s431" tooltip="" restartrequired="1" >
+        <item type="chk" key="layout/devicedropdown/RememberLastSubPath" attribute="value" default="1" text="#s436" tooltip="#s436"  restartrequired="1" />
+        <item type="text" text="#s439" value="b" >
+          <item type="chk" key="layout/devicedropdown/CommonSpecialFolders" attribute="value" default="1" text="#s437" restartrequired="1" />
+          <item type="chk" key="layout/devicedropdown/ExtendedSpecialFolders" attribute="value" default="1" text="#s438" tooltip="#s438" restartrequired="1" />
+          <item type="chk" key="layout/devicedropdown/VirtualDevices" attribute="value" default="1" text="#s427" tooltip="#s427" restartrequired="1" />
+          <item type="chk" key="layout/devicedropdown/Cloud" attribute="value" default="1" text="#s428" tooltip="#s428" restartrequired="1" />
+        </item>
+      </item>
+
+      <item type="chk" key="layout/freespacearea" text="#s432" attribute="value" default="1" tooltip="" restartrequired="1">
+        <item type="cmb" key="layout/freespacearea/showusedspace" attribute="value" value="200" default="0" text="#s433" widthgroup="3" >
+          <option text="#s358" value="0" />
+          <option text="#s359" value="1" />
+        </item>
+        <item type="cmb" key="layout/freespacearea/showsizeas" attribute="value" value="200" default="0" text="#s434" widthgroup="3">
+          <option text="#s362" value="0"/>
+          <option text="#s363" value="1"/>
+          <option text="#s364" value="2"/>
+          <option text="#s365" value="3"/>
+          <option text="#s366" value="4"/>
+        </item>
+        <item type="cmb" key="layout/freespacearea/kbsize" attribute="value" value="200" default="1000" text="#s368" widthgroup="3">
+          <option text="#s369" value="1024"/>
+          <option text="#s370" value="1000"/>
+        </item>
+      </item>
+
+      <item type="text" text="#s435" value="b">
+        <item_disabled type="chk" key="layout/selectionstatus"  attribute="value" default="1" text="#s435" tooltip="" restartrequired="1" />
+        <item type="cmb" key="layout/selectionstatus/showsizeas" attribute="value" value="200" default="0" text="#s434" widthgroup="3">
+          <option text="#s362" value="0"/>
+          <option text="#s363" value="1"/>
+          <option text="#s364" value="2"/>
+          <option text="#s365" value="3"/>
+          <option text="#s366" value="4"/>
+        </item>
+
+        <item type="cmb" key="layout/selectionstatus/sizeunit" attribute="value" value="200" default="2" text="#s385" widthgroup="3">
+          <option text="#s386" value="0"/>
+          <option text="#s387" value="1"/>
+          <option text="#s388" value="2"/>
+          <option text="#s389" value="3"/>
+        </item>
+
+        <item type="cmb" key="layout/selectionstatus/decimals" attribute="value" value="200" default="0" text="#s450" widthgroup="3">
+          <option text="#s451" value="0"/>
+          <option text="#s452" value="1"/>
+          <option text="#s453" value="2"/>
+        </item>
+
+        <item type="cmb" key="layout/selectionstatus/kbsize" attribute="value" value="200" default="1024" text="#s368" widthgroup="3">
+          <option text="#s369" value="1024"/>
+          <option text="#s370" value="1000"/>
+        </item>
+      </item>
+      <item type="text" text="#s280" value="b">
+        <item_disabled type="chk" key="layout/viewfilter"  attribute="value" default="1" text="#s280" tooltip="" restartrequired="1" />
+        <item type="chk" key="layout/ResetFilterOnPathChange"  attribute="value" default="0" text="#s278" />
+        <item type="chk" key="layout/RestorePathFilterOnReturn"  attribute="value" default="0" text="#s279" />
+      </item>
+      <item type="text" text="#s440" value="b" tooltip="#s440"> 
+        <item type="chk" key="layout/buttons/foldertree"  attribute="value" default="1" text="#s441" restartrequired="1" />
+        <item type="chk" key="layout/buttons/gotoroot"  attribute="value" default="1" text="#s442" restartrequired="1" />
+        <item type="chk" key="layout/buttons/gotoparent"  attribute="value" default="1" text="#s443" restartrequired="1" />
+        <item type="chk" key="layout/buttons/reload"  attribute="value" default="1" text="#s444" restartrequired="1" />
+        <item type="chk" key="layout/buttons/disconnect"  attribute="value" default="1" text="#s445" restartrequired="1" />
+        <item type="chk" key="layout/buttons/viewmode"  attribute="value" default="1" text="#s446" restartrequired="1" />
+      </item>
+    </item>
+  </section>
+  <section text="#s300">
+    <item type="icon" value="22,shell32.dll" text="#s300">
+      <item type="text" text="#s321" value="b">
+        <item type="chk" key="colors/backgroundhighlight" attribute="value" default="1" text="#s325" tooltip="#t325" />
+        <item type="chk" key="colors/override_windows_bg" attribute="value" default="0" text="#s326" tooltip="#t326" onchange="revalidateallcolorpicks" >
+          <item type="chk" key="colors/override_windows_bg/alternating" attribute="value" default="0" text="#s328"/>
+          <item type="text" text="#s316" value="b">
+            <item type="color" key="colors/override_windows_bg/active"       attribute="color" value="80,#s302,#s303" default="#FFFFEA" text="#s327" tooltip="#t327" onchange="revalidateallcolorpicks" />
+            <item type="color" key="colors/override_windows_bg/active_alt"   attribute="color" value="80,#s302,#s303" default="#FEFADA" text="#s328" tooltip="#t327" />
+          </item>
+          <item type="text" text="#s317" value="b">
+            <item type="color" key="colors/override_windows_bg/inactive"     attribute="color" value="80,#s302,#s303" default="#EFEFFC" text="#s327" tooltip="#t328" />
+            <item type="color" key="colors/override_windows_bg/inactive_alt" attribute="color" value="80,#s302,#s303" default="#E6E6FB" text="#s328" tooltip="#t328" />
+          </item>
+        </item>
+
+        <item type="chk" key="colors/item_specific_bg_color/use_files_bg"   attribute="value" default="0" text="#s323" tooltip="#t323" onchange="revalidateallcolorpicks" />
+        <item type="chk" key="colors/item_specific_bg_color/use_folders_bg" attribute="value" default="0" text="#s324"  tooltip="#t324" onchange="revalidateallcolorpicks" />
+
+        <itemx type="chk" key="colors/item_specific_bg_color" attribute="value" default="0" text="#s322" tooltip="#t322" onchange="revalidateallcolorpicks" >
+        </itemx>
+      </item>
+
+      <item type="text" text="#s332" value="b">
+        <item type="chk" key="colors/forcefocusrect" attribute="value" default="0" text="#s333" />
+        <item type="color" key="colors/focusrect" attribute="value" value="80,#s302,#s303" text="#s319" default="#FF0000" tooltip="#t319" />
+      </item>
+      <item type="color" key="colors/gridline" attribute="value" value="80,#s302,#s303" text="#s318" default="#C0C0C0" />
+
+      <item type="text" text="#s309" value="b">
+
+        <item type="icon" value="3,shell32.dll" text="#s310">
+          <item  type="color3" key="colors/files/normal"       attribute="background,foreground" value="80,#s302,#s303" default="$COLOR_WINDOW,$COLOR_WINDOWTEXT"       text="#s311" tooltip="#t311" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, changebg=colors/item_specific_bg_color/use_files_bg:1" onchange="revalidateallcolorpicks" />
+          <item  type="color3" key="colors/files/focus"        attribute="background,foreground" value="80,#s302,#s303" default="$COLOR_HIGHLIGHT,$COLOR_HIGHLIGHTTEXT" text="#s312" tooltip="#t312" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, changebg=colors/item_specific_bg_color/use_files_bg:1" />
+          <item  type="color3" key="colors/files/checked"      attribute="background,foreground" value="80,#s302,#s303" default="$COLOR_HIGHLIGHT,$COLOR_HIGHLIGHTTEXT" text="#s314" tooltip="#t313" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, changebg=colors/item_specific_bg_color/use_files_bg:1" />
+          <item  type="color3" key="colors/files/checkedfocus" attribute="background,foreground" value="80,#s302,#s303" default="$COLOR_HIGHLIGHT,$COLOR_HIGHLIGHTTEXT" text="#s315" tooltip="#t315" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, changebg=colors/item_specific_bg_color/use_files_bg:1" />
+          <itemx  type="color3" key="colors/files/selected"     attribute="background,foreground" value="80,#s302,#s303" default="$COLOR_HIGHLIGHT,$COLOR_HIGHLIGHTTEXT" text="#s314" tooltip="#t314" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, changebg=colors/item_specific_bg_color/use_files_bg:1" />
+        </item>
+
+        <item type="icon" value="4,shell32.dll" text="#s320">
+          <item  type="color3" key="colors/folders/normal"       attribute="background,foreground" value="80,#s302,#s303" default="$COLOR_WINDOW,$COLOR_WINDOWTEXT"       text="#s311" tooltip="#t311" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, changebg=colors/item_specific_bg_color/use_folders_bg:1" />
+          <item  type="color3" key="colors/folders/focus"        attribute="background,foreground" value="80,#s302,#s303" default="$COLOR_HIGHLIGHT,$COLOR_HIGHLIGHTTEXT" text="#s312" tooltip="#t312" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, changebg=colors/item_specific_bg_color/use_folders_bg:1" />
+          <item  type="color3" key="colors/folders/checked"      attribute="background,foreground" value="80,#s302,#s303" default="$COLOR_HIGHLIGHT,$COLOR_HIGHLIGHTTEXT" text="#s314" tooltip="#t313" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, changebg=colors/item_specific_bg_color/use_folders_bg:1" />
+          <item  type="color3" key="colors/folders/checkedfocus" attribute="background,foreground" value="80,#s302,#s303" default="$COLOR_HIGHLIGHT,$COLOR_HIGHLIGHTTEXT" text="#s315" tooltip="#t315" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, changebg=colors/item_specific_bg_color/use_folders_bg:1" />
+          <itemx  type="color3" key="colors/folders/selected"     attribute="background,foreground" value="80,#s302,#s303" default="$COLOR_HIGHLIGHT,$COLOR_HIGHLIGHTTEXT" text="#s314" tooltip="#t314" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, changebg=colors/item_specific_bg_color/use_folders_bg:1" />
+        </item>
+        <item type="chk" key="colors/special" attribute="value" default="0" text="#s390" >
+          <item type="chk" key="colors/special/autocolor" attribute="value" default="1" text="#s391">
+            <item type="edit2" key="colors/special/autocolorvalue" attribute="value" default="135" text="#s392" />
+          </item>
+          <item type="text" text="#s395">
+            <item  type="color3" key="colors/special/systemhidden" attribute="background,foreground" value="80,#s302,#s303" default="-1,$COLOR_WINDOWTEXT"  text="#s396" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, changebg=colors/item_specific_bg_color/use_folders_bg:1" />
+            <item  type="color3" key="colors/special/readonly" attribute="background,foreground" value="80,#s302,#s303" default="-1,$COLOR_WINDOWTEXT"  text="#s397" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, changebg=colors/item_specific_bg_color/use_folders_bg:1" />
+          </item>
+        </item>
+        <item type="chk" key="colors/rulebasedoverridecolors" attribute="value" default="0" text="#s621" tooltip="#s621" />
+        <itemx type="chk" key="colors/overridecolors" attribute="value" default="0" text="#s340">
+          <itemx type="color3" key="colors/overridecolors/profile1/color" attribute="background,foreground" value="80,#s302,#s303" text="#s341" default="-1,#2895d6" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, defaultbginherit=colors/files/normal:1, changebg=colors/item_specific_bg_color/use_files_bg:1" />
+          <itemx type="edit2"  key="colors/overridecolors/profile1/match" attribute="value" text="#s349" value="80" default="*.txt *.xml *.ini" />
+          <itemx type="color3" key="colors/overridecolors/profile2/color" attribute="background,foreground" value="80,#s302,#s303" text="#s342" default="-1,#805ef5" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, defaultbginherit=colors/files/normal:1, changebg=colors/item_specific_bg_color/use_files_bg:1" />
+          <itemx type="edit2"  key="colors/overridecolors/profile2/match" attribute="value" text="#s349" value="80" default="*.exe *.bat"/>
+          <itemx type="color3" key="colors/overridecolors/profile3/color" attribute="background,foreground" value="80,#s302,#s303" text="#s343" default="-1,#e30fef" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, defaultbginherit=colors/files/normal:1, changebg=colors/item_specific_bg_color/use_files_bg:1" />
+          <itemx type="edit2"  key="colors/overridecolors/profile3/match" attribute="value" text="#s349" value="80" default="*.jpg *.png *.bmp *.gif"/>
+          <itemx type="color3" key="colors/overridecolors/profile4/color" attribute="background,foreground" value="80,#s302,#s303" text="#s344" default="-1,#8e98a1" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, defaultbginherit=colors/files/normal:1, changebg=colors/item_specific_bg_color/use_files_bg:1" />
+          <itemx type="edit2"  key="colors/overridecolors/profile4/match" attribute="value" text="#s349" value="80" default="*.avi *.mkv *.mov *.wmv"/>
+          <itemx type="color3" key="colors/overridecolors/profile5/color" attribute="background,foreground" value="80,#s302,#s303" text="#s345" default="-1,#5ad37e" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, defaultbginherit=colors/files/normal:1, changebg=colors/item_specific_bg_color/use_files_bg:1" />
+          <itemx type="edit2"  key="colors/overridecolors/profile5/match" attribute="value" text="#s349" value="80" default=".mp3 *.ogg" />
+          <itemx type="color3" key="colors/overridecolors/profile6/color" attribute="background,foreground" value="80,#s302,#s303" text="#s346" default="-1,#8b259e" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, defaultbginherit=colors/files/normal:1, changebg=colors/item_specific_bg_color/use_files_bg:1" />
+          <itemx type="edit2"  key="colors/overridecolors/profile6/match" attribute="value" text="#s349" value="80" default="*.zip .rar *.tar *.gz *.7z"/>
+          <itemx type="color3" key="colors/overridecolors/profile7/color" attribute="background,foreground" value="80,#s302,#s303" text="#s347" default="-1,#38b6f2" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, defaultbginherit=colors/files/normal:1, changebg=colors/item_specific_bg_color/use_files_bg:1" />
+          <itemx type="edit2"  key="colors/overridecolors/profile7/match" attribute="value" text="#s349" value="80" default="*.iso"/>
+          <itemx type="color3" key="colors/overridecolors/profile8/color" attribute="background,foreground" value="80,#s302,#s303" text="#s348" default="-1,#cad31a" rules="defaultbg=colors/override_windows_bg:1:colors/override_windows_bg/active:$COLOR_WINDOW, defaultbginherit=colors/files/normal:1, changebg=colors/item_specific_bg_color/use_files_bg:1" />
+          <itemx type="edit2"  key="colors/overridecolors/profile8/match" attribute="value" text="#s349" value="80" default="*.doc *.docx *.xls *.xlsx"/>
+        </itemx>
+      </item>
+      <item type="text" text="#s30" value="b">
+        <item type="text" text="#s316" value="b">
+          <item type="color3" key="colors/pathfield/active/color" attribute="background,foreground" value="80,#s302,#s303" text="#s304" default="$COLOR_ACTIVECAPTION,$COLOR_CAPTIONTEXT"  onchange="revalidateallcolorpicks"/>
+          <item type="color3" key="colors/pathfield/active/color2" attribute="background,-" value="80,#s302,#s303" text="#s305" default="$COLOR_GRADIENTACTIVECAPTION,-1" rules="disableforeground" />
+          <item type="color3" key="colors/pathfield/active/hot" attribute="-,foreground" value="80,#s302,#s303" text="#s306" default="-1,$COLOR_INACTIVECAPTIONTEXT" rules="defaultbg=colors/pathfield/active/color, disablebackground"/>
+        </item>
+        <item type="text" text="#s317" value="b">
+          <item type="color3" key="colors/pathfield/inactive/color" attribute="background,foreground" value="80,#s302,#s303" text="#s304" default="$COLOR_INACTIVECAPTION,$COLOR_INACTIVECAPTIONTEXT"  onchange="revalidateallcolorpicks"/>
+          <item type="color3" key="colors/pathfield/inactive/color2" attribute="background,-" value="80,#s302,#s303" text="#s305" default="$COLOR_GRADIENTINACTIVECAPTION,-1" rules="disableforeground" />
+          <item type="color3" key="colors/pathfield/inactive/hot" attribute="-,foreground" value="80,#s302,#s303" text="#s306" default="-1,$COLOR_INACTIVECAPTIONTEXT"  rules="defaultbg=colors/pathfield/inactive/color, disablebackground"/>
+        </item>
+      </item>
+      <item type="text" text="#s250" value="b">
+        <item type="chk" key="colors/tweak/autofadeselection" attribute="value" default="1" text="#s339" />
+      </item>
+
+    </item>
+  </section>
+  <section text="#s50">
+    <define type="optiongrp" value="1">
+      <option text="#s51" value="0"/>
+      <option text="#s52" value="1"/>
+      <option text="#s53" value="2"/>
+      <option text="#s54" value="3"/>
+      <option text="#s55" value="4"/>
+      <option text="#s56" value="5"/>
+      <option text="#s57" value="6"/>
+      <option text="#s58" value="7"/>
+      <option text="#s59" value="8"/>
+      <option text="#s60" value="10"/>
+      <option text="#s61" value="11"/>
+      <option text="#s491" value="50"/>
+      <option text="#s492" value="51"/>
+      <option text="#s493" value="52"/>
+      <option text="#s494" value="53"/>
+      <option text="#s495" value="54"/>
+    </define>
+    <define type="optiongrp" value="2">
+      <option text="#s51" value="0" />
+      <option text="#s74" value="1"/>
+      <option text="#s75" value="5"/>
+      <option text="#s71" value="2"/>
+      <option text="#s72" value="3"/>
+      <option text="#s73" value="4"/>
+    </define>
+
+    <item type="text" text="#s80" value="i" />
+    <item type="text" text="#s81" value="b">
+      <item type="cmb" key="mouse/left/click"     attribute="value" default="0" text="#s86" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/left/dblclick"  attribute="value" default="3" text="#s87" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/left/clickhold" attribute="value" default="0" text="#s88" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/left/clickwait" attribute="value" default="2" text="#s89" value="300" optiongrp="1" widthgroup="1" />
+    </item>
+    <item type="text" text="#s82" value="b">
+      <item type="cmb" key="mouse/right/click"     attribute="value" default="1" text="#s86" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/right/dblclick"  attribute="value" default="0" text="#s87" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/right/clickhold" attribute="value" default="6" text="#s88" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/right/clickwait" attribute="value" default="0" text="#s89" value="300" optiongrp="1" widthgroup="1" />
+    </item>
+    <item type="text" text="#s83" value="b">
+      <item type="cmb" key="mouse/middle/click"     attribute="value" default="8" text="#s86" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/middle/dblclick"  attribute="value" default="0" text="#s87" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/middle/clickhold" attribute="value" default="0" text="#s88" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/middle/clickwait" attribute="value" default="0" text="#s89" value="300" optiongrp="1" widthgroup="1" />
+    </item>
+    <item type="text" text="#s84" value="b">
+      <item type="cmb" key="mouse/extra1/click"     attribute="value" default="10" text="#s86" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/extra1/dblclick"  attribute="value" default="0" text="#s87" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/extra1/clickhold" attribute="value" default="0" text="#s88" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/extra1/clickwait" attribute="value" default="0" text="#s89" value="300" optiongrp="1" widthgroup="1" />
+    </item>
+    <item type="text" text="#s85" value="b">
+      <item type="cmb" key="mouse/extra2/click"     attribute="value" default="11" text="#s86" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/extra2/dblclick"  attribute="value" default="0" text="#s87" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/extra2/clickhold" attribute="value" default="0" text="#s88" value="300" optiongrp="1" widthgroup="1" />
+      <item type="cmb" key="mouse/extra2/clickwait" attribute="value" default="0" text="#s89" value="300" optiongrp="1" widthgroup="1" />
+    </item>
+
+    <item type="text" text="#s90" value="b">
+      <item type="cmb" key="mouse/rightbuttondrag" attribute="value" default="0" value="300" widthgroup="1" text="#s91" tooltip="#s91">
+        <option text="#s92" value="0"/>
+        <option text="#s93" value="1"/>
+        <option text="#s94" value="2"/>
+      </item>
+    </item>
+
+    <item type="text" text="#s480" value="b">
+      <item type="text" text="#s481">
+        <item type="chk" key="mouse/clickonemptyarea_gotoparent" attribute="value" value="80" default="0" text="#s482" />
+      </item>
+      <item type="text" text="#s483">
+        <item type="chk" key="mouse/clickonemptyrowarea_showparentmenu" attribute="value" value="80" default="0" text="#s484" />
+      </item>
+      <item type="chk" key="mouse/selectonhoverover" attribute="value" value="80" default="0" text="#s487" tooltip="#s487">
+        <item type="edit2" key="mouse/selectonhoveroverdelay" attribute="value" default="300" minvalue="20" text="#s488" tooltip="#s488"/>
+      </item>
+    </item>
+    <item type="text" text="#s490" value="b" tooltip="#s490">
+      <item type="cmb" key="mouse/CustomAction1" attribute="value" default="0" text="#s491" value="300"  externalsource="UserCommandList" widthgroup="2" />
+      <item type="cmb" key="mouse/CustomAction2" attribute="value" default="0" text="#s492" value="300"  externalsource="UserCommandList" widthgroup="2" />
+      <item type="cmb" key="mouse/CustomAction3" attribute="value" default="0" text="#s493" value="300"  externalsource="UserCommandList" widthgroup="2" />
+      <item type="cmb" key="mouse/CustomAction4" attribute="value" default="0" text="#s494" value="300"  externalsource="UserCommandList" widthgroup="2" />
+      <item type="cmb" key="mouse/CustomAction5" attribute="value" default="0" text="#s495" value="300"  externalsource="UserCommandList" widthgroup="2" />
+    </item>
+    <item type="text"/>
+    <item type="text" text="#s30" value="b">
+      <item type="cmb" key="mouse/pathfield/left/clickitem" attribute="value" default="4" text="#s31" value="300" optiongrp="2" widthgroup="1" />
+      <item type="cmb" key="mouse/pathfield/left/ctrlclickitem" attribute="value" default="2" text="#s32" value="300" optiongrp="2" widthgroup="1" />
+      <item type="cmb" key="mouse/pathfield/left/ctrlshiftclickitem" attribute="value" default="3" text="#s33" value="300" optiongrp="2" widthgroup="1" />
+      <item type="cmb" key="mouse/pathfield/left/ctrlclickanywhere" attribute="value" default="0" text="#s34" value="300" optiongrp="2" widthgroup="1" />
+
+      <item type="cmb" key="mouse/pathfield/right/clickitem" attribute="value" default="2" text="#s35" value="300" optiongrp="2" widthgroup="1" />
+      <item type="cmb" key="mouse/pathfield/right/ctrlclickitem" attribute="value" default="0" text="#s36" value="300" optiongrp="2" widthgroup="1" />
+      <item type="cmb" key="mouse/pathfield/right/ctrlshiftclickitem" attribute="value" default="3" text="#s37" value="300" optiongrp="2" widthgroup="1" />
+      <item type="cmb" key="mouse/pathfield/right/clicknoneitem" attribute="value" default="5" text="#s38" value="300" optiongrp="2" widthgroup="1" />
+      <item type="cmb" key="mouse/pathfield/right/clickanywhere" attribute="value" default="0" text="#s39" value="300" optiongrp="2" widthgroup="1" />
+      <item type="cmb" key="mouse/pathfield/right/ctrlclickanywhere" attribute="value" default="1" text="#s40" value="300" optiongrp="2" widthgroup="1" />
+      <item type="text" text="#s41" />
+    </item>
+
+  </section>
+  <sectionx text="Touch and Pen support">
+    <itemx type="text" text="(Very Exprimental)" value="ib"/>
+    <itemx type="chk" key="touch" text="Touch" >
+    </itemx>
+    <itemx type="chk" key="pen" text="Pen" >
+    </itemx>
+  </sectionx>
+  <section text="#s900">
+    <item type="text" text="#s901" value="b">
+      <item type="chk" key="layout/tweak/devicefilter/globaltoolbar" attribute="value" default="0" text="#s905" restartrequired="1" expand="0" >
+        <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/floppy" attribute="value" default="0" text="#s910"  restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/localdrives" attribute="value" default="1" text="#s911" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/disc" attribute="value" default="1" text="#s912"  restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/removable" attribute="value" default="1" text="#s913" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/remote" attribute="value" default="1" text="#s914" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/unc" attribute="value" default="1" text="#s915" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/virtualdevices" attribute="value" default="1" text="#s916" restartrequired="1" />
+
+        <item type="edit2" key="layout/tweak/devicefilter/globaltoolbar/devicefilter" attribute="value" default="*" text="#s472" tooltip="#s472" />
+
+        <item type="text" text="#s920" value="b">
+          <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/desktop" attribute="value" default="1" text="#s921" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/documents" attribute="value" default="1" text="#s922" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/publicdocuments" attribute="value" default="1" text="#s923"  restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/downloads" attribute="value" default="1" text="#s924" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/music" attribute="value" default="1" text="#s925" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/pictures" attribute="value" default="1" text="#s926" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/video" attribute="value" default="1" text="#s927" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/onedrive" attribute="value" default="1" text="#s928" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/dropbox" attribute="value" default="1" text="#s929" restartrequired="1" />
+        </item>
+      </item>
+    </item>
+    <item type="text" text="#s902" value="b">
+      <item type="chk" key="layout/tweak/devicefilter/paneltoolbar" attribute="value" default="0" text="#s905" restartrequired="1" expand="0">
+        <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/floppy" attribute="value" default="0" text="#s910"  restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/localdrives" attribute="value" default="1" text="#s911" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/disc" attribute="value" default="1" text="#s912"  restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/removable" attribute="value" default="1" text="#s913" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/remote" attribute="value" default="1" text="#s914" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/unc" attribute="value" default="1" text="#s915" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/virtualdevices" attribute="value" default="1" text="#s916" restartrequired="1" />
+
+        <item type="edit2" key="layout/tweak/devicefilter/paneltoolbar/devicefilter" attribute="value" default="*" text="#s472" tooltip="#s472" />
+
+        <item type="text" text="#s920" value="b">
+          <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/desktop" attribute="value" default="1" text="#s921" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/documents" attribute="value" default="1" text="#s922" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/publicdocuments" attribute="value" default="1" text="#s923"  restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/downloads" attribute="value" default="1" text="#s924" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/music" attribute="value" default="1" text="#s925" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/pictures" attribute="value" default="1" text="#s926" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/video" attribute="value" default="1" text="#s927" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/onedrive" attribute="value" default="1" text="#s928" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/dropbox" attribute="value" default="1" text="#s929" restartrequired="1" />
+        </item>
+      </item>
+    </item>
+    <item type="text" text="#s903" value="b">
+      <item type="chk" key="layout/tweak/devicefilter/paneldropdown" attribute="value" default="0" text="#s905" restartrequired="1" expand="0">
+        <item type="chk" key="layout/tweak/devicefilter/paneldropdown/floppy" attribute="value" default="0" text="#s910"  restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/paneldropdown/localdrives" attribute="value" default="1" text="#s911" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/paneldropdown/disc" attribute="value" default="1" text="#s912"  restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/paneldropdown/removable" attribute="value" default="1" text="#s913" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/paneldropdown/remote" attribute="value" default="1" text="#s914" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/paneldropdown/unc" attribute="value" default="1" text="#s915" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/paneldropdown/virtualdevices" attribute="value" default="1" text="#s916" restartrequired="1" />
+
+        <item type="edit2" key="layout/tweak/devicefilter/paneldropdown/devicefilter" attribute="value" default="*" text="#s472" tooltip="#s472" />
+
+        <item type="text" text="#s920" value="b">
+          <item type="chk" key="layout/tweak/devicefilter/paneldropdown/desktop" attribute="value" default="1" text="#s921" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneldropdown/documents" attribute="value" default="1" text="#s922" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneldropdown/publicdocuments" attribute="value" default="1" text="#s923"  restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneldropdown/downloads" attribute="value" default="1" text="#s924" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneldropdown/music" attribute="value" default="1" text="#s925" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneldropdown/pictures" attribute="value" default="1" text="#s926" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneldropdown/video" attribute="value" default="1" text="#s927" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneldropdown/onedrive" attribute="value" default="1" text="#s928" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneldropdown/dropbox" attribute="value" default="1" text="#s929" restartrequired="1" />
+        </item>
+      </item>
+    </item>
+    <item type="text" text="#s904" value="b">
+      <item type="chk" key="layout/tweak/devicefilter/foldertree" attribute="value" default="0" text="#s905" restartrequired="1" expand="0">
+        <item type="chk" key="layout/tweak/devicefilter/foldertree/floppy" attribute="value" default="0" text="#s910"  restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/foldertree/localdrives" attribute="value" default="1" text="#s911" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/foldertree/disc" attribute="value" default="1" text="#s912"  restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/foldertree/removable" attribute="value" default="1" text="#s913" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/foldertree/remote" attribute="value" default="1" text="#s914" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/foldertree/unc" attribute="value" default="1" text="#s915" restartrequired="1" />
+        <item type="chk" key="layout/tweak/devicefilter/foldertree/virtualdevices" attribute="value" default="1" text="#s916" restartrequired="1" />
+
+        <item type="edit2" key="layout/tweak/devicefilter/foldertree/devicefilter" attribute="value" default="*" text="#s472" tooltip="#s472" />
+        <!--
+        <item type="text" text="#s920" value="b">
+          <item type="chk" key="layout/tweak/devicefilter/foldertree/desktop" attribute="value" default="1" text="#s921" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/foldertree/documents" attribute="value" default="1" text="#s922" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/foldertree/publicdocuments" attribute="value" default="1" text="#s923"  restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/foldertree/downloads" attribute="value" default="1" text="#s924" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/foldertree/music" attribute="value" default="1" text="#s925" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/foldertree/pictures" attribute="value" default="1" text="#s926" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/foldertree/video" attribute="value" default="1" text="#s927" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/foldertree/onedrive" attribute="value" default="1" text="#s928" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/foldertree/dropbox" attribute="value" default="1" text="#s929" restartrequired="1" />
+        </item>
+         -->
+      </item>
+    </item>
+  </section>
+</settings_layout>

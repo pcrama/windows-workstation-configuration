@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings_layout name="Local and NetworkSettings" use_sections="y" expand_all="y" >
+  <section text="#s2400">
+    <item type="text" value="b" text="#s2450" >
+      <item type="cmb" key="network/scanmethod" attribute="value" value="140,230" default="1" text="#s2451" tooltip="#s2451" >
+        <option text="#s2452" value="1" />
+        <option text="#s2453" value="2" />
+        <option text="#s2454" value="3" />
+      </item>
+      <item type="chk" key="network/keepcache" attribute="value" default="1" text="#s2460" tooltip="#s2460" />
+    </item>
+  </section>
+</settings_layout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings_layout name="#s100" use_sections="y" expand_all="y" >
+  <section text="#s101">
+    <item type="text" value="b" text="#s110">
+      <item type="cmb" key="encoding/codepage"  attribute="value" default="-1" text="#s111" value="300" widthgroup="1" >
+        <option text="#s200" value="-1"/>
+        <option text="#s201" value="-2"/>
+        <option text="437 - OEM - US (Zip Standard)" value="437"/>
+        <option text="737 - OEM - Greek" value="737"/>
+        <option text="775 - OEM - Baltic" value="775"/>
+        <option text="850 - OEM - Latin 1 - Western European" value="850"/>
+        <option text="852 - OEM - Latin 2 - Central European" value="852" />
+        <option text="855 - OEM - Cyrillic" value="855" />
+        <option text="857 - OEM - Turkish" value="857" />
+        <option text="860 - OEM - Portuguese" value="860" />
+        <option text="861 - OEM - Icelandic" value="861" />
+        <option text="862 - OEM - Hebrew" value="862" />
+        <option text="863 - OEM - French Canadian" value="863" />
+        <option text="864 - OEM - Arabic" value="864" />
+        <option text="865 - OEM - Nordic" value="865" />
+        <option text="866 - OEM - Russian (Cyrillic)" value="866"/>
+        <option text="869 - OEM - Modern Greek" value="869" />
+        <option text="874 - ANSI/OEM-Thai" value="874" />
+        <option text="932 - ANSI/OEM Japanese" value="932" />
+        <option text="936 - ANSI/OEM Simplified Chinese" value="936" />
+        <option text="949 - ANSI/OEM Korean" value="949" />
+        <option text="950 - ANSI/OEM Traditional Chinese, BIG5" value="950" />
+        <option text="1250 - ANSI Central European" value="1250" />
+        <option text="1251 - ANSI Cyrillic" value="1251" />
+        <option text="1252 - ANSI Latin 1 - Western European" value="1252" />
+        <option text="1253 - ANSI Greek" value="1253" />
+        <option text="1254 - ANSI Turkish" value="1254" />
+        <option text="1255 - ANSI Hebrew" value="1255" />
+        <option text="1256 - ANSI Arabic" value="1256" />
+        <option text="1257 - ANSI Baltic" value="1257" />
+        <option text="1258 - ANSI Vietnamese" value="1258" />
+        <option text="28591 - ISO 8859-1 - Latin 1- Western European" value="28591" />
+        <option text="28592 - ISO 8859-2 - Central European" value="28592" />
+        <option text="28593 - ISO 8859-3 - Latin 3" value="28593" />
+        <option text="28595 - ISO 8859-5 - Cyrillic" value="28595" />
+        <option text="#s299" value="-3"/>
+      </item>
+
+      <item type="edit2" key="encoding/customcodepage" attribute="value" default="" text="#s300" tooltip="#s300" />
+      <item type="text" text="#s310" value="b">
+        <item type="chk" key="encoding/createzip/utf8" text="#s311" tooltip="#s311" attribute="value"/>
+      </item>
+    </item>
+  </section>
+</settings_layout>

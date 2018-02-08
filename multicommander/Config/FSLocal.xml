@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config>
+  <network>
+    <scanmethod value="1"/>
+    <keepcache value="1"/>
+  </network>
+</config>

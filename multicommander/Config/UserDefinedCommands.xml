@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userdefinedcommands>
+  <userdefinedcommand name="Google Search" id="3146babb15934bc6b53872c1c6c1dfc9" type="multiscript">
+    <tip>Search google from the command line&#13;
+Create an alias named 'g' and connected it to this command.</tip>
+    <command>function CreateGoolgeSearchQuery()</command>
+    <command>{</command>
+    <command>  @var $query = "";</command>
+    <command>  @var $n = 0;</command>
+    <command>  for( $n = 0; $n &lt; $argcount; $n = $n + 1 )</command>
+    <command>  {</command>
+    <command>    if( $n &gt; 0 )</command>
+    <command>    {</command>
+    <command>       $query = $query + "+";</command>
+    <command>    }</command>
+    <command>    $query = $query + $arg($n);</command>
+    <command>  }</command>
+    <command>  return $query;</command>
+    <command>}</command>
+    <command>@var $s = "";</command>
+    <command>$s = "http://www.google.com/search?q=" + CreateGoolgeSearchQuery();</command>
+    <command>MC.Run CMD="{$s}" SHELL </command>
+  </userdefinedcommand>
+  <userdefinedcommand name="Play .M3U in Folder" id="0dafc203b8264bb28da415d7370a8f05" type="multiscript">
+    <tip>Play the first m3u file located in selected folder</tip>
+    <command>MC.Run CMD={_findfirstfile( "{focusfilepath}\*.m3u" )} SHELL</command>
+  </userdefinedcommand>
+</userdefinedcommands>

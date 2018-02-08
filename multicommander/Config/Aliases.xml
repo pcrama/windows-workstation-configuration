@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <aliases>
+    <alias name="c">cd c:\</alias>
+    <alias name="d">cd d:\</alias>
+    <alias name="e">cd e:\</alias>
+    <alias name="n">notepad.exe</alias>
+    <alias name="cu">cd REG:\HKEY_CURRENT_USER\Software</alias>
+    <alias name="lm">cd REG:\HKEY_LOCAL_MACHINE\Software</alias>
+    <alias name="g">@3146babb15934bc6b53872c1c6c1dfc9</alias>
+    <alias name="p">@0dafc203b8264bb28da415d7370a8f05</alias>
+  </aliases>
+</config>

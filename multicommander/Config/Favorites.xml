@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<favorites>
+  <favsection name="$QUICKPATHS$" type="quickpaths">
+    <favitem name="" type="" quickid="1"/>
+    <favitem name="" type="" quickid="2"/>
+    <favitem name="" type="" quickid="3"/>
+    <favitem name="" type="" quickid="4"/>
+    <favitem name="" type="" quickid="5"/>
+    <favitem name="" type="" quickid="6"/>
+    <favitem name="" type="" quickid="7"/>
+    <favitem name="" type="" quickid="8"/>
+    <favitem name="" type="" quickid="9"/>
+    <favitem name="" type="" quickid="10"/>
+  </favsection>
+  <favsection name="Favorites">
+    <favitem name="Bureau" type="">C:\Users\philippe\Desktop</favitem>
+    <favitem name="Téléchargements" type="">C:\Users\philippe\Downloads</favitem>
+    <favitem name="Documents" type="">C:\Users\philippe\Documents</favitem>
+  </favsection>
+  <favsection name="Web">
+    <favfolder name="MultiCommander">
+      <favitem name="Multi Commander home page" type="">http://multicommander.com</favitem>
+      <favitem name="Multi Commander Online Forum" type="">http://forum.multicommander.com</favitem>
+      <favitem name="Multi Commander Online Documentation" type="">http://multicommander.com/docs</favitem>
+    </favfolder>
+  </favsection>
+</favorites>
