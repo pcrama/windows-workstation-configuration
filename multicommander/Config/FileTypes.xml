@@ -1,2 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config/>
+<filetypes>
+  <view>
+    <viewer name="MultiDataViewer" default="1">
+      <program type="2" name="MultiDataViewer" path="eb565a07cddf4dacabe7cf61982ae6fe" args=""/>
+      <icon use="0" path="" index="-1"/>
+      <extensions>*</extensions>
+    </viewer>
+    <viewer name="MC Picture Viewer">
+      <program type="2" name="MC Picture Viewer" path="949375A072C540F08E36B3ACB5DCF19A" args=""/>
+      <icon use="0" path="" index="-1"/>
+      <extensions>*.jpg *.jpeg *.png *.bmp *.gif *.ico *.tif *.tiff *.cr2 *.nef *.dcr</extensions>
+    </viewer>
+    <viewer name="SumatraPDF">
+      <program type="1" name="" path="${mcpath}\..\..\sumatrapdf\current\SumatraPDF.exe" args="&quot;${filepath}&quot;"/>
+      <icon use="0" path="" index="-1"/>
+      <extensions>*.pdf *.epub *.mobi *.xps *.djvu *.chm *.cbz *.cpr</extensions>
+    </viewer>
+  </view>
+  <edit>
+    <editor name="Notepad" default="1">
+      <program type="1" name="" path="emacsclientw.exe" args="--alternate-editor= &quot;${filepath}&quot;"/>
+      <icon use="0" path="" index="-1"/>
+      <extensions>*</extensions>
+    </editor>
+    <editor name="Default Picture Editor">
+      <program type="3" name="" path="edit" args=""/>
+      <icon use="0" path="" index="-1"/>
+      <extensions>*.jpg *.jpeg *.png *.bmp *.gif *.tif *.tiff</extensions>
+    </editor>
+  </edit>
+  <run>
+    <launcher name="Windows Open" default="1">
+      <program type="3" name="" path="default" args=""/>
+      <icon use="0" path="" index="-1"/>
+      <extensions>*</extensions>
+    </launcher>
+  </run>
+</filetypes>

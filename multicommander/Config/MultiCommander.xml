@@ -41,6 +41,11 @@
       <keepNTFSperm value="0"/>
       <keepNTFSsubstreams value="0"/>
       <speedlimit value="128"/>
+      <autoclose value="1"/>
+      <onlyautocloseshort value="1"/>
+      <keepbroken value="-1"/>
+      <fslinks value="1"/>
+      <autoloadpreset value="1"/>
     </fileoperations>
     <confirmation>
       <overwriting value="1"/>

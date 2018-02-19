@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <favorites>
   <favsection name="$QUICKPATHS$" type="quickpaths">
-    <favitem name="" type="" quickid="1"/>
+    <favitem name="HOME" type="" quickid="1">%HOMEDRIVE%%HOMEPATH%</favitem>
     <favitem name="" type="" quickid="2"/>
     <favitem name="" type="" quickid="3"/>
     <favitem name="" type="" quickid="4"/>
