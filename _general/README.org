@@ -43,5 +43,61 @@ Copy-Item -Path "$multicmdsrc\TOTD" -Destination "$multicmdest" -Recurse
 Copy-Item -Path "$multicmdsrc\Presets" -Destination "$multicmdest" -Recurse
 Copy-Item -Path "$multicmdsrc\CfgProfiles" -Destination "$multicmdest" -Recurse
 
+scoop bucket add versions
+scoop install -a 32bit python27
+scoop install -a 32bit tomcat
+
+scoop install dngrep dview sumatrapdf plantuml pdftk unison workrave flux
+
 . "$scoop\persist\_general\makeshortcut.ps1"
 #+END_EXAMPLE
+
+PS C:\Users\cramaph1\scoop> scoop list
+Installed apps:
+
+  7zip 18.01
+  android-studio 3.0.1.0 [extras]
+  ant 1.10.2
+  autohotkey 1.1.25.01 [extras]
+  autoit 3.3.14.2 [scoop-buckets]
+  conemu 18.01.31 [extras]
+  dd 0.6beta3
+  ditto 3.21.223.0 [extras]
+  dngrep 2.8.16.0 [scoop-buckets]
+  dotnet-sdk 2.1.4
+  dview 1.7.2 [scoop-buckets]
+  ec2-api-tools 1.7.3.0 [extras]
+  ezwinports 20170329 [scoop-buckets]
+  fd 6.2.0
+  flux 3.12 [C:\Users\cramaph1\opt\scoop\buckets\scoop-buckets\flux.json]
+  FSViewer 6.4 [scoop-buckets]
+  git 2.16.1.windows.4
+  gpg4win 3.0.3 [extras]
+  gradle 4.5.1
+  graphviz 2.38
+  greenshot 1.2.10.6 [extras]
+  innounp 0.46
+  keypirinha 2.18.2 [extras]
+  locate32 3.1.11.7100 [C:\Users\cramaph1\opt\scoop\buckets\scoop-buckets\locate32.json]
+  multicommander 7.7.0.2404 [scoop-buckets]
+  nuget 4.5.1
+  p4merge 152.131.2139 [extras]
+  pdftk 2.02
+  plantuml 1.2018.1 [extras]
+  putty 0.70 [extras]
+  python27 2.7.14 [versions] {32bit}
+  ripgrep 0.7.1
+  ruby 2.5.0-1
+  sift 0.9.0 [scoop-buckets]
+  smallcliutils 2 [scoop-buckets]
+  snaketail 1.9.4 [extras]
+  stduviewer 1.6.375 [scoop-buckets]
+  SumatraPDF 3.1.2 [extras]
+  sysinternals 2017.09.16 [extras]
+  tomcat 8.5.27 [extras] {32bit}
+  unison 2.48.4 [scoop-buckets]
+  vlc 2.2.8 [extras]
+  winmerge 2.14.0 [extras]
+  workrave 1.10.1 [C:\Users\cramaph1\opt\scoop\buckets\scoop-buckets\workrave.json]
+  xming 6.9.0.31
+  zip 3.0
