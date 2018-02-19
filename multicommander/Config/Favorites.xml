@@ -13,9 +13,9 @@
     <favitem name="" type="" quickid="10"/>
   </favsection>
   <favsection name="Favorites">
-    <favitem name="Bureau" type="">C:\Users\philippe\Desktop</favitem>
-    <favitem name="Téléchargements" type="">C:\Users\philippe\Downloads</favitem>
-    <favitem name="Documents" type="">C:\Users\philippe\Documents</favitem>
+    <favitem name="Desktop" type="">%HOMEDRIVE%%HOMEPATH%\Desktop</favitem>
+    <favitem name="Downloads" type="">%HOMEDRIVE%%HOMEPATH%\Downloads</favitem>
+    <favitem name="Documents" type="">%HOMEDRIVE%%HOMEPATH%\Documents</favitem>
   </favsection>
   <favsection name="Web">
     <favfolder name="MultiCommander">
