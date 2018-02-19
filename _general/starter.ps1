@@ -6,10 +6,16 @@ Function Start-OnceOnly {
     try {
         $_ = Get-Process $shim -ErrorAction Stop
         Write-Host "$shim already running"
+        Return $False
     } catch {
         Write-Host "Starting $shim"
-        Start-Sleep $delay
-        . $shim
+        try {
+            . $shim
+            Return $True
+        } catch {
+            Write-Host "Skipping $shim"
+            Return $False
+        }
     }
 }
 
@@ -63,6 +69,9 @@ Foreach ($x in (@("flux", 10),
                 @("ditto", 10),
                 @("multicommander", 10),
                 @("keypirinha", 10))) {
-    Start-OnceOnly $x[0] $x[1]
-    Wait-Process $x[0]
+    If (Start-OnceOnly $x[0] $x[1]) {
+        Wait-Process $x[0]
+        Write-Host "Sleeping $($delay)s after $($x[0]) started"
+        Start-Sleep $delay
+    }
 }
