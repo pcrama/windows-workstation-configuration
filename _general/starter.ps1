@@ -1,7 +1,6 @@
 Function Start-OnceOnly {
     param (
-        [string]$shim,
-        [int]$delay
+        [string]$shim
     )
     try {
         $_ = Get-Process $shim -ErrorAction Stop
@@ -69,9 +68,9 @@ Foreach ($x in (@("flux", 10),
                 @("ditto", 10),
                 @("multicommander", 10),
                 @("keypirinha", 10))) {
-    If (Start-OnceOnly $x[0] $x[1]) {
+    If (Start-OnceOnly $x[0]) {
         Wait-Process $x[0]
-        Write-Host "Sleeping $($delay)s after $($x[0]) started"
-        Start-Sleep $delay
+        Write-Host "Sleeping $($x[1])s after $($x[0]) started"
+        Start-Sleep $x[1]
     }
 }
