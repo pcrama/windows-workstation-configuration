@@ -103,6 +103,7 @@ DisableRecieve=0
 ListToPutOnClipboard=
 NetworkExtraPassword=
 RequestFilesUsingIP=0
+DiffApp=WinMergeU.exe
 [DisplayFont5]
 Height=-33
 Width=0
