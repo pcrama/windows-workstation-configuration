@@ -47,7 +47,7 @@ scoop bucket add versions
 scoop install -a 32bit python27
 scoop install -a 32bit tomcat
 
-scoop install dngrep dview sumatrapdf plantuml pdftk unison workrave flux
+scoop install dngrep dview sumatrapdf plantuml pdftk unison workrave flux jpegview
 
 . "$scoop\persist\_general\makeshortcut.ps1"
 #+END_EXAMPLE

@@ -9,12 +9,17 @@
     <viewer name="MC Picture Viewer">
       <program type="2" name="MC Picture Viewer" path="949375A072C540F08E36B3ACB5DCF19A" args=""/>
       <icon use="0" path="" index="-1"/>
-      <extensions>*.jpg *.jpeg *.png *.bmp *.gif *.ico *.tif *.tiff *.cr2 *.nef *.dcr</extensions>
+      <extensions>*.ico *.cr2 *.nef *.dcr</extensions>
     </viewer>
     <viewer name="SumatraPDF">
       <program type="1" name="" path="${mcpath}\..\..\sumatrapdf\current\SumatraPDF.exe" args="&quot;${filepath}&quot;"/>
       <icon use="0" path="" index="-1"/>
       <extensions>*.pdf *.epub *.mobi *.xps *.djvu *.chm *.cbz *.cpr</extensions>
+    </viewer>
+    <viewer name="JPEGView">
+      <program type="1" name="" path="${mcpath}\..\..\jpegview\current\JPEGView.exe" args="&quot;${filepath}&quot;"/>
+      <icon use="0" path="" index="-1"/>
+      <extensions>*.jpg *.jpeg *.png *.bmp *.gif *.tif *.tiff *.webp *.tga</extensions>
     </viewer>
   </view>
   <edit>
