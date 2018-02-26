@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keymap/>
+<keymap>
+  <map extid="a4c2985d9c7e4035a3221cfd600171d0" ctrl="0" cmd="40107" key="P" keymod="CAS"/>
+  <map extid="3f93229334d648ab8dcc1eb4f62b8ef7" ctrl="0" cmd="30005" key="-" keymod="CS"/>
+  <map extid="3f93229334d648ab8dcc1eb4f62b8ef7" ctrl="0" cmd="30012" key="-" keymod="C"/>
+</keymap>

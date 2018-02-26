@@ -47,7 +47,7 @@ scoop bucket add versions
 scoop install -a 32bit python27
 scoop install -a 32bit tomcat
 
-scoop install dngrep dview sumatrapdf plantuml pdftk unison workrave flux jpegview winmerge
+scoop install dngrep dview sumatrapdf plantuml pdftk unison workrave flux jpegview winmerge paint.net
 
 . "$scoop\persist\_general\makeshortcut.ps1"
 #+END_EXAMPLE
@@ -101,3 +101,11 @@ Installed apps:
   workrave 1.10.1 [C:\Users\cramaph1\opt\scoop\buckets\scoop-buckets\workrave.json]
   xming 6.9.0.31
   zip 3.0
+
+* Other setup actions to investigate
+** TODO Setting a mouse trail
+- [[https://msdn.microsoft.com/en-us/library/ms724947(v=VS.85).aspx][MSDN for SystemParametersInfo]]:
+  - ~SPI_SETMOUSETRAILS~
+  - ~SPI_SETMOUSESONAR~
+  - ~SPI_SETMOUSEVANISH~
+- [[http://www.strichnet.com/edit-and-apply-registry-settings-via-powershell/][How to call SystemParametersInfo from Powershell]]
