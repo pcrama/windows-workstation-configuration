@@ -67,8 +67,13 @@ Foreach ($x in (@("flux", 10),
                 @("greenshot", 10),
                 @("ditto", 10),
                 @("multicommander", 10),
-                @("keypirinha", 10))) {
+                @("keypirinha", 10, "keypirinha-x64"))) {
     If (Start-OnceOnly $x[0]) {
+        if ($x[2] -eq $null) {
+            $procname = $x[0]
+        } else {
+            $procname = $x[2]
+        }
         Wait-ProcessExistsP $procname
         Write-Host "Sleeping $($x[1])s after $($x[0]) started"
         Start-Sleep $x[1]
