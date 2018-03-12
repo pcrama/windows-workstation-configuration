@@ -122,3 +122,4 @@ FaceName=Segoe UI
 
 [PasteStrings]
 emacs.exe=^y
+putty.exe=+{INS}
