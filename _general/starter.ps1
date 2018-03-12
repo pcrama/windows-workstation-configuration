@@ -18,7 +18,7 @@ Function Start-OnceOnly {
     }
 }
 
-Function Wait-Process {
+Function Wait-ProcessExistsP {
     param (
         [string]$shim
     )
@@ -59,7 +59,7 @@ $scoop = $Env:SCOOP
 $ssh_agent = "$scoop\apps\git\current\usr\bin\ssh-agent.exe"
 Write-Host "SCOOP=`"$($Env:SCOOP)`"`nbasename=`"$basename`"`nconemu=`"$conemu`"`nscoop=`"$scoop`"`nssh_agent=`"$ssh_agent`""
 Start-Process -WindowStyle Hidden -FilePath "$ssh_agent" -ArgumentList @("$conemu", "-LoadCfgFile", "$($scoop)\persist\conemu\conemu.xml")
-Wait-Process bash
+Wait-ProcessExistsP bash
 
 # Start other programs with a certain delay...
 Foreach ($x in (@("flux", 10),
@@ -69,7 +69,7 @@ Foreach ($x in (@("flux", 10),
                 @("multicommander", 10),
                 @("keypirinha", 10))) {
     If (Start-OnceOnly $x[0]) {
-        Wait-Process $x[0]
+        Wait-ProcessExistsP $procname
         Write-Host "Sleeping $($x[1])s after $($x[0]) started"
         Start-Sleep $x[1]
     }
