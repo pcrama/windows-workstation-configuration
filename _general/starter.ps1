@@ -54,8 +54,8 @@ $Env:PATH = (
     ";" + $Env:PATH)
 
 $basename = "ConEmu64.exe"
-$conemu = "$(Resolve-Path (scoop which "$basename"))"
 $scoop = $Env:SCOOP
+$conemu = "$scoop\apps\conemu\current\$basename"
 $ssh_agent = "$scoop\apps\git\current\usr\bin\ssh-agent.exe"
 Write-Host "SCOOP=`"$($Env:SCOOP)`"`nbasename=`"$basename`"`nconemu=`"$conemu`"`nscoop=`"$scoop`"`nssh_agent=`"$ssh_agent`""
 Start-Process -WindowStyle Hidden -FilePath "$ssh_agent" -ArgumentList @("$conemu", "-LoadCfgFile", "$($scoop)\persist\conemu\conemu.xml")
