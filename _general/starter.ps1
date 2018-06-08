@@ -44,14 +44,16 @@ Write-Host "Initial Path=$($Env:PATH)"
 $Env:HOME = $Env:HOMEDRIVE + $Env:HOMEPATH
 $opt = $Env:HOME + "\opt"
 $Env:PATH = (
-    "$opt\emaxw64\bin" +
-    ";$opt\bin" +
+    "$opt\bin" +
     ";$($Env:HOME)\AppData\Roaming\Python\Scripts" +
     ";$opt\vasco\DigipassSequencer-20170519_2_3_6_2_QA" +
     ";$opt\vasco\DPEmulator_1_0_5_0_forVC_3_15_0" +
     ";$opt\vasco\DpxDumpPro" +
     ";$opt\vasco\bin" +
+    ";$($Env:SCOOP)\apps\emax64\current\emax64\bin" +
     ";" + $Env:PATH)
+
+$Env:GRAPHVIZ_DOT = $scoop + "\shims\dot.exe"
 
 $basename = "ConEmu64.exe"
 $scoop = $Env:SCOOP
