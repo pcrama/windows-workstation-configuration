@@ -2,7 +2,7 @@
 <config global="1">
   <appinfo>
     <name>MultiCommander</name>
-    <version>7.7.0.2404</version>
+    <version>8.1.0.2452</version>
   </appinfo>
   <modules folder="Extensions"/>
   <filesystem>
@@ -46,6 +46,7 @@
       <keepbroken value="-1"/>
       <fslinks value="1"/>
       <autoloadpreset value="1"/>
+      <skipemptyfolders value="0"/>
     </fileoperations>
     <confirmation>
       <overwriting value="1"/>
@@ -69,7 +70,7 @@
       <defaulttotarget value="0"/>
     </unpack>
     <pack>
-      <defaulttotarget value="1"/>
+      <defaulttotarget value="0"/>
     </pack>
     <fslinks>
       <delete value="2"/>
@@ -98,6 +99,7 @@
     <filesystemscanning>
       <show value="0"/>
       <save value="0"/>
+      <extendedscanlog value="0"/>
     </filesystemscanning>
     <logwindow>
       <font FontName="Courier New" SizePt="9" Style=""/>
