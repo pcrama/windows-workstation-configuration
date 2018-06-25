@@ -53,7 +53,7 @@ $Env:PATH = (
     ";$($Env:SCOOP)\apps\emax64\current\emax64\bin" +
     ";" + $Env:PATH)
 
-$Env:GRAPHVIZ_DOT = $scoop + "\shims\dot.exe"
+$Env:GRAPHVIZ_DOT = $Env:SCOOP + "\shims\dot.exe"
 
 $basename = "ConEmu64.exe"
 $scoop = $Env:SCOOP
