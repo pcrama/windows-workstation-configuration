@@ -7,7 +7,7 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 pause
 
 scoop install git
-$scoop="$(Resolve-Path "$(Split-Path (scoop which 7z))\..\..\..")"
+Resolve-Path "$(scoop prefix scoop)\..\..\.."
 git clone https://github.com/pcrama/windows-workstation-configuration.git -o https-origin "$scoop\persist"
 
 Write-Host "Pull https://github.com/lukesampson/scoop/pull/1934"
@@ -96,3 +96,72 @@ Installed apps:
   - ~SPI_SETMOUSESONAR~
   - ~SPI_SETMOUSEVANISH~
 - [[http://www.strichnet.com/edit-and-apply-registry-settings-via-powershell/][How to call SystemParametersInfo from Powershell]]
+* Setting up with git-sdk-64
+** Git SDK (MINGW64 + MSYS2)
+#+BEGIN_EXAMPLE
+  $gitZip = "git-sdk-64-master.zip"
+  $gitDest = "C:\gitsdk"
+  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+  (New-Object System.Net.WebClient).DownloadFile("https://github.com/git-for-windows/git-sdk-64/archive/master.zip", $gitZip)
+  Add-Type -assembly "system.io.compression.filesystem"
+  [io.compression.zipfile]::ExtractToDirectory($gitZip, "C:\")
+  Move-Item C:\git-sdk-64-master\ $gitDest
+  & "$gitDest\msys2_shell.cmd" -msys2 -mintty -c "pacman -Syu"
+  & "$gitDest\msys2_shell.cmd" -msys2 -mintty -c "pacman -Syu" # 2nd time to make sure
+  & "$gitDest\msys2_shell.cmd" -msys2 -mintty -c "for p in MINGW-packages MSYS2-packages ; do sdk cd `$p ; done"
+#+END_EXAMPLE
+
+** Scoop
+*** Scoop installation & setup
+#+BEGIN_EXAMPLE
+  Set-ExecutionPolicy RemoteSigned -Scope Process
+  iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+  $Env:PATH += ";$gitDest\cmd"
+  scoop update
+  $scoop = Resolve-Path "$(scoop prefix scoop)\..\..\.."
+  git clone https://github.com/pcrama/windows-workstation-configuration.git -o https-origin "$scoop\persist"
+  cd "$scoop\persist"
+  git config --local user.name "Philippe Crama"
+  git config --local user.email "dontsendmespam@example.com"
+  scoop bucket add extras
+  scoop bucket add scoop-buckets https://github.com/pcrama/scoop-buckets.git
+#+END_EXAMPLE
+
+*** Install some apps
+#+BEGIN_EXAMPLE
+  scoop virustotal 7zip zip conemu ditto fd ripgrep smallcliutils greenshot keypirinha emax64 wincompose
+  scoop install 7zip zip conemu ditto fd ripgrep smallcliutils greenshot keypirinha emax64 wincompose
+#+END_EXAMPLE
+
+*** Multicommander
+#+BEGIN_EXAMPLE
+  scoop install multicommander
+  # Fix up some directories that are not under source control
+  $multicmdsrc="$scoop\apps\multicommander\current\Config.original"
+  $multicmdest="$scoop\persist\multicommander\Config"
+  Copy-Item -Path "$multicmdsrc\TOTD" -Destination "$multicmdest" -Recurse
+  Copy-Item -Path "$multicmdsrc\Presets" -Destination "$multicmdest" -Recurse
+  Copy-Item -Path "$multicmdsrc\CfgProfiles" -Destination "$multicmdest" -Recurse
+#+END_EXAMPLE
+
+*** Python + Tomcat (?) 32 bit
+#+BEGIN_EXAMPLE
+  scoop bucket add versions
+  scoop install -a 32bit python27
+  # scoop install -a 32bit tomcat
+#+END_EXAMPLE
+
+*** More applications
+#+BEGIN_EXAMPLE
+  scoop install sumatrapdf plantuml unison workrave flux jpegview meld
+#+END_EXAMPLE
+
+*** NOT installed
+#+BEGIN_EXAMPLE
+  scoop install dngrep dview pdftk winmerge paint.net smartty
+#+END_EXAMPLE
+
+*** Create starter shortcut
+#+BEGIN_EXAMPLE
+  . "$scoop\persist\_general\makeshortcut.ps1"
+#+END_EXAMPLE
