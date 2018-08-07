@@ -67,9 +67,9 @@ Wait-ProcessExistsP bash
 
 # Start other programs with a certain delay...
 Foreach ($x in (@("flux", 10),
+                @("multicommander", 10),
                 @("workrave", 10),
                 @("ditto", 10),
-                @("multicommander", 10),
                 @("WinCompose", 10),
                 @("greenshot", 10),
                 @("keypirinha", 10, "keypirinha-x64"))) {
