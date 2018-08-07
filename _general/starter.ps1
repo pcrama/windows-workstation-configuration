@@ -46,10 +46,12 @@ $opt = $Env:HOME + "\opt"
 $Env:PATH = (
     "$opt\bin" +
     ";$($Env:HOME)\AppData\Roaming\Python\Scripts" +
-    ";$opt\vasco\DigipassSequencer-20170519_2_3_6_2_QA" +
-    ";$opt\vasco\DPEmulator_1_0_5_0_forVC_3_15_0" +
-    ";$opt\vasco\DpxDumpPro" +
-    ";$opt\vasco\bin" +
+    ";C:\VASCO\Programs\Vasco.Tim.Runner\Vasco.Tim.Runner_2_4_1_7" +
+    ";C:\VASCO\Programs\DPEmulator\DPEmulator_1_0_5_1_forVC_3_15_0_beta2" +
+    ";C:\VASCO\Programs\DpxDumpPro" +
+    ";C:\VASCO\Programs\DigipassSequencer\20170519_2_3_6_2_QA" +
+    ";C:\VASCO\Programs\bin" +
+    ";C:\VASCO\Programs\IASLicenseGenerator" +
     ";$($Env:SCOOP)\apps\emax64\current\emax64\bin" +
     ";" + $Env:PATH)
 
