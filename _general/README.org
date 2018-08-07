@@ -7,7 +7,7 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 pause
 
 scoop install git
-Resolve-Path "$(scoop prefix scoop)\..\..\.."
+$scoop=Resolve-Path "$(scoop prefix scoop)\..\..\.."
 git clone https://github.com/pcrama/windows-workstation-configuration.git -o https-origin "$scoop\persist"
 
 Write-Host "Pull https://github.com/lukesampson/scoop/pull/1934"

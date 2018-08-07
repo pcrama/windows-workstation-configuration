@@ -1,4 +1,4 @@
-$scoop_shims="$(split-path -Path $(scoop which git-bash.exe))";
+$scoop_shims="$(Resolve-Path "$(scoop prefix scoop)\..\..\..\shims")"
 $persist_dir="$(split-path $scoop_shims)\persist"
 $ssh_agent="$(split-path -Path "$scoop_shims")\apps\git\current\usr\bin\ssh-agent.exe";
 $conemu="$scoop_shims\ConEmu64.exe";
