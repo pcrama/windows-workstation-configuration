@@ -44,7 +44,8 @@ Write-Host "Initial Path=$($Env:PATH)"
 $Env:HOME = $Env:HOMEDRIVE + $Env:HOMEPATH
 $opt = $Env:HOME + "\opt"
 $Env:PATH = (
-    "$opt\bin" +
+    "$($Env:SCOOP)\apps\emax64\current\emax64\bin" +
+    ";$opt\bin" +
     ";$($Env:HOME)\AppData\Roaming\Python\Scripts" +
     ";C:\VASCO\Programs\Vasco.Tim.Runner\Vasco.Tim.Runner_2_4_1_7" +
     ";C:\VASCO\Programs\DPEmulator\DPEmulator_1_0_5_1_forVC_3_15_0_beta2" +
@@ -52,7 +53,6 @@ $Env:PATH = (
     ";C:\VASCO\Programs\DigipassSequencer\20170519_2_3_6_2_QA" +
     ";C:\VASCO\Programs\bin" +
     ";C:\VASCO\Programs\IASLicenseGenerator" +
-    ";$($Env:SCOOP)\apps\emax64\current\emax64\bin" +
     ";" + $Env:PATH)
 
 $Env:GRAPHVIZ_DOT = $Env:SCOOP + "\shims\dot.exe"

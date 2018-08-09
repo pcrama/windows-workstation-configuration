@@ -96,7 +96,8 @@ Installed apps:
   - ~SPI_SETMOUSESONAR~
   - ~SPI_SETMOUSEVANISH~
 - [[http://www.strichnet.com/edit-and-apply-registry-settings-via-powershell/][How to call SystemParametersInfo from Powershell]]
-* Setting up with git-sdk-64
+
+* Tentative: Setting up with git-sdk-64
 ** Git SDK (MINGW64 + MSYS2)
 #+BEGIN_EXAMPLE
   $gitZip = "git-sdk-64-master.zip"
@@ -110,6 +111,13 @@ Installed apps:
   & "$gitDest\msys2_shell.cmd" -msys2 -mintty -c "pacman -Syu" # 2nd time to make sure
   & "$gitDest\msys2_shell.cmd" -msys2 -mintty -c "for p in MINGW-packages MSYS2-packages ; do sdk cd `$p ; done"
 #+END_EXAMPLE
+
+** Mingw64/Emacs installation (instead of emax64 from scoop)
+1. Download/unzip https://github.com/git-for-windows/git-sdk-64/archive/master.zip
+2. ~msys2_shell.cmd -mingw64 -conemu~
+3. From ~msys2~:
+   1. ~pacman -Syu~
+   2. ~pacman -Sy mingw-w64-x86_64-hunspell{,-en} mingw-w64-x86_64-librsvg mingw-w64-x86_64-emacs~
 
 ** Scoop
 *** Scoop installation & setup
