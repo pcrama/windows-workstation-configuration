@@ -115,7 +115,7 @@
 			<value name="Multi.DupConfirm" type="hex" data="01"/>
 			<value name="Multi.DetachConfirm" type="hex" data="01"/>
 			<value name="Multi.UseArrows" type="hex" data="00"/>
-			<value name="Multi.UseNumbers" type="hex" data="00"/>
+			<value name="Multi.UseNumbers" type="hex" data="01"/>
 			<value name="Multi.UseWinTab" type="hex" data="00"/>
 			<value name="Multi.AutoCreate" type="hex" data="00"/>
 			<value name="Multi.LeaveOnClose" type="hex" data="00"/>
@@ -239,7 +239,7 @@
 			<value name="FARuseASCIIsort" type="hex" data="00"/>
 			<value name="ShellNoZoneCheck" type="hex" data="00"/>
 			<value name="FixAltOnAltTab" type="hex" data="00"/>
-			<value name="UseAltGrayPlus" type="hex" data="00"/>
+			<value name="UseAltGrayPlus" type="hex" data="01"/>
 			<value name="DisableMouse" type="hex" data="00"/>
 			<value name="RSelectionFix" type="hex" data="01"/>
 			<value name="MouseSkipActivation" type="hex" data="01"/>
@@ -422,10 +422,10 @@
 				<value name="SetFocusChild" type="dword" data="00000000"/>
 				<value name="ChildSystemMenu" type="dword" data="00000000"/>
 				<value name="Multi.NewConsole" type="dword" data="00005d57"/>
-				<value name="Multi.NewConsoleShift" type="dword" data="00105b57"/>
-				<value name="Multi.CmdKey" type="dword" data="00005b58"/>
+				<value name="Multi.NewConsoleShift" type="dword" data="00105d57"/>
+				<value name="Multi.CmdKey" type="dword" data="00000000"/>
 				<value name="Multi.NewWindow" type="dword" data="00000000"/>
-				<value name="Multi.NewConsolePopup" type="dword" data="00005b4e"/>
+				<value name="Multi.NewConsolePopup" type="dword" data="00005d4e"/>
 				<value name="Multi.NewConsolePopup2" type="dword" data="00000000"/>
 				<value name="Multi.NewAttach" type="dword" data="00105b47"/>
 				<value name="Multi.NewSplitV" type="dword" data="0010114f"/>
