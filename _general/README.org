@@ -40,6 +40,9 @@ $multicmdest="$scoop\persist\multicommander\Config"
 Copy-Item -Path "$multicmdsrc\TOTD" -Destination "$multicmdest" -Recurse
 Copy-Item -Path "$multicmdsrc\Presets" -Destination "$multicmdest" -Recurse
 Copy-Item -Path "$multicmdsrc\CfgProfiles" -Destination "$multicmdest" -Recurse
+# On work PC, consider adding these favorites to $multicmdest/Favorites.xml:
+#    <favitem name="pcr" type="" quickid="2">\\example.com\WQA\Personal-Temp\pcr</favitem>
+#    <favitem name="2<user-id> (trash)" type="" quickid="3">S:\Trash\2<user-id>\</favitem>
 
 scoop bucket add versions
 scoop install -a 32bit python27
@@ -57,38 +60,36 @@ PS C:\Users\cramaph1\scoop> scoop list
 Installed apps:
 
   7zip 18.05
+  anaconda3 5.2.0 [extras]
+  anki 2.1.5 [extras]
   autoit 3.3.14.5
-  autoruns 13.82 [extras]
-  conemu 18.04.29 [extras]
-  ditto 3.21.223.0 [extras]
-  dngrep 2.8.16.0 [scoop-buckets]
-  dview 1.7.2 [scoop-buckets]
+  bat 0.7.1
+  conemu 18.06.26 [extras]
+  ditto 3.21.258.0 [extras]
   emax64 20180529 [scoop-buckets]
-  fd 7.0.0
-  flux 4.72 [extras]
-  foxit-reader 9.1.0.5096 [extras]
-  git 2.17.1.windows.2
+  fd 7.1.0
+  flux 4.75 [extras]
+  foxit-reader 9.3.0.10826 [extras]
+  git 2.18.0.windows.1
   graphviz 2.38
   greenshot 1.2.10.6 [extras]
-  idris 1.3.0
-  innounp 0.46
-  jpegview 1.0.37 [extras]
-  keypirinha 2.18.2 [extras]
-  multicommander 8.1.0.2452 [scoop-buckets]
-  paint.net 4.0.21 [extras]
-  pdftk 2.02
-  plantuml 1.2018.6 [extras]
-  procexp 16.21 [extras]
+  hack-font 1.6.0 [extras]
+  innounp 0.47
+  keypirinha 2.19 [extras]
+  meld 3.18.2 [extras]
+  multicommander 8.3.0.2469 [scoop-buckets]
+  plantuml 1.2018.11 [extras]
+  pspad 5.0.0 [extras]
   putty 0.70 [extras]
-  python27 2.7.14 [versions] {32bit}
-  ripgrep 0.8.1
+  python27 2.7.15 [versions] {32bit}
+  qemu 3.0.0
+  ripgrep 0.10.0
   smallcliutils 2 [scoop-buckets]
-  smartty 3.1 [extras]
   sumatrapdf 3.1.2 [extras]
-  tomcat 8.5.28 [extras] {32bit}
   unison 2.48.4 [scoop-buckets]
-  vifm 0.9.1 [extras]
-  winmerge 2.14.0 [extras]
+  vcxsrv 1.20.1.3 [extras]
+  virtualbox-np 5.2.18 [nonportable]
+  wincompose 0.8.2 [extras]
   workrave 1.10.1 [scoop-buckets]
   zip 3.0
 
@@ -176,3 +177,7 @@ Installed apps:
 #+BEGIN_EXAMPLE
   . "$scoop\persist\_general\makeshortcut.ps1"
 #+END_EXAMPLE
+* Firefox extensions
+- GhostText
+- Open in Browser
+- Vim Vixen
