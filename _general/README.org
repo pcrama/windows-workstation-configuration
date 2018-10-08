@@ -47,6 +47,9 @@ scoop install -a 32bit tomcat
 
 scoop install dngrep dview sumatrapdf plantuml pdftk unison workrave flux jpegview winmerge paint.net smartty
 
+# This one actually asks for admin credentials
+scoop install hack-font
+
 . "$scoop\persist\_general\makeshortcut.ps1"
 #+END_EXAMPLE
 
