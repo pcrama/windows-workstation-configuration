@@ -1,0 +1,2 @@
+#!/bin/sh
+powershell.exe -ExecutionPolicy RemoteSigned "$(cygpath -aw "$0").ps1" "$@"
