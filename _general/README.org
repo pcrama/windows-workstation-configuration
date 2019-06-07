@@ -56,6 +56,11 @@ scoop install hack-font
 . "$scoop\persist\_general\makeshortcut.ps1"
 #+END_EXAMPLE
 
+Other apps to look at
+- DoubleCmd (Lua extensibility instead of home-grown language)
+- roughgrep (like dngrep but above ripgrep)
+- duplicacy (encrypted cloud backup tool)
+
 PS C:\Users\cramaph1\scoop> scoop list
 Installed apps:
 
@@ -102,6 +107,7 @@ Installed apps:
 - [[http://www.strichnet.com/edit-and-apply-registry-settings-via-powershell/][How to call SystemParametersInfo from Powershell]]
 
 * Tentative: Setting up with git-sdk-64
+Maybe see https://github.com/lambdaheart/Haskell-Guide/blob/master/DevelopmentEnvironment.md
 ** Git SDK (MINGW64 + MSYS2)
 #+BEGIN_EXAMPLE
   $gitZip = "git-sdk-64-master.zip"
