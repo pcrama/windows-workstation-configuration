@@ -10,8 +10,10 @@ $adapterName = "Wi-Fi"
 $IPType = "IPv4"
 $adapter = Get-NetAdapter -Name $adapterName
 $dnsclient = Get-DnsClientServerAddress -InterfaceAlias $adapterName -AddressFamily $IPType
-$externalIP1 = "8.8.8.8"
-$externalIP2 = "8.8.4.4"
+# www.quad9.net: 9.9.9.9 & 149.112.112.112
+# google public DNS: 8.8.8.8 & 8.8.4.4
+$externalIP1 = "9.9.9.9"
+$externalIP2 = "149.112.112.112"
 If (($externalIP1 -In $dnsclient.ServerAddresses) -Or ($externalIP2 -In $dnsclient.ServerAddresses)) {
     Write-Host "$externalIP1 or $externalIP2 already in $adapterName's DNS settings, switching back to DHCP"
     # Check to see if we are currently running "as Administrator"
