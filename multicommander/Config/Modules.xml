@@ -226,5 +226,13 @@
       <filename>MultiFileViewer.dll</filename>
       <internal>N</internal>
     </module>
+    <module guid="B0DF9818D04047B7BBF5EF3F7272B362" enable="Y" type="FS">
+      <name>FS-Virtual Folder</name>
+      <internal>Y</internal>
+      <readparam value="0"/>
+      <writeparam value="0"/>
+      <ext/>
+      <byte/>
+    </module>
   </modules>
 </config>
