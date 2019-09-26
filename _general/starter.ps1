@@ -44,7 +44,7 @@ Write-Host "Initial Path=$($Env:PATH)"
 $Env:HOME = $Env:HOMEDRIVE + $Env:HOMEPATH
 $opt = $Env:HOME + "\opt"
 $Env:PATH = (
-    "$($Env:SCOOP)\apps\emax64\current\emax64\bin" +
+    "$($Env:SCOOP)\apps\emax64\current\emax64-pdumper\bin" +
     ";$opt\bin" +
     ";$($Env:HOME)\AppData\Roaming\Python\Scripts" +
     ";C:\VASCO\Programs\Vasco.Tim.Runner\Vasco.Tim.Runner_2_4_1_7" +
@@ -57,12 +57,14 @@ $Env:PATH = (
 
 $Env:GRAPHVIZ_DOT = $Env:SCOOP + "\shims\dot.exe"
 
-$basename = "ConEmu64.exe"
+$basename = "git-bash.exe"
 $scoop = $Env:SCOOP
-$conemu = "$scoop\apps\conemu\current\$basename"
+$gitbash = "$scoop\apps\git\current\$basename"
 $ssh_agent = "$scoop\apps\git\current\usr\bin\ssh-agent.exe"
-Write-Host "SCOOP=`"$($Env:SCOOP)`"`nbasename=`"$basename`"`nconemu=`"$conemu`"`nscoop=`"$scoop`"`nssh_agent=`"$ssh_agent`""
-Start-Process -WindowStyle Hidden -FilePath "$ssh_agent" -ArgumentList @("$conemu", "-LoadCfgFile", "$($scoop)\persist\conemu\conemu.xml")
+Write-Host "SCOOP=`"$($Env:SCOOP)`"`ngitbash=`"$gitbash`"`nbasename=`"$basename`"`nscoop=`"$scoop`"`nssh_agent=`"$ssh_agent`""
+# Thanks to https://superuser.com/questions/1104567/how-can-i-find-out-the-command-line-options-for-git-bash-exe
+Start-Process -WindowStyle Hidden -FilePath "$ssh_agent" -ArgumentList @("$gitbash", "--cd-to-home")
+
 Wait-ProcessExistsP bash
 
 # Start other programs with a certain delay...
