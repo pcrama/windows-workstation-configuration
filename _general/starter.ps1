@@ -65,17 +65,19 @@ Write-Host "SCOOP=`"$($Env:SCOOP)`"`ngitbash=`"$gitbash`"`nbasename=`"$basename`
 # Thanks to https://superuser.com/questions/1104567/how-can-i-find-out-the-command-line-options-for-git-bash-exe
 Start-Process -WindowStyle Hidden -FilePath "$ssh_agent" -ArgumentList @("$gitbash", "--cd-to-home")
 
-# Persisting DoubleCmd config doesn't work: DoubleCmd rewrites the file, thus
-# losing the hard link, so simulate by copying newer files over older files
-# (NB: this doesn't handle conflicts nicely):
-robocopy "$scoop\persist\doublecmd\" "$scoop\apps\doublecmd\current" history.xml doublecmd.xml /XO /V
-robocopy "$scoop\apps\doublecmd\current" "$scoop\persist\doublecmd\" history.xml doublecmd.xml /XO /V
+# [2019-10-21]: Switch back to MultiCommander...
+#
+# # Persisting DoubleCmd config doesn't work: DoubleCmd rewrites the file, thus
+# # losing the hard link, so simulate by copying newer files over older files
+# # (NB: this doesn't handle conflicts nicely):
+# robocopy "$scoop\persist\doublecmd\" "$scoop\apps\doublecmd\current" history.xml doublecmd.xml /XO /V
+# robocopy "$scoop\apps\doublecmd\current" "$scoop\persist\doublecmd\" history.xml doublecmd.xml /XO /V
 
 Wait-ProcessExistsP bash
 
 # Start other programs with a certain delay...
 Foreach ($x in (@("flux", 10),
-                @("doublecmd", 10),
+                @("multicommander", 10),
                 @("workrave", 10),
                 @("ditto", 10),
                 @("WinCompose", 10),
