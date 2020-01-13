@@ -2,7 +2,7 @@
 <config global="1">
   <appinfo>
     <name>MultiCommander</name>
-    <version>9.0.0.2532</version>
+    <version>9.5.0.2570</version>
   </appinfo>
   <modules folder="Extensions"/>
   <filesystem>
