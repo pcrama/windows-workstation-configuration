@@ -1,0 +1,10 @@
+*.bak
+*-bak.ini
+copyq_geometry.ini
+copyq_tab_*.dat
+copyq_tabs.ini
+copyq-bak.ini
+copyq-commands.ini.bak
+copyq-commands.ini.new.bak
+copyq-filter.ini
+themes/
