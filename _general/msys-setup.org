@@ -1,0 +1,67 @@
+* Installation
+** MSYS2
+- Download installer from https://www.msys2.org
+- Start installer as local admin
+- Accept default installation folder ~C:\msys64~
+- Once installation is finished, before clicking ~Next~, edit
+  ~c:/msys64/etc/nsswitch.conf~ to prepend ~windows~ to the ~db_home~ field
+  #+begin_quote
+    db_home: windows cygwin desc
+  #+end_quote
+  This will ensure that the user's home directories will be their Windows
+  ~$USERPROFILE~ folders
+- Close the shell (it's a local admin shell)
+- Start a MSYS shell as normal user with ~c:\msys64\msys2_shell.cmd~ and run
+  #+begin_src shell :exports code
+    pacman -Syu
+  #+end_src
+  Follow instructions of killing the mintty window and restart the same MSYS
+  shell again and run
+  #+begin_src shell :exports code
+    pacman -Su
+  #+end_src
+- Install software
+  - mingw64/mingw-w64-x86_64-libxml2 # for eww in Emacs
+  - mingw64/mingw-w64-x86_64-emacs
+  - msys/openssh
+  - mingw64/mingw-w64-x86_64-enchant
+  - mingw64/mingw-w64-x86_64-hunspell-en
+  - msys/git
+  - msys/unzip
+  - msys/zip
+  - not really useful if there is no mail sync: mingw64/mingw-w64-x86_64-msmtp
+
+  - There's a ~mingw64/mingw-w64-x86_64-graphviz~ in mingw64 but no plantuml.
+    Installing plantuml from scoop would pull in graphviz from scoop too, so
+    no need to install graphviz from MSYS2.
+
+** SCOOP
+Some binaries will still be needed from Scoop:
+- 7zip
+- copyq
+- dngrep
+- fd
+- graphviz
+- greenshot
+- imageglass
+- multicommander
+- paint.net
+- pdftk
+- pdf-xchange-editor
+- plantuml
+- ripgrep
+- smallcliutils
+- sumatrapdf
+- unison
+- wincompose
+- winmerge
+
+* Idea to setup ssh-agent automatically
+All sharing the same gpg-agent, incorporated in =~/.bash_profile=:
+#+begin_src shell :exports code
+  export SSH_AUTH_SOCK=$(\
+                         gpg-agent --enable-ssh-support --allow-emacs-pinentry --quiet \
+                             && gpg-connect-agent.exe 'getinfo ssh_socket_name' '/bye' \
+                                 | sed -n -s '/^D/s/^D //p' \
+         )
+#+end_src
