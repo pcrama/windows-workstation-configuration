@@ -56,12 +56,50 @@ Some binaries will still be needed from Scoop:
 - wincompose
 - winmerge
 
-* Idea to setup ssh-agent automatically
+* SSH & GPG setup
 All sharing the same gpg-agent, incorporated in =~/.bash_profile=:
 #+begin_src shell :exports code
-  export SSH_AUTH_SOCK=$(\
-                         gpg-agent --enable-ssh-support --allow-emacs-pinentry --quiet \
-                             && gpg-connect-agent.exe 'getinfo ssh_socket_name' '/bye' \
-                                 | sed -n -s '/^D/s/^D //p' \
-         )
+  _gpg_tty=$(tty) && {
+      # Setting GPG_TTY is recommended by GPG documentation
+      export GPG_TTY=$_gpg_tty
+      # Actually this isn't related to GPG, but we reuse the fact that we know
+      # there's a TTY and that thus filename completion should be handled by the
+      # interactive shell and thus on Windows, filename completion should be
+      # case-insensitive:
+      [ -n "$MSYSTEM" ] && bind "set completion-ignore-case on"
+  }
+  unset _gpg_tty
+  if [ -z "$SSH_AUTH_SOCK" ] ; then
+      # export SSH_AUTH_SOCK=$(gpg-connect-agent.exe 'getinfo ssh_socket_name' '/bye' \
+      #                            | sed -n -s '/^D/s/^D //p' )
+      #
+      # gpgconf --list-dirs does not autostart gpg-agent.  There's
+      # gpg-connect-agent /bye, but then there's little difference with above
+      # except that we use a high-level command rather than manipulating output
+      # with sed.
+      gpg-connect-agent /bye # starts gpg-agent if needed
+      export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+  fi
+#+end_src
+
+When password authentication is needed, but there is no terminal, ask the user
+for password with popup dialog (also in =~/.bash_profile=):
+#+begin_src shell :exports code
+  # For ssh-askpass emulation: if DISPLAY & SSH_ASKPASS are set, ssh will use
+  # ssh-askpass if no TTY is available to query the password:
+  _ssh_askpass="$HOME/bin/ssh-askpass-with-pinentry"
+  if [ -x "$_ssh_askpass" ] ; then
+      # Emacs would set DISPLAY to w32 anyway, so if it is unset, set it...
+      [ -z "$DISPLAY" ] && export DISPLAY="w32"
+      export SSH_ASKPASS=$_ssh_askpass
+      # $_ssh_askpass content:
+      ##!/bin/sh
+      #cat <<EOF | pinentry | sed -n -e '/^OK/d' -e 's/^D //p'
+      #SETDESC $@
+      #SETPROMPT SSH Password
+      #GETPIN
+      #BYE
+      #EOF
+  fi
+  unset _ssh_askpass
 #+end_src
