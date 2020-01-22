@@ -34,6 +34,8 @@
   - There's a ~mingw64/mingw-w64-x86_64-graphviz~ in mingw64 but no plantuml.
     Installing plantuml from scoop would pull in graphviz from scoop too, so
     no need to install graphviz from MSYS2.
+  - Do not install ~mingw64/mingw-w64-x86_64-gnupg~: its default home
+    directory does not match ~$HOME/.gnupg~ and there's MSYS2's gnupg already.
 
 ** SCOOP
 Some binaries will still be needed from Scoop:
@@ -69,7 +71,18 @@ All sharing the same gpg-agent, incorporated in =~/.bash_profile=:
       [ -n "$MSYSTEM" ] && bind "set completion-ignore-case on"
   }
   unset _gpg_tty
-  if [ -z "$SSH_AUTH_SOCK" ] ; then
+  # The test involving the gnupg_SSH_AUTH_SOCK_by variable is for the case where
+  # the agent is started as gpg-agent --daemon /bin/sh, in which case the shell
+  # inherits the SSH_AUTH_SOCK variable from the parent, gpg-agent
+  #
+  # echo 'enable-ssh-support:0:1' | gpgconf.exe --change-option gpg-agent
+  # echo 'allow-emacs-pinentry:0:1' | gpgconf.exe --change-option gpg-agent
+  #
+  # See also https://opensource.com/article/19/4/gpg-subkeys-ssh or
+  # https://incenp.org/notes/2015/gnupg-for-ssh-authentication.html how to use a
+  # GPG key instead of separate SSH key as private key for logging in
+  unset SSH_AGENT_PID
+  if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
       # export SSH_AUTH_SOCK=$(gpg-connect-agent.exe 'getinfo ssh_socket_name' '/bye' \
       #                            | sed -n -s '/^D/s/^D //p' )
       #
