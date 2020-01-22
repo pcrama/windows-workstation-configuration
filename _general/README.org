@@ -176,4 +176,4 @@ Maybe see https://github.com/lambdaheart/Haskell-Guide/blob/master/DevelopmentEn
 * Firefox extensions
 - GhostText
 - Open in Browser
-- Vim Vixen
+- Tridactyl (maybe Vim Vixen)
