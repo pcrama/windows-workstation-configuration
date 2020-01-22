@@ -67,10 +67,10 @@ Wait-ProcessExistsP bash
 Foreach ($x in (@("flux", 10),
                 @("multicommander", 10),
                 @("workrave", 10),
-                @("ditto", 10),
+                @("copyq", 10),
                 @("WinCompose", 10),
-                @("greenshot", 10),
-                @("keypirinha", 10, "keypirinha-x64"))) {
+                @("greenshot", 10)
+               )) {
     If (Start-OnceOnly $x[0]) {
         if ($x[2] -eq $null) {
             $procname = $x[0]
