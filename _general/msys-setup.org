@@ -116,3 +116,14 @@ for password with popup dialog (also in =~/.bash_profile=):
   fi
   unset _ssh_askpass
 #+end_src
+
+* Prompt tweaks
+** Enable navigation between shell prompts
+In =~/.bash_profile=:
+#+begin_src shell :exports code
+  # Enable jumping from prompt to prompt with Shift-{Left,Right} in mintty
+  # https://github.com/mintty/mintty/wiki/CtrlSeqs#scroll-markers
+  [ "$MSYSCON" == "mintty.exe" ] && PS1="${PS1//\n/\e[?7711l\\n}\e[?7711h"
+#+end_src
+
+** TODO Add Git branch information inside working folders
