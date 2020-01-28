@@ -4,10 +4,18 @@
 - Start installer as local admin
 - Accept default installation folder ~C:\msys64~
 - Once installation is finished, before clicking ~Next~, edit
-  ~c:/msys64/etc/nsswitch.conf~ to prepend ~windows~ to the ~db_home~ field
-  #+begin_quote
-    db_home: windows cygwin desc
-  #+end_quote
+  ~c:/msys64/etc/nsswitch.conf~ (see also cywgin documentation on
+  [[https://cygwin.com/cygwin-ug-net/ntsec.html][nsswitch.conf]])
+  #+begin_example
+    # Begin /etc/nsswitch.conf
+    passwd: files db
+    group: files db
+    db_enum: cache builtin
+    db_home: /%H # home directory is $USERPROFILE formatted as POSIX path
+    db_shell: cygwin desc
+    db_gecos: cygwin desc
+    # End /etc/nsswitch.conf
+  #+end_example
   This will ensure that the user's home directories will be their Windows
   ~$USERPROFILE~ folders
 - Close the shell (it's a local admin shell)
