@@ -45,6 +45,7 @@
     no need to install graphviz from MSYS2.
   - Do not install ~mingw64/mingw-w64-x86_64-gnupg~: its default home
     directory does not match ~$HOME/.gnupg~ and there's MSYS2's gnupg already.
+- Maybe [[http://imperfect.work/2015/10/03/git-perf-tuning/][sign all executables for a speed-up]]
 
 ** SCOOP
 Some binaries will still be needed from Scoop:
@@ -127,12 +128,94 @@ for password with popup dialog (also in =~/.bash_profile=):
 #+end_src
 
 * Prompt tweaks
-** Enable navigation between shell prompts
-In =~/.bash_profile=:
-#+begin_src shell :exports code
-  # Enable jumping from prompt to prompt with Shift-{Left,Right} in mintty
-  # https://github.com/mintty/mintty/wiki/CtrlSeqs#scroll-markers
-  [ "$MSYSCON" == "mintty.exe" ] && PS1="${PS1//\n/\e[?7711l\\n}\e[?7711h"
-#+end_src
+1. Set variable identifying the chroot you work in (used in the prompt below):
+   #+begin_src shell :exports code
+     if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+         debian_chroot=$(cat /etc/debian_chroot)
+     fi
+   #+end_src
+   I only kept this for reference in case I ever work on Debian.
+2. Set a fancy prompt (non-color, unless we know we "want" color)
+   #+begin_src shell :exports code
+     case "$TERM" in
+         xterm-color|*-256color) color_prompt=yes;;
+     esac
 
-** TODO Add Git branch information inside working folders
+     # uncomment for a colored prompt, if the terminal has the capability; turned
+     # off by default to not distract the user: the focus in a terminal window
+     # should be on the output of commands, not on the prompt
+     #force_color_prompt=yes
+
+     if [ -n "$force_color_prompt" ]; then
+         if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+             # We have color support; assume it's compliant with Ecma-48
+             # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+             # a case would tend to support setf rather than setaf.)
+             color_prompt=yes
+         else
+             color_prompt=
+         fi
+     fi
+
+     if [ "$color_prompt" = yes ]; then
+         RS="\[\033[0m\]"    # reset
+         HC="\[\033[1m\]"    # hicolor
+         # UL="\[\033[4m\]"    # underline
+         # INV="\[\033[7m\]"   # inverse background and foreground
+         # FBLK="\[\033[30m\]" # foreground black
+         # FRED="\[\033[31m\]" # foreground red
+         FGRN="\[\033[32m\]" # foreground green
+         FYEL="\[\033[33m\]" # foreground yellow
+         FBLE="\[\033[34m\]" # foreground blue
+         # FMAG="\[\033[35m\]" # foreground magenta
+         FCYN="\[\033[36m\]" # foreground cyan
+         # FWHT="\[\033[37m\]" # foreground white
+         # BBLK="\[\033[40m\]" # background black
+         # BRED="\[\033[41m\]" # background red
+         # BGRN="\[\033[42m\]" # background green
+         # BYEL="\[\033[43m\]" # background yellow
+         # BBLE="\[\033[44m\]" # background blue
+         # BMAG="\[\033[45m\]" # background magenta
+         # BCYN="\[\033[46m\]" # background cyan
+         # BWHT="\[\033[47m\]" # background white
+         # cyan is 6 (man terminfo)
+         # $(tput setaf 6)
+     else
+         RS=""   # reset
+         HC=""   # hicolor
+         FGRN="" # foreground green
+         FYEL="" # foreground yellow
+         FBLE="" # foreground blue
+         FCYN="" # foreground cyan
+     fi
+     unset color_prompt force_color_prompt
+   #+end_src
+3. Basic prompt (color is set/hidden by having the variables ~RS~, ~FGRN~ etc
+   being blank strings for monochrome)
+   #+begin_src shell :exports code
+     PS1='${debian_chroot:+($debian_chroot)}'"${RS}${FGRN}"'\u@\h'"${RS}:${HC}${FBLE}"'\w'"${RS}"
+   #+end_src
+4. Enable jumping from prompt to prompt with Shift-{Left,Right} in [[https://github.com/mintty/mintty/wiki/CtrlSeqs#scroll-markers][mintty]]
+   #+begin_src shell :exports code
+     if [ "$MSYSCON" == "mintty.exe" ] ; then
+         PS1="\[\033[?7711h\]$PS1"
+     fi
+   #+end_src
+5. Show the git branch on the command line, adapted from Git-for-Windows
+   #+begin_src shell :exports code
+     function parse_git_branch () {
+      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+     }
+     PS1="$PS1 $FCYN\$(parse_git_branch)$RS\$ "
+   #+end_src
+6. If this is an xterm set the title to user@host:dir and optional
+   MSYS/MINGW64 indication
+   #+begin_src shell :exports code
+     case "$TERM" in
+     xterm*|rxvt*)
+         PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w${MSYSTEM:+ $MSYSTEM}\a\]$PS1"
+         ;;
+     ,*)
+         ;;
+     esac
+   #+end_src
