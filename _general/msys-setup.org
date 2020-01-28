@@ -35,6 +35,7 @@
   - mingw64/mingw-w64-x86_64-enchant
   - mingw64/mingw-w64-x86_64-hunspell-en
   - msys/git
+  - msys/git-flow
   - msys/unzip
   - msys/zip
   - not really useful if there is no mail sync: mingw64/mingw-w64-x86_64-msmtp
