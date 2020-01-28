@@ -14,6 +14,7 @@
         <option text="#s1172" value="1"/>
         <option text="#s1173" value="2"/>
       </item>
+    <item type="chk" key="startup/startminimized"  attribute="value" default="0" text="#s1176" tooltip="#s1176" />
     </item>
     <item type="text" value="b" text="#s1200" >
       <item type="text" text="#s1203" value="b">
@@ -61,7 +62,22 @@
           <option text="#s812" value="1" />
           <option text="#s813" value="2" />
         </item>
-        <item type="chk" key="layout/remembersplitsize" attribute="value" default="0" text="#s1240" tooltip="#s1240"/>
+        <item type="chk" key="layout/tab/overridefont" attribute="value" default="0" text="#s1265">
+          <item type="font" key="layout/tab/font" attribute="value" value="100" default="Segoe UI,12" text="#s1266" />
+        </item>
+
+        <item type="text" text="#s1267" value="b">
+          <item type="cmb" key="layout/tab/tabwidth" attribute="value" value="200" default="0" text="#s1273">
+            <option text="#s1268" value="0" />
+            <option text="#s1269" value="1" />
+            <option text="#s1270" value="2" />
+          </item>
+          <item type="edit2" key="layout/tab/fixedtabwidth" attribute="value" default="120" text="#s1271"  />
+          <item type="edit2" key="layout/tab/maxtextwidth" attribute="value" default="15" text="#s1272"  />
+          <item type="chk" key="layout/tab/ellipsetabtext"  attribute="value" default="0" text="#s1275" tooltip="#s1275"/>
+        </item>
+        
+         <item type="chk" key="layout/remembersplitsize" attribute="value" default="0" text="#s1240" tooltip="#s1240"/>
       </item>
       <item type="text" text="#s1245" value="b">
         <item type="cmb" key="layout/buttonpanel/rows" attribute="value" value="70,65" default="4" text="#s1246" tooltip="#s1246" restartrequired="1">
@@ -85,7 +101,7 @@
       </item>
     </item>
     <item type="text" value="b" text="#s1250">
-      <item type="cmb" key="layout/tab/mouse/dblclick_emptyarea" text="#s1260" default="a4c2985d9c7e4035a3221cfd600171d0" value="150,150" attribute="value" externalsource="PanelApps" />
+      <item type="cmb" key="layout/tab/mouse/dblclick_emptyarea" text="#s1260" default="a4c2985d9c7e4035a3221cfd600171d0" value="150" attribute="value" externalsource="PanelApps" />
     </item>
     <item type="text" value="b" text="#s1300">
       <item type="chk" key="layout/showclosebuttonintab" attribute="value" default="1" text="#s1301"/>
@@ -144,24 +160,24 @@
 
     </item>
     <item type="text" value="b" text="#s2300">
-      <item type="cmb" key="filesystem/fslinks/delete" attribute="value" default="2" value="120,280" text="#s2310">
+      <item type="cmb" key="filesystem/fslinks/delete" attribute="value" default="2" value="140,280" text="#s2310">
         <option text="#s2311" value="1"/>
         <option text="#s2312" value="2"/>
         <option text="#s2313" value="0"/>
       </item>
-      <item type="cmb" key="filesystem/fslinks/copymove" attribute="value" default="0" value="120,280" text="#s2320">
+      <item type="cmb" key="filesystem/fslinks/copymove" attribute="value" default="0" value="140,280" text="#s2320">
         <option text="#s2321" value="1"/>
         <option text="#s2322" value="2"/>
         <option text="#s2323" value="0"/>
       </item>
-      <item type="cmb" key="filesystem/fslinks/foldersizing" attribute="value" default="0" value="120,280" text="#s2330">
+      <item type="cmb" key="filesystem/fslinks/foldersizing" attribute="value" default="0" value="140,280" text="#s2330">
         <option text="#s2331" value="1"/>
         <option text="#s2332" value="0"/>
       </item>
     </item>
     <item type="text" value="b" text="#s2400">
       <item type="text" value="b" text="#s2401" >
-        <item type="cmb" key="filesystem/fileoperations/keepbroken" attribute="value" value="140,230" default="-1" text="#s2410">
+        <item type="cmb" key="filesystem/fileoperations/keepbroken" attribute="value" value="230" default="-1" text="#s2410">
           <option text="#s2411" value="-1" />
           <option text="#s2412" value="1" />
           <option text="#s2413" value="0" />
@@ -174,6 +190,7 @@
         <item type="chk" key="filesystem/fileoperations/autoclose" attribute="value" default="1" text="#s2425">
           <item type="chk" key="filesystem/fileoperations/onlyautocloseshort" attribute="value" default="1" text="#s2427" />
         </item>
+        <item type="chk" key="filesystem/fileoperations/skipemptyfolders" attribute="value" default="0" text="#s2429" tooltip="#s2429"/>
         <item type="chk" key="filesystem/fileoperations/autodetectrw" attribute="value" default="1" text="#s2428" tooltip="#s2428" />
         <item type="text" value="b" text="#s2500">
           <item type="chk" key="filesystem/fileoperations/playsound/finished" attribute="value" default="1" text="#s2501" />
@@ -198,6 +215,7 @@
     <item type="text" value="b" text="#s2430">
       <item type="chk" key="filesystem/fileoperations/dropcopyshowdialog" attribute="value" default="1" text="#s2431"/>
       <item type="chk" key="filesystem/fileoperations/dropmoveshowdialog" attribute="value" default="1" text="#s2432"/>
+      <item type="chk" key="filesystem/fileoperations/CompatibleFileDrop" attribute="value" default="0" text="#s2445" />
     </item>
     <item type="text" value="b" text="#s2450">
       <item type="chk" key="filesystem/contextmenu/windowsshellcontextmenu" attribute="value" default="1" text="#s2451" tooltip="#s2451"/>
@@ -206,7 +224,9 @@
     </item>
     <item type="text" value="b" text="#s3291">
       <item type="chk" key="filesystem/tweak/refreshviews_onactivate" attribute="value" default="1" text="#s3292" tooltip="#s3292" />
+      <item type="chk" key="filesystem/tweak/findfiles_virtualdevice" attribute="value" default="1" text="#s3294" tooltip="#s3294" />
       <item type="edit2" key="filesystem/browse/timeout" attribute="value" default="1500" text="#s3293" restartrequired="1" />
+      <item type="chk" key="tweak/ProgressUIMainThread" attribute="value" default="1" text="(Expert) Use the new way to show progress windows (Do not change, Unless you have issue with progress UI)" restartrequired="1" />
       <item type="text" value="b" text="#s3339">
         <item type="cmb" key="filesystem/thumbnail/system" attribute="value" value="310" default="0" text="#s3341">
           <option text="#g220" value="0" />
@@ -290,6 +310,7 @@
           <option text="#s3114" value="30" />
           <option text="#s3115" value="100" />
         </item>
+        <item type="chk" key="log/filesystemscanning/extendedscanlog" attribute="value" default="0" text="#s3130" />
         <item type="chk" key="log/filesystemscanning/save" attribute="value" default="0" text="#s3120" />
       </item>
     </item>

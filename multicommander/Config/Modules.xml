@@ -26,6 +26,14 @@
       <ext/>
       <byte/>
     </module>
+    <module guid="B0DF9818D04047B7BBF5EF3F7272B362" enable="Y" type="FS">
+      <name>FS-Virtual Folder</name>
+      <internal>Y</internal>
+      <readparam value="0"/>
+      <writeparam value="0"/>
+      <ext/>
+      <byte/>
+    </module>
     <module guid="39604ae4d2dd416dad6eeb1091c07a3c" enable="Y" type="FS">
       <name>FS-Zip</name>
       <internal>Y</internal>
@@ -225,14 +233,6 @@
       <path>MultiFileViewer</path>
       <filename>MultiFileViewer.dll</filename>
       <internal>N</internal>
-    </module>
-    <module guid="B0DF9818D04047B7BBF5EF3F7272B362" enable="Y" type="FS">
-      <name>FS-Virtual Folder</name>
-      <internal>Y</internal>
-      <readparam value="0"/>
-      <writeparam value="0"/>
-      <ext/>
-      <byte/>
     </module>
   </modules>
 </config>
