@@ -32,6 +32,7 @@
   - mingw64/mingw-w64-x86_64-libxml2 # for eww in Emacs
   - mingw64/mingw-w64-x86_64-emacs
   - msys/openssh
+  - msys/winpty
   - mingw64/mingw-w64-x86_64-enchant
   - mingw64/mingw-w64-x86_64-hunspell-en
   - msys/git
