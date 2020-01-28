@@ -1,9 +1,11 @@
 keypirinha/portable/Local/Keypirinha.mathilde.catalog
 keypirinha/portable/Local/Keypirinha.mathilde.log
 keypirinha/portable/Profile/User/Keypirinha.history
-multicommander/Config/TOTD/
-multicommander/Config/CfgProfiles/
-multicommander/Config/Presets/
+/multicommander/Config/TOTD/
+/multicommander/Config/CfgProfiles/
+/multicommander/Config/Presets/
+/multicommander/Extensions/*/*.dll
+/multicommander/SessionConfig/
 ditto/Ditto.db
 # Backup files
 \#*
