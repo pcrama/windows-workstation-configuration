@@ -220,3 +220,10 @@ for password with popup dialog (also in =~/.bash_profile=):
          ;;
      esac
    #+end_src
+
+* Font
+** Input font
+** [[https://github.com/be5invis/Iosevka/][Iosevka]]
+1. Download ttc-iosevka-x.x.x.zip from [[https://github.com/be5invis/Iosevka/releases/tag/v2.3.3][releases]]
+2. Unzip to ~/tmp~: ~unzip ~/Downloads/ttc-iosevka-2.3.3.zip -d /tmp~
+3. ~for x in /tmp/iosevka-{italic,regular,bold,bolditalic}.ttc ; do start $x ; done~
