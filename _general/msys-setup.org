@@ -64,6 +64,7 @@ Some binaries will still be needed from Scoop:
 - plantuml
 - ripgrep
 - smallcliutils
+- stretchly
 - sumatrapdf
 - unison
 - wincompose

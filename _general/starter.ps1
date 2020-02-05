@@ -66,9 +66,9 @@ Wait-ProcessExistsP bash
 # Start other programs with a certain delay...
 Foreach ($x in (@("flux", 10),
                 @("multicommander", 10),
-                @("workrave", 10),
                 @("copyq", 10),
                 @("WinCompose", 10),
+                @("stretchly", 10),
                 @("greenshot", 10)
                )) {
     If (Start-OnceOnly $x[0]) {
