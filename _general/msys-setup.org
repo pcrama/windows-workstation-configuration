@@ -54,10 +54,14 @@ Some binaries will still be needed from Scoop:
 - copyq
 - dngrep
 - fd
+- flux
+- git
 - graphviz
 - greenshot
 - imageglass
 - multicommander
+- notepadplusplus
+- oraclejre8
 - paint.net
 - pdftk
 - pdf-xchange-editor
@@ -69,6 +73,15 @@ Some binaries will still be needed from Scoop:
 - unison
 - wincompose
 - winmerge
+
+*** MultiCommander
+MultiCommander's plugins are in a persisted directory, hence updated DLLs do
+not automatically overwrite the existing DLLs.  To update them:
+#+begin_src shell :exports code
+  (cd "$SCOOP/apps/multicommander/current/Extensions.original" \
+      && (tar cf - . | \
+              tar xvf - --directory=../Extensions --keep-newer-files --exclude="*.xml" ))
+#+end_src
 
 * SSH & GPG setup
 All sharing the same gpg-agent, incorporated in =~/.bash_profile=:
