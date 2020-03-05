@@ -259,3 +259,72 @@ Add this to your profile:
   fi
   unset emacs_prefix emacs_info
 #+end_src
+* Useful aliases in =~/.bash_aliases=
+For more ideas, see also [[https://github.com/fniessen/shell-leuven][shell-leuven]].
+
+In your ~.bashrc~ or ~.bash_profile~
+#+begin_src shell :exports code
+  if [ -f ~/.bash_aliases ]; then
+      . ~/.bash_aliases
+  fi
+#+end_src
+
+** Changing directories
+#+begin_src shell :exports code
+  alias ..='cd ..'
+  alias ...='cd ../..'
+  alias ....='cd ../../..'
+  alias .....='cd ../../../..'
+#+end_src
+
+** Syncing directories
+Because my unison is a Windows console application (installed with scoop), it
+needs ~winpty~:
+#+begin_src shell :exports code
+  if [ -z "$INSIDE_EMACS" ] ; then
+      # Not inside shell buffer inside Emacs, assume we have a TTY and need to
+      # translate it to Windows console.  A shell buffer inside emacs has no
+      # TTY, so no possibility to use winpty for unison.  There will be spurious
+      # newlines in output...
+      type -p winpty unison > /dev/null && alias unison='winpty unison'
+  fi
+#+end_src
+
+** Jumping to directory of Emacs selected buffer
+This probably breaks for directories with strange characters (space, double quotes etc)
+#+begin_src shell :exports code
+  if [ -z "$INSIDE_EMACS" ] ; then
+      # having the cde alias inside Emacs shell buffers makes no sense
+      if type -p emacsclient > /dev/null ; then
+          # inspired by https://github.com/fniessen/shell-leuven: cd into directory that
+          # currently selected window in emacs is in
+          alias cde='cd "$(emacsclient -e '\''(with-current-buffer (window-buffer (selected-window))
+                                                (expand-file-name default-directory))'\'' \
+                           | tr -d '\''\n\r"'\'')"'
+      fi
+  fi
+#+end_src
+
+** Opening a dired buffer
+This is actually a function, not an alias...
+#+begin_src shell :exports code
+  if type -p emacsclient > /dev/null ; then
+      function dired ()
+      {
+          # dired [dirname]: open dired of (default current) directory inside Emacs
+          if [ -z "$1" ]; then
+              mixedDir="."
+          else
+              dir="$1"
+              mixedDir="$(cygpath --mixed --absolute "$dir")"
+          fi
+          emacsclient --no-wait "$mixedDir"
+          [ -z "$INSIDE_EMACS" ] && emacsclient --suppress-output --eval "(raise-frame)"
+      }
+      # NB: it would be nice to do complete -F _cd dired (to have CDPATH support
+      # in completion, like the `cd' shell builtin does, but then our dired
+      # function would need to support CHPATH as well; I don't use CDPATH at the
+      # moment, so maybe it's not that useful...)
+      complete -A directory dired
+  fi
+#+end_src
