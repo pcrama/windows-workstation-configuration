@@ -47,6 +47,10 @@
   - Do not install ~mingw64/mingw-w64-x86_64-gnupg~: its default home
     directory does not match ~$HOME/.gnupg~ and there's MSYS2's gnupg already.
 - Maybe [[http://imperfect.work/2015/10/03/git-perf-tuning/][sign all executables for a speed-up]]
+- Maybe edit ~c:/msys64/etc/pacman.d/mirrorlist.mingw32~,
+  ~c:/msys64/etc/pacman.d/mirrorlist.mingw64~ and
+  ~c:/msys64/etc/pacman.d/mirrorlist.msys~ to put an European server on the
+  top of the list of mirrors (inspired by this [[https://github.com/msys2/MSYS2-packages/issues/1884][msys2-packages #1884]] issue)
 
 ** SCOOP
 Some binaries will still be needed from Scoop:
