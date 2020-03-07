@@ -285,13 +285,31 @@ In your ~.bashrc~ or ~.bash_profile~
 Because my unison is a Windows console application (installed with scoop), it
 needs ~winpty~:
 #+begin_src shell :exports code
-  if [ -z "$INSIDE_EMACS" ] ; then
-      # Not inside shell buffer inside Emacs, assume we have a TTY and need to
-      # translate it to Windows console.  A shell buffer inside emacs has no
-      # TTY, so no possibility to use winpty for unison.  There will be spurious
-      # newlines in output...
-      type -p winpty unison > /dev/null && alias unison='winpty unison'
-  fi
+  function unison ()
+  {
+      if [ "$1" == "zettelkasten" ] ; then
+          # The unison binary on that host is still 2.48:
+          unison="$HOME/opt/bin/unison-2.48.exe"
+      else
+          unison="$(type -fp unison)"
+      fi
+      if [ -z "$unison" ] ; then
+          echo "unison not found" >&2
+      fi
+      if [ -z "$INSIDE_EMACS" ] ; then
+          # Not inside shell buffer inside Emacs, assume we have a TTY and need to
+          # translate it to Windows console.
+          winpty="$(type -fp winpty)"
+          if [ -z "$winpty" ] ; then
+              "$unison" "$@"
+          else
+              "$winpty" "$unison" "$@"
+          fi
+      else
+          # Inside shell buffer inside Emacs: unison manual recommends '-dumbtty'
+          "$unison" -dumbtty "$@"
+      fi
+  }
 #+end_src
 
 ** Jumping to directory of Emacs selected buffer
@@ -327,7 +345,7 @@ This is actually a function, not an alias...
       }
       # NB: it would be nice to do complete -F _cd dired (to have CDPATH support
       # in completion, like the `cd' shell builtin does, but then our dired
-      # function would need to support CHPATH as well; I don't use CDPATH at the
+      # function would need to support CDPATH as well; I don't use CDPATH at the
       # moment, so maybe it's not that useful...)
       complete -A directory dired
   fi
