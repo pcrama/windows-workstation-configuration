@@ -281,6 +281,14 @@ In your ~.bashrc~ or ~.bash_profile~
   alias .....='cd ../../../..'
 #+end_src
 
+Using [[https://github.com/ajeetdsouza/zoxide][zoxide]]: ~z~ is an alias for fast jumps to often used directories
+#+begin_src shell :exports code
+  if type -p zoxide > /dev/null ; then
+      eval "$(zoxide init bash)"
+      type -p fzf > /dev/null || unalias zqi
+  fi
+#+end_src
+
 ** Syncing directories
 Because my unison is a Windows console application (installed with scoop), it
 needs ~winpty~:
