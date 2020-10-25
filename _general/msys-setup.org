@@ -361,3 +361,51 @@ This is actually a function, not an alias...
       complete -A directory dired
   fi
 #+end_src
+
+* Useful scripts
+** Emacs
+*** ~ec~: an emacsclient wrapper
+From this [[https://www.reddit.com/r/emacs/comments/fk7p49/piping_stdout_to_emacs/][reddit thread]]: this shorthand for emacsclient also accepts stdin as
+input.
+
+#+begin_src shell :exports code
+  #!/bin/sh
+  #
+  # Use this instead of emacsclient: it also reads from stdin (unless called
+  # from inside Emacs *shell* buffer):
+  # ec file
+  # ls | ec
+  if [ -n "$INSIDE_EMACS" ]; then
+      emacsclient -n "$@"
+  elif [ -t 0 ]; then
+      emacsclient -n "$@"
+  else
+      # stdin has data
+      tmpf=$(mktemp --tmpdir emacs-edit.XXXXXXXX)
+      cat > $tmpf
+      trap 'rm -rf $tmpf; trap - EXIT; exit' EXIT INT HUP
+      # let emacs-eval read from stdin: because it is called in a context
+      # where stdin is the input (for this script actually), it will believe
+      # it must look at its stdin, too):
+      emacs-eval <<EOF
+        (let ((dir default-directory))
+          (find-file "$(cygpath --mixed --absolute "$tmpf")")
+          (setq default-directory dir)
+          (set-visited-file-name nil)
+          (rename-buffer "*stdin*" t))
+  EOF
+  fi
+#+end_src
+
+*** ~emacs-eval~: evaluat elisp from the command line
+Evaluates its stdin or command line arguments.
+#+begin_src shell :exports code
+  #!/bin/sh
+
+  if [ -t 0 ]; then
+      sexp="$*"
+  else
+      sexp="$(cat)"
+  fi
+  exec emacsclient -n -e "$sexp"
+#+end_src
