@@ -362,6 +362,20 @@ This is actually a function, not an alias...
   fi
 #+end_src
 
+** docker
+Stop docker from complaining it needs winpty:
+#+begin_src shell :exports code
+  function docker ()
+  {
+      winpty="$(type -fp winpty)"
+      if [ -z "$winpty" ] ; then
+          docker "$@"
+      else
+          "$winpty" docker "$@"
+      fi
+  }
+#+end_src
+
 * Useful scripts
 ** Emacs
 *** ~ec~: an emacsclient wrapper
