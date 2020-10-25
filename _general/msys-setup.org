@@ -134,9 +134,12 @@ for password with popup dialog (also in =~/.bash_profile=):
       # Emacs would set DISPLAY to w32 anyway, so if it is unset, set it...
       [ -z "$DISPLAY" ] && export DISPLAY="w32"
       export SSH_ASKPASS=$_ssh_askpass
-      # $_ssh_askpass content:
+      # $_ssh_askpass content: with full paths so that
+      # c:\msys64\msys\bin\sh -c '$_ssh_askpass prompt text'
+      # works when called from cmd.exe (without valid PATH), too
+      #
       ##!/bin/sh
-      #cat <<EOF | pinentry | sed -n -e '/^OK/d' -e 's/^D //p'
+      #/usr/bin/cat <<EOF | /mingw64/bin/pinentry | /usr/bin/sed -n -e '/^OK/d' -e 's/^D //p'
       #SETDESC $@
       #SETPROMPT SSH Password
       #GETPIN
