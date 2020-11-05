@@ -7,6 +7,7 @@ keypirinha/portable/Profile/User/Keypirinha.history
 /multicommander/Extensions/*/*.dll
 /multicommander/SessionConfig/
 ditto/Ditto.db
+/zoxide/data/db.zo
 # Backup files
 \#*
 *\#

@@ -288,7 +288,7 @@ Using [[https://github.com/ajeetdsouza/zoxide][zoxide]]: ~z~ is an alias for fas
 #+begin_src shell :exports code
   if type -p zoxide > /dev/null ; then
       eval "$(zoxide init bash)"
-      type -p fzf > /dev/null || unalias zqi
+      type -p fzf > /dev/null || unset -f zqi
   fi
 #+end_src
 
