@@ -1,13 +1,15 @@
-keypirinha/portable/Local/Keypirinha.mathilde.catalog
-keypirinha/portable/Local/Keypirinha.mathilde.log
-keypirinha/portable/Profile/User/Keypirinha.history
+/keypirinha/portable/Local/Keypirinha.mathilde.catalog
+/keypirinha/portable/Local/Keypirinha.mathilde.log
+/keypirinha/portable/Profile/User/Keypirinha.history
 /multicommander/Config/TOTD/
 /multicommander/Config/CfgProfiles/
 /multicommander/Config/Presets/
 /multicommander/Extensions/*/*.dll
 /multicommander/SessionConfig/
-ditto/Ditto.db
+/ditto/Ditto.db
 /zoxide/data/db.zo
+/zeal/cache/
+/zeal/docsets/
 # Backup files
 \#*
 *\#

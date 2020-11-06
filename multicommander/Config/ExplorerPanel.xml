@@ -76,8 +76,8 @@
     <SearchMode value="2"/>
     <SortNatural value="1"/>
     <Tooltip value="2"/>
-    <ShowHidden value="0"/>
-    <ShowSystem value="0"/>
+    <ShowHidden value="1"/>
+    <ShowSystem value="1"/>
     <DateMode value="1"/>
     <ShowLinkTargetInName value="1"/>
     <ShowFreespaceAs value="0"/>
