@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings_layout name="Portable Device File System settings" use_sections="y" expand_all="y" >
+  <section text="#s100">
+    <item type="text" value="b" text="#s150">
+      <item type="chk" key="objects/showall"  attribute="value" default="0" text="#s200" tooltip="#s200" />
+    </item>
+    <item type="text" value="b" text="#s300" tooltip="#s300">
+      <item type="chk" key="logging/error"   default="1" text="#s310" attribute="value" restartrequired="1"/>
+      <item type="chk" key="logging/traceinfo"   default="0" text="#s320" attribute="value" restartrequired="1">
+        <item type="chk" key="logging/objectinfo"  default="1" text="#s321" attribute="value" restartrequired="1"/>
+        <item type="chk" key="logging/deviceinfo"  default="1" text="#s322" attribute="value" restartrequired="1"/>
+        <item type="chk" key="logging/deviceinfo2" default="1" text="#s323" attribute="value" restartrequired="1"/>
+        <item type="chk" key="logging/storageinfo" default="1" text="#s324" attribute="value" restartrequired="1"/>
+      </item>
+    </item>
+  </section>
+</settings_layout>

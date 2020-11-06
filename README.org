@@ -1,1 +1,1 @@
-See [[_general/README.org]]
+See [[file:_general/README.org][_general/README.org]]

@@ -58,6 +58,7 @@
         <option text="#s658" value="2" />
       </item>
       <item type="chk" key="layout/tab/newtabiflocked" attribute="value" default="0" text="#s660" tooltip="#s660" />
+      <item type="chk" key="layout/tab/newtabkeepname" attribute="value" default="1" text="#s661" tooltip="#s661" />
 
       <item type="text" value="b" text="#s460">
 
@@ -203,7 +204,8 @@
       <item type="chk" key="layout/AutoSortOnRename" attribute="value" defualt="1" text="#s253" tooltip="#s253" />
       <item type="chk" key="layout/SortNatural" attribute="value" default="1" text="#s254" tooltip="#s254" />
       <item type="chk" key="layout/SortLanguageAware" attribute="value" default="0" text="#s252" tooltip="#s252" />
-      <item type="chk" key="layout/SortSeparateFilesFolders" attribute="value" default="1" text="#s276" >
+      <item type="chk" key="layout/SortSeparateFilesFolders" attribute="value" default="1" text="#s282" >
+        <item type="chk" key="layout/SortFilesBeforeFolders" attribute="value" default="0" text="#s283" tooltip="#s283" />
         <item type="chk" key="layout/SortFoldersByName" attribute="value" default="0" text="#s275"/>
       </item>
     </item>
@@ -267,6 +269,8 @@
       <item type="chk" key="layout/FolderTree/ExpandCurrent" attribute="value" default="1" text="#s470" tooltip="#s470"/>
       <item type="chk" key="layout/FolderTree/ExpandOnHover" attribute="value" default="1" text="#s471" tooltip="#s471"/>
       <item type="chk" key="layout/FolderTree/AllowFolderColors" attribute="value" default="1" text="#s473" tooltip="#s473"/>
+      <item type="chk" key="layout/FolderTree/SmartExpandBox" attribute="value" default="0" text="#s474" tooltip="#s474" />
+      <item type="chk" key="layout/FolderTree/AutoAdjustHorizontalScrollbar" attribute="value" default="0" text="#s475" tooltip="#s475" />
       <item type="edit2" key="layout/FolderTree/DevicesFilter" attribute="value" default="*" text="#s472" tooltip="#s472" />
     </item>
 
@@ -276,7 +280,7 @@
        </item>
       <item type="chk" key="save/onlylocked" attribute="value" value="80" default="0" text="#s354" />
       <item type="chk" key="save/sort" attribute="value" value="80" default="0" text="#s353" />
-      <item type="chk" key="save/itemfocus" attribute="value" value="80" default="1" text="Remember what item is in focus" />
+      <item type="chk" key="save/itemfocus" attribute="value" value="80" default="1" text="#s355" />
     </item>
 
     <!-- Tweaking -->
@@ -613,6 +617,7 @@
           <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/video" attribute="value" default="1" text="#s927" restartrequired="1" />
           <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/onedrive" attribute="value" default="1" text="#s928" restartrequired="1" />
           <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/dropbox" attribute="value" default="1" text="#s929" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/globaltoolbar/googledrive" attribute="value" default="1" text="#s930" restartrequired="1" />
         </item>
       </item>
     </item>
@@ -638,6 +643,7 @@
           <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/video" attribute="value" default="1" text="#s927" restartrequired="1" />
           <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/onedrive" attribute="value" default="1" text="#s928" restartrequired="1" />
           <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/dropbox" attribute="value" default="1" text="#s929" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneltoolbar/googledrive" attribute="value" default="1" text="#s930" restartrequired="1" />
         </item>
       </item>
     </item>
@@ -663,6 +669,7 @@
           <item type="chk" key="layout/tweak/devicefilter/paneldropdown/video" attribute="value" default="1" text="#s927" restartrequired="1" />
           <item type="chk" key="layout/tweak/devicefilter/paneldropdown/onedrive" attribute="value" default="1" text="#s928" restartrequired="1" />
           <item type="chk" key="layout/tweak/devicefilter/paneldropdown/dropbox" attribute="value" default="1" text="#s929" restartrequired="1" />
+          <item type="chk" key="layout/tweak/devicefilter/paneldropdown/googledrive" attribute="value" default="1" text="#s930" restartrequired="1" />
         </item>
       </item>
     </item>

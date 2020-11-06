@@ -11,6 +11,7 @@
     <language name="Japanese" localized="日本語" langcode="jp" matching="ja, ja-JP"/>
     <language name="Dutch" localized="Nederlands" langcode="nl" matching="nl, nl-NL"/>
     <language name="Portuguese" localized="Portugal" langcode="pt" matching="pt, pt-PT"/>
+    <language name="Portuguese (Brazil)" localized="Português (Brasil)" langcode="pt-BR" matching="pt-BR"/>
     <language name="Polish" localized="Polski" langcode="pl" matching="pl, pl-PL"/>
     <language name="Romanian" localized="Română" langcode="ro" matching="ro, ro-RO"/>
     <language name="Russian" localized="Pусский" langcode="ru" matching="ru, ru-RU"/>
@@ -19,6 +20,8 @@
     <language name="Norwegian" localized="Norsk" langcode="no" matching="nb-NO"/>
     <language name="Italian" localized="Italiano" langcode="it" matching="it, it-IT"/>
     <language name="Lithuanian" localized="Lietuvių" langcode="lt" matching="lt,lt-LT"/>
-	<language name="Korean" localized="한국어" langcode="ko" matching="ko, ko-KR" />
+    <language name="Korean" localized="한국어" langcode="ko" matching="ko, ko-KR" />
+    <language name="Turkey" localized="Türkçe" langcode="tr" matching="tr,tr-TR" />
+    <language  name="Ukrainian" localized="Українська" langcode="uk" matching="uk, uk-UA" />
   </languages>
 </config>

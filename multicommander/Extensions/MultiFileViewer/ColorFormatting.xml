@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colorformatting>
+  <profile name="C/C++" id="8ea5146bbf7245bd8b6142f26ddfd30e" ext="cpp,h,hpp,c">
+    <format themecolor="5" textcolor="-1" backgroundcolor="-1" flags="16388">//</format>
+    <format themecolor="2" textcolor="-1" backgroundcolor="-1" flags="256">^[[:space:]]*#[[:space:]]*(define|include(_next)?|(un|ifn?)def|endif|el(if|se)|if|warning|error|pragma)</format>
+    <format themecolor="6" textcolor="-1" backgroundcolor="-1" flags="256">"(\.|[^"])*"</format>
+    <format themecolor="4" textcolor="-1" backgroundcolor="-1" flags="256">(\bTRUE\b|\bFALSE\b|\btrue\b|\bfalse\b)</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">float,double,bool,char,int,short,long,sizeof,enum,void,auto,static,const,struct,union,typedef,extern,unsigned,signed,inline</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">class,namespace,template,public,protected,private,typename,this,friend,virtual,using,mutable,volatile,register,explicit</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">for,if,while,do,else,case,default,switch</format>
+    <format themecolor="2" textcolor="-1" backgroundcolor="-1" flags="8">goto,continue,break,return</format>
+  </profile>
+  <profile name="C#" id="c455112e14de4208a4c2303647e908f8" ext="cs">
+    <format themecolor="5" textcolor="-1" backgroundcolor="-1" flags="16388">//</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="256">\b(?:public|protected|internal|private|static|virtual|sealed|override|abstract|extern|volatile|namespace|class|struct|interface|enum|const|event|operator)\b</format>
+    <format themecolor="6" textcolor="-1" backgroundcolor="-1" flags="256">"(\.|[^"])*"</format>
+    <format themecolor="8" textcolor="-1" backgroundcolor="-1" flags="256">(\btrue\b|\bfalse\b)</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">float,double,bool,char,int,short,long,sizeof,enum,void,auto,static,const,struct,union,typedef,extern,unsigned,signed,inline</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">class,typename,this,friend,virtual,using</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">for,if,while,do,else,case,default,switch</format>
+    <format themecolor="2" textcolor="-1" backgroundcolor="-1" flags="8">goto,continue,break,return</format>
+  </profile>
+  <profile name="JAVA" id="9cf3d0e201ad4ccab0b87695c2b07b11" ext="java">
+    <format themecolor="5" textcolor="-1" backgroundcolor="-1" flags="16388">//</format>
+    <format themecolor="6" textcolor="-1" backgroundcolor="-1" flags="256">"(\.|[^"])*"</format>
+    <format themecolor="4" textcolor="-1" backgroundcolor="-1" flags="256">(\bTRUE\b|\bFALSE\b|\btrue\b|\bfalse\b)</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">abstract,boolean,byte,case,catch,char,class,const,default,do,doule,else,enum,extends,final,finally,float,for,if</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">implements,import,instanceof,int,interface,long,native,new,package,private,protected,public,short,static,super,switch</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">synchronized,this,throws,transient,try,void,volatile,while</format>
+    <format themecolor="8" textcolor="-1" backgroundcolor="-1" flags="8">goto,continue,break,return</format>
+  </profile>
+  <profile name="JavaScript" id="fda72da35e704586872800e7afb991d8" ext="js">
+    <format themecolor="5" textcolor="-1" backgroundcolor="-1" flags="16388">//</format>
+    <format themecolor="5" textcolor="-1" backgroundcolor="-1" flags="256">/\*.*\*/</format>
+    <format themecolor="6" textcolor="-1" backgroundcolor="-1" flags="256">'(\.|[^"])*'</format>
+    <format themecolor="4" textcolor="-1" backgroundcolor="-1" flags="256">(\btrue\b|\bfalse\b)</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">abstract,boolean,byte,case,catch,char,class,const,debugger,default,delete,do,double,else,enum,export,extends</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">final,finally,float,for,function,if,implements,import,instanceof,int,interface,long,native,new,null,package,private,protected,public</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">short,static,super,switch,synchronized,this,throws,transient,try,typeof,var,void,volatile,while,with</format>
+    <format themecolor="8" textcolor="-1" backgroundcolor="-1" flags="8">continue,break,return</format>
+  </profile>
+  <profile name="PHP" id="cd5f354dd41248578728841bd09c40e6" ext="php">
+    <format themecolor="5" textcolor="-1" backgroundcolor="-1" flags="16388">//</format>
+    <format themecolor="6" textcolor="-1" backgroundcolor="-1" flags="256">'(\.|[^"])*'</format>
+    <format themecolor="4" textcolor="-1" backgroundcolor="-1" flags="256">(\bTRUE\b|\bFALSE\b)</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">abstract,and,array,as,case,catch,cfunction,class,clone,const,declare,default,die,do,echo,else,elseif,empty</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">enddeclare,endfor,endforeach,endif,endswitch,endwhile,eval,exception,exit,extends,final,for,foreach,function,global,if</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">implements,include,include_once,interface,isset,list,new,old_function,or,php_user_filter,print,private,protected,public</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">require,require_once,static,switch,throw,try,unset,use,var,while,xor</format>
+    <format themecolor="8" textcolor="-1" backgroundcolor="-1" flags="8">continue,break,return</format>
+    <format themecolor="3" textcolor="-1" backgroundcolor="-1" flags="256">\$[A-Za-z_][A-Za-z0-9_]*</format>
+  </profile>
+  <profile name="SQL" id="47970f00b4be47c296ff18b8441f6fab" ext="sql">
+    <format themecolor="5" textcolor="-1" backgroundcolor="-1" flags="16388">--</format>
+    <format themecolor="3" textcolor="-1" backgroundcolor="-1" flags="256">@\w+</format>
+    <format themecolor="3" textcolor="-1" backgroundcolor="-1" flags="256">@@\w+</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">ADD,ALL,ALTER,AND,ANY,AS,ASC,AUTHORIZATION,AVG,BACKUP,BEGIN,BETWEEN,BREAK,BROWSE,BULK,BY,CASCADE,CASE,CHECK,CHECKPOINT,CLOSE</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">CLUSTERED,COALESCE,COLUMN,COMMIT,COMMITTED,COMPUTE,CONFIRM,CONSTRAINT,CONTAINS,CONTAINSTABLE,CONTINUE,CONTROLROW,CONVERT</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">COUNT,CREATE,CROSS,CURRENT,CURRENT_DATE,CURRENT_TIME,CURRENT_TIMESTAMP,CURRENT_USER,CURSOR,DATABASE,DBCC,DEALLOCATE,DECLARE</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">DEFAULT,DELETE,DENY,DESC,DISK,DISTINCT,DISTRIBUTED,DOUBLE,DROP,DUMMY,DUMP,ELSE,END,ERRLVL,ERROREXIT,ESCAPE,EXCEPT,EXEC,EXECUTE,EXISTS,EXIT,FETCH</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">FILE,FILLFACTOR,FLOPPY,FOR,FOREIGN,FREETEXT,FREETEXTTABLE,FROM,FULL,FUNCTION,GO,GOTO,GRANT,GROUP,HAVING,HOLDLOCK,IDENTITY,IDENTITY_INSERT,IDENTITYCOL</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">IF,IN,INDEX,INNER,INSERT,INT,INTERSECT,INTO,IS,ISOLATION,JOIN,KEY,KILL,LEFT,LEVEL,LIKE,LINENO,LOAD,MAX,MIN,MIRROREXIT,NATIONAL,NOCHECK,NONCLUSTERED</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">NOT,NULL,NULLIF,OF,OFF,OFFSETS,ON,ONCE,ONLY,OPEN,OPENDATASOURCE,OPENQUERY,OPENROWSET,OPTION,OR,ORDER,OUTER,OVER,PERCENT,PERM,PERMANENT,PIPE,PLAN</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">PRECISION,PREPARE,PRIMARY,PRINT,PRIVILEGES,PROC,PROCEDURE,PROCESSEXIT,PUBLIC,RAISERROR,READ,READTEXT,RECONFIGURE,REFERENCES,REPEATABLE,REPLICATION</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">RESTORE,RESTRICT,RETURN,RETURNS,REVOKE,RIGHT,ROLLBACK,ROWCOUNT,ROWGUIDCOL,RULE,SAVE,SCHEMA,SELECT,SERIALIZABLE,SESSION_USER,SET,SETUSER,SHUTDOWN</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">SOME,STATISTICS,SUM,SYSTEM_USER,TABLE,TAPE,TEMP,TEMPORARY,TEXTSIZE,THEN,TO,TOP,TRAN,TRANSACTION,TRIGGER,TRUNCATE,TSEQUAL,UNCOMMITTED,UNION,UNIQUE</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="8">UPDATE,UPDATETEXT,USE,USER,VALUES,VARCHAR,VARYING,VIEW,WAITFOR,WHEN,WHERE,WHILE,WITH,WORK,WRITETEXT</format>
+  </profile>
+  <profile name="XML" id="4c1be33932274bc2ab40204dac3ed985" ext="xml">
+    <format themecolor="3" textcolor="-1" backgroundcolor="-1" flags="256">&lt;\w+</format>
+    <format themecolor="3" textcolor="-1" backgroundcolor="-1" flags="256">&lt;*([/]?&gt;)</format>
+    <format themecolor="3" textcolor="-1" backgroundcolor="-1" flags="256">&lt;/.*&gt;</format>
+    <format themecolor="6" textcolor="-1" backgroundcolor="-1" flags="256">"(\.|[^"])*"</format>
+  </profile>
+  <profile name="Apache Log" id="b4c09e2a41b1400a98e10f83a518fd26" ext="">
+    <format themecolor="5" textcolor="-1" backgroundcolor="-1" flags="256">^[[:xdigit:].:]</format>
+    <format themecolor="1" textcolor="-1" backgroundcolor="-1" flags="256">(GET|POST|HEAD|PUT|DELETE|CONNECT|OPTIONS|PATCH|TRACE) [^"]+</format>
+    <format themecolor="6" textcolor="-1" backgroundcolor="-1" flags="256">"(http[^"]+|-)"</format>
+    <format themecolor="8" textcolor="-1" backgroundcolor="-1" flags="256">(".*Chrome.*)@&lt;!&lt;Safari&gt;</format>
+  </profile>
+  <profile name="BAT" id="b89ce93014ba4389a6e1a76981a0984f" ext="bat">
+    <format themecolor="0" textcolor="#008000" backgroundcolor="-1" flags="2">rem</format>
+    <format themecolor="0" textcolor="#0080ff" backgroundcolor="-1" flags="256">^\w+</format>
+    <format themecolor="0" textcolor="#0000ff" backgroundcolor="-1" flags="256">^\s*\t*\b(?:[Aa][Ss][Ss][Oo][Cc]|[Bb][Rr][Ee][Aa][Kk]|[Cc][Aa][Ll][Ll]|[Cc][Hh][Cc][Pp]|[Cc][Hh][Dd][Ii][Rr]|[Cc][Dd]|[Cc][Ll][Ss]|[Cc][Oo][Ll][Oo][Rr]|[Cc][Oo][Pp][Yy]|[Dd][Aa][Ee]|[Ee][Cc][Hh][Oo]|[Ee][Nn][Dd][Ll][Oo][Cc][Aa][Ll]|[Ee][Xx][Ii]|[Ff][Oo][Rr]|[Ff][Yy][Pp][Ee]|[Gg][Oo][Oo]|[Ii][Ff]|[Mm][Kk][Dd][Ii][Rr]|[Mm][Oo][Vv][Ee]|[Pp][Aa][Hh]|[Pp][Aa][Uu][Ss][Ee]|[Pp][Oo][Pp][Dd]|[Pp][Rr][Oo][Mm][Pp]|[Pp][Uu][Ss][Hh][Dd]|[Rr][Ee][Nn][Aa][Mm][Ee]|[Rr][Mm][Dd][Ii][Rr][  ][Rr][Dd]|[Rr][Ee][Nn]|[Ss][Ee]|[Ss][Ee][Ll][Oo][Cc][Aa][Ll]|[Ss][Hh][Ii][Ff]|[Ss][Aa][Rr]|[Ii][Mm][Ee]|[Ii][Ll][Ee]|[Yy][Pp][Ee]|[Vv][Ee][Rr]|[Vv][Ee][Rr][Ii][Ff][Yy]|[Vv][Oo][Ll])\b</format>
+    <format themecolor="0" textcolor="#0000ff" backgroundcolor="-1" flags="256">\b(?:[Gg][Oo][Oo]|[Ii][Ff]|[Ff][Oo][Rr]|[Dd][Oo]|[Ii][Nn]|[Ss][Ee])\b</format>
+    <format themecolor="0" textcolor="#ff8040" backgroundcolor="#ffffd9" flags="256">%%\w+</format>
+    <format themecolor="0" textcolor="#ff8040" backgroundcolor="#ffffd9" flags="256">%~?(\w+)</format>
+    <format themecolor="0" textcolor="#ff8040" backgroundcolor="#ffffd9" flags="1">$%</format>
+    <format themecolor="0" textcolor="#ff8000" backgroundcolor="#ffffd9" flags="256">!(?:[^"%\\]|\\.)*?!</format>
+    <format themecolor="0" textcolor="#808080" backgroundcolor="-1" flags="256">"(?:[^"%\\]|\\.)*?"</format>
+    <format themecolor="0" textcolor="#808080" backgroundcolor="-1" flags="1">"</format>
+    <format themecolor="0" textcolor="#ff0000" backgroundcolor="-1" flags="16640">^\s*\t*:</format>
+    <format themecolor="0" textcolor="#ff0080" backgroundcolor="-1" flags="4352">^@</format>
+    <format themecolor="0" textcolor="#008000" backgroundcolor="-1" flags="4352">^::</format>
+    <format themecolor="0" textcolor="#008000" backgroundcolor="-1" flags="4352">\b(?:[Rr][Ee][Mm])\b</format>
+    <format themecolor="0" textcolor="#ff0000" backgroundcolor="-1" flags="1">|,*,&lt;,&gt;,=</format>
+    <format themecolor="0" textcolor="#0080ff" backgroundcolor="-1" flags="1">(,)</format>
+    <format themecolor="0" textcolor="#ff0000" backgroundcolor="-1" flags="256">\b[0-9]+</format>
+  </profile>
+<profile name="HTML" id="0596a19914574936a2e34f16fe87d476" ext="htm,html">
+    <format themecolor="0" textcolor="#0000ff" backgroundcolor="-1" flags="256">&lt;\w+</format>
+    <format themecolor="0" textcolor="#0000ff" backgroundcolor="-1" flags="256">&lt;*([/]?&gt;)</format>
+    <format themecolor="0" textcolor="#0000ff" backgroundcolor="-1" flags="256">&lt;/.*&gt;</format>
+    <format themecolor="0" textcolor="#ff0000" backgroundcolor="-1" flags="256">\b(?:[Aa][Cc][Cc][Ee][Pp]|[Aa][Cc][Cc][Ee][Pp][-][Cc][Hh][Aa][Rr][Ss][Ee]|[Aa][Cc][Cc][Ee][Ss][Ss][Kk][Ee][Yy]|[Aa][Cc][Ii][Oo][Nn]|[Aa][Ll][Ii][Gg][Nn]|[Aa][Ll]|[Aa][Ss][Yy][Nn][Cc]|[Aa][Uu][Oo][Cc][Oo][Mm][Pp][Ll][Ee][Ee]|[Aa][Uu][Oo][Ff][Oo][Cc][Uu][Ss]|[Aa][Uu][Oo][Pp][Ll][Aa][Yy]|[Bb][Gg][Cc][Oo][Ll][Oo][Rr]|[Bb][Oo][Rr][Dd][Ee][Rr]|[Cc][Hh][Aa][Ll][Ll][Ee][Nn][Gg][Ee]|[Cc][Hh][Aa][Rr][Ss][Ee]|[Cc][Hh][Ee][Cc][Kk][Ee][Dd]|[Cc][Ii][Ee]|[Cc][Ll][Aa][Ss][Ss]|[Cc][Oo][Ll][Oo][Rr]|[Cc][Oo][Ll][Ss]|[Cc][Oo][Ll][Ss][Pp][Aa][Nn]|[Cc][Oo][Nn][Ee][Nn]|[Cc][Oo][Nn][Ee][Nn][Ee][Dd][Ii][Aa][Bb][Ll][Ee]|[Cc][Oo][Nn][Ee][Xx][Mm][Ee][Nn][Uu]|[Cc][Oo][Nn][Rr][Oo][Ll][Ss]|[Cc][Oo][Oo][Rr][Dd][Ss]|[Dd][Aa][Aa]|[Dd][Aa][Aa][-][\*]|[Dd][Aa][Ee][Ii][Mm][Ee]|[Dd][Ee][Ff][Aa][Uu][Ll]|[Dd][Ee][Ff][Ee][Rr]|[Dd][Ii][Rr]|[Dd][Ii][Rr][Nn][Aa][Mm][Ee]|[Dd][Ii][Ss][Aa][Bb][Ll][Ee][Dd])=</format>
+    <format themecolor="0" textcolor="#ff0000" backgroundcolor="-1" flags="256">\b(?:[Dd][Oo][Ww][Nn][Ll][Oo][Aa][Dd]|[Dd][Rr][Aa][Gg][Gg][Aa][Bb][Ll][Ee]|[Dd][Rr][Oo][Pp][Zz][Oo][Nn][Ee]|[Ee][Nn][Cc][Yy][Pp][Ee]|[Ff][Oo][Rr]|[Ff][Oo][Rr][Mm]|[Ff][Oo][Rr][Mm][Aa][Cc][Ii][Oo][Nn]|[Hh][Ee][Aa][Dd][Ee][Rr][Ss]|[Hh][Ee][Ii][Gg][Hh]|[Hh][Ii][Dd][Dd][Ee][Nn]|[Hh][Ii][Gg][Hh]|[Hh][Rr][Ee][Ff]|[Hh][Rr][Ee][Ff][Ll][Aa][Nn][Gg]|[Hh][Pp][-][Ee][Qq][Uu][Ii][Vv]|[Ii][Dd]|[Ii][Ss][Mm][Aa][Pp]|[Kk][Ee][Yy][Yy][Pp][Ee]|[Kk][Ii][Nn][Dd]|[Ll][Aa][Bb][Ee][Ll]|[Ll][Aa][Nn][Gg]|[Ll][Ii][Ss]|[Ll][Oo][Oo][Pp]|[Ll][Oo][Ww]|[Mm][Aa][Xx]|[Mm][Aa][Xx][Ll][Ee][Nn][Gg][Hh]|[Mm][Ee][Dd][Ii][Aa]|[Mm][Ee][Hh][Oo][Dd]|[Mm][Ii][Nn]|[Mm][Uu][Ll][Ii][Pp][Ll][Ee]|[Mm][Uu][Ee][Dd]|[Nn][Aa][Mm][Ee]|[Nn][Oo][Vv][Aa][Ll][Ii][Dd][Aa][Ee]|[Oo][Nn][Aa][Bb][Oo][Rr]|[Oo][Nn][Aa][Ff][Ee][Rr][Pp][Rr][Ii][Nn]|[Oo][Nn][Bb][Ee][Ff][Oo][Rr][Ee][Pp][Rr][Ii][Nn]|[Oo][Nn][Bb][Ee][Ff][Oo][Rr][Ee][Uu][Nn][Ll][Oo][Aa][Dd])=</format>
+    <format themecolor="0" textcolor="#ff0000" backgroundcolor="-1" flags="256">\b(?:[Oo][Nn][Bb][Ll][Uu][Rr]|[Oo][Nn][Cc][Aa][Nn][Pp][Ll][Aa][Yy]|[Oo][Nn][Cc][Aa][Nn][Pp][Ll][Aa][Yy][Hh][Rr][Oo][Uu][Gg][Hh]|[Oo][Nn][Cc][Hh][Aa][Nn][Gg][Ee]|[Oo][Nn][Cc][Ll][Ii][Cc][Kk]|[Oo][Nn][Cc][Oo][Nn][Ee][Xx][Mm][Ee][Nn][Uu]|[Oo][Nn][Cc][Oo][Pp][Yy]|[Oo][Nn][Cc][Uu][Ee][Cc][Hh][Aa][Nn][Gg][Ee]|[Oo][Nn][Cc][Uu]|[Oo][Nn][Dd][Bb][Ll][Cc][Ll][Ii][Cc][Kk]|[Oo][Nn][Dd][Rr][Aa][Gg]|[Oo][Nn][Dd][Rr][Aa][Gg][Ee][Nn][Dd]|[Oo][Nn][Dd][Rr][Aa][Gg][Ee][Nn][Ee][Rr]|[Oo][Nn][Dd][Rr][Aa][Gg][Ll][Ee][Aa][Vv][Ee]|[Oo][Nn][Dd][Rr][Aa][Gg][Oo][Vv][Ee][Rr]|[Oo][Nn][Dd][Rr][Aa][Gg][Ss][Aa][Rr]|[Oo][Nn][Dd][Rr][Oo][Pp]|[Oo][Nn][Dd][Uu][Rr][Aa][Ii][Oo][Nn][Cc][Hh][Aa][Nn][Gg][Ee]|[Oo][Nn][Ee][Mm][Pp][Ii][Ee][Dd]|[Oo][Nn][Ee][Nn][Dd][Ee][Dd]|[Oo][Nn][Ee][Rr][Rr][Oo][Rr]|[Oo][Nn][Ff][Oo][Cc][Uu][Ss]|[Oo][Nn][Hh][Aa][Ss][Hh][Cc][Hh][Aa][Nn][Gg][Ee]|[Oo][Nn][Ii][Nn][Pp][Uu]|[Oo][Nn][Ii][Nn][Vv][Aa][Ll][Ii][Dd])=</format>
+    <format themecolor="0" textcolor="#ff0000" backgroundcolor="-1" flags="256">\b(?:[Oo][Nn][Kk][Ee][Yy][Dd][Oo][Ww][Nn]|[Oo][Nn][Kk][Ee][Yy][Pp][Rr][Ee][Ss][Ss]|[Oo][Nn][Kk][Ee][Yy][Uu][Pp]|[Oo][Nn][Ll][Oo][Aa][Dd]|[Oo][Nn][Ll][Oo][Aa][Dd][Ee][Dd][Dd][Aa][Aa]|[Oo][Nn][Ll][Oo][Aa][Dd][Ee][Dd][Mm][Ee][Aa][Dd][Aa][Aa]|[Oo][Nn][Ll][Oo][Aa][Dd][Ss][Aa][Rr]|[Oo][Nn][Mm][Oo][Uu][Ss][Ee][Dd][Oo][Ww][Nn]|[Oo][Nn][Mm][Oo][Uu][Ss][Ee][Mm][Oo][Vv][Ee]|[Oo][Nn][Mm][Oo][Uu][Ss][Ee][Oo][Uu]|[Oo][Nn][Mm][Oo][Uu][Ss][Ee][Oo][Vv][Ee][Rr]|[Oo][Nn][Mm][Oo][Uu][Ss][Ee][Uu][Pp]|[Oo][Nn][Mm][Oo][Uu][Ss][Ee][Ww][Hh][Ee][Ee][Ll]|[Oo][Nn][Oo][Ff][Ff][Ll][Ii][Nn][Ee]|[Oo][Nn][Oo][Nn][Ll][Ii][Nn][Ee]|[Oo][Nn][Pp][Aa][Gg][Ee][Hh][Ii][Dd][Ee]|[Oo][Nn][Pp][Aa][Gg][Ee][Ss][Hh][Oo][Ww]|[Oo][Nn][Pp][Aa][Ss][Ee]|[Oo][Nn][Pp][Aa][Uu][Ss][Ee]|[Oo][Nn][Pp][Ll][Aa][Yy]|[Oo][Nn][Pp][Ll][Aa][Yy][Ii][Nn][Gg]|[Oo][Nn][Pp][Oo][Pp][Ss][Aa][Ee]|[Oo][Nn][Pp][Rr][Oo][Gg][Rr][Ee][Ss][Ss]|[Oo][Nn][Rr][Aa][Ee][Cc][Hh][Aa][Nn][Gg][Ee])=</format>
+    <format themecolor="0" textcolor="#ff0000" backgroundcolor="-1" flags="256">\b(?:[Oo][Nn][Rr][Ee][Ss][Ee]|[Oo][Nn][Rr][Ee][Ss][Ii][Zz][Ee]|[Oo][Nn][Ss][Cc][Rr][Oo][Ll][Ll]|[Oo][Nn][Ss][Ee][Aa][Rr][Cc][Hh]|[Oo][Nn][Ss][Ee][Ee][Kk][Ee][Dd]|[Oo][Nn][Ss][Ee][Ee][Kk][Ii][Nn][Gg]|[Oo][Nn][Ss][Ee][Ll][Ee][Cc]|[Oo][Nn][Ss][Hh][Oo][Ww]|[Oo][Nn][Ss][Aa][Ll][Ll][Ee][Dd]|[Oo][Nn][Ss][Oo][Rr][Aa][Gg][Ee]|[Oo][Nn][Ss][Uu][Bb][Mm][Ii]|[Oo][Nn][Ss][Uu][Ss][Pp][Ee][Nn][Dd]|[Oo][Nn][Ii][Mm][Ee][Uu][Pp][Dd][Aa][Ee]|[Oo][Nn][Oo][Gg][Gg][Ll][Ee]|[Oo][Nn][Uu][Nn][Ll][Oo][Aa][Dd]|[Oo][Nn][Vv][Oo][Ll][Uu][Mm][Ee][Cc][Hh][Aa][Nn][Gg][Ee]|[Oo][Nn][Ww][Aa][Ii][Ii][Nn][Gg]|[Oo][Nn][Ww][Hh][Ee][Ee][Ll]|[Oo][Pp][Ee][Nn]|[Oo][Pp][Ii][Mm][Uu][Mm]|[Pp][Aa][Ee][Rr][Nn]|[Pp][Ll][Aa][Cc][Ee][Hh][Oo][Ll][Dd][Ee][Rr]|[Pp][Oo][Ss][Ee][Rr]|[Pp][Rr][Ee][Ll][Oo][Aa][Dd]|[Rr][Ee][Aa][Dd][Oo][Nn][Ll][Yy]|[Rr][Ee][Ll]|[Rr][Ee][Qq][Uu][Ii][Rr][Ee][Dd]|[Rr][Ee][Vv][Ee][Rr][Ss][Ee][Dd]|[Rr][Oo][Ww][Ss]|[Rr][Oo][Ww][Ss][Pp][Aa][Nn])=</format>
+    <format themecolor="0" textcolor="#ff0000" backgroundcolor="-1" flags="256">\b(?:[Ss][Aa][Nn][Dd][Bb][Oo][Xx]|[Ss][Cc][Oo][Pp][Ee]|[Ss][Cc][Oo][Pp][Ee][Dd]|[Ss][Ee][Ll][Ee][Cc][Ee][Dd]|[Ss][Hh][Aa][Pp][Ee]|[Ss][Ii][Zz][Ee]|[Ss][Ii][Zz][Ee][Ss]|[Ss][Pp][Aa][Nn]|[Ss][Pp][Ee][Ll][Ll][Cc][Hh][Ee][Cc][Kk]|[Ss][Rr][Cc]|[Ss][Rr][Cc][Dd][Oo][Cc]|[Ss][Rr][Cc][Ll][Aa][Nn][Gg]|[Ss][Rr][Cc][Ss][Ee]|[Ss][Aa][Rr]|[Ss][Ee][Pp]|[Ss][Yy][Ll][Ee]|[Aa][Bb][Ii][Nn][Dd][Ee][Xx]|[Aa][Rr][Gg][Ee]|[Ii][Ll][Ee]|[Rr][Aa][Nn][Ss][Ll][Aa][Ee]|[Yy][Pp][Ee]|[Uu][Ss][Ee][Mm][Aa][Pp]|[Vv][Aa][Ll][Uu][Ee]|[Ww][Ii][Dd][Hh]|[Ww][Rr][Aa][Pp]|)=</format>
+    <format themecolor="0" textcolor="#8000ff" backgroundcolor="-1" flags="256">".*?"</format>
+    <format themecolor="0" textcolor="#8000ff" backgroundcolor="-1" flags="256">'.*?'</format>
+    <format themecolor="0" textcolor="#008000" backgroundcolor="-1" flags="256">&lt;!--.*--&gt;</format>
+  </profile>
+ <profile name="SH" id="334b5e34f49246d8af418b2db717562b" ext="sh">
+    <format themecolor="0" textcolor="#008080" backgroundcolor="#00ffff" flags="256">\$\{([^\s]+)</format>
+    <format themecolor="0" textcolor="#808080" backgroundcolor="-1" flags="256">"\$(\w+)</format>
+    <format themecolor="0" textcolor="#ff8040" backgroundcolor="#ffffd9" flags="256">\$(\w+)</format>
+    <format themecolor="0" textcolor="#0000ff" backgroundcolor="-1" flags="256">\b(?:[Cc][Aa][Ss][Ee]|[Dd][Oo]|[Dd][Oo][Nn][Ee]|[Ee][Ll][Ii][Ff]|[Ee][Ll][Ss][Ee]|[Ee][Ss][Aa][Cc]|[Ff][Ii]|[Ff][Oo][Rr]|[Ff][Uu][Nn][Cc][Ii][Oo][Nn]|[Ii][Ff]|[Ii][Nn]|[Ss][Ee][Ll][Ee][Cc]|[Hh][Ee][Nn]|[Uu][Nn][Ii][Ll]|[Ww][Hh][Ii][Ll][Ee]|[Ii][Mm][Ee])\b</format>
+    <format themecolor="0" textcolor="#0000ff" backgroundcolor="-1" flags="256">\b(?:[Cc][Dd]|[Ee][Cc][Hh][Oo])\b</format>
+    <format themecolor="0" textcolor="#804040" backgroundcolor="#e1fff3" flags="256">`(?:[^"\\]|\\.)*?`</format>
+    <format themecolor="0" textcolor="#808080" backgroundcolor="-1" flags="256">"(?:[^"\\]|\\.)*?"</format>
+    <format themecolor="0" textcolor="#ff0000" backgroundcolor="-1" flags="256">\b[0-9]+</format>
+    <format themecolor="0" textcolor="#804000" backgroundcolor="-1" flags="256">(?:\[|\(|\]|\)|=|\||;|!|\/|-|&lt;|&gt;)</format>
+    <format themecolor="0" textcolor="#804000" backgroundcolor="-1" flags="2">{,},{}</format>
+    <format themecolor="0" textcolor="#008000" backgroundcolor="-1" flags="4352">^#</format>
+  </profile>
+</colorformatting>

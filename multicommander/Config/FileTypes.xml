@@ -16,15 +16,15 @@
       <icon use="0" path="" index="-1"/>
       <extensions>*.pdf *.epub *.mobi *.xps *.djvu *.chm *.cbz *.cpr</extensions>
     </viewer>
-    <viewer name="JPEGView">
-      <program type="1" name="" path="${mcpath}\..\..\jpegview\current\JPEGView.exe" args="&quot;${filepath}&quot;"/>
+    <viewer name="ImageGlass">
+      <program type="1" name="" path="${mcpath}\..\..\imageglass\current\ImageGlass.exe" args="&quot;${filepath}&quot;"/>
       <icon use="0" path="" index="-1"/>
       <extensions>*.jpg *.jpeg *.png *.bmp *.gif *.tif *.tiff *.webp *.tga</extensions>
     </viewer>
   </view>
   <edit>
     <editor name="Emacs" default="1">
-      <program type="1" name="" path="emacsclientw.exe" args="-n --alternate-editor= &quot;${filepath}&quot;"/>
+      <program type="1" name="" path="C:\msys64\mingw64\bin\emacsclientw.exe" args="-n --alternate-editor= &quot;${filepath}&quot;"/>
       <icon use="0" path="" index="-1"/>
       <extensions>*</extensions>
     </editor>

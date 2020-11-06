@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <objects>
+    <showall value="0"/>
+  </objects>
+  <logging>
+    <errors value="1"/>
+    <traceinfo value="0"/>
+    <objectinfo value="1"/>
+    <deviceinfo value="1"/>
+    <deviceinfo2 value="1"/>
+    <storageinfo value="1"/>
+  </logging>
+</config>
