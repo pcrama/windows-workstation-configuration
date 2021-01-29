@@ -316,6 +316,14 @@ Using [[https://github.com/ajeetdsouza/zoxide][zoxide]]: ~z~ is an alias for fas
   if type -p zoxide > /dev/null ; then
       eval "$(zoxide init bash)"
       type -p fzf > /dev/null || unset -f zqi
+      if type -p ugrep > /dev/null; then
+          function __zoxide_zi_ugrep() {
+              local __zoxide_result
+              __zoxide_result="$(zoxide query --list -- "$@" | ugrep -Q)" && __zoxide_cd "$__zoxide_result"
+          }
+          # list directories from zoxide & select interactively with ugrep:
+          alias zu=__zoxide_zi_ugrep
+      fi
   fi
 #+end_src
 
@@ -389,6 +397,21 @@ This is actually a function, not an alias...
   fi
 #+end_src
 
+** Diffing with M-x ediff
+#+begin_src shell :exports code
+  function _ediff_function {
+      left="$1"
+      right="$2"
+      if [ -r "$left" -a -r "$right" ] ; then
+          emacsclient --eval "(ediff \"$(cygpath --mixed --absolute "$left")\" \"$(cygpath --mixed --absolute "$right")\")"
+      else
+          [ -r "$left" ] || echo "Can't read '$left'"
+          [ -r "$right" ] || echo "Can't read '$right'"
+      fi
+  }
+  alias ediff="_ediff_function"
+#+end_src
+
 ** docker
 Stop docker from complaining it needs winpty:
 #+begin_src shell :exports code
@@ -434,6 +457,22 @@ input.
           (set-visited-file-name nil)
           (rename-buffer "*stdin*" t))
   EOF
+  fi
+#+end_src
+
+*** ~eu~: combine ~fd~ and ~ugrep~ to interactively select file to edit
+#+begin_src shell :exports code
+  if type -p ugrep > /dev/null; then
+      if type -p fd > /dev/null; then
+          function _emacsclient_ugrep {
+              fd --path-separator "$@" // \
+                  | ugrep -Q \
+                  | tr -d '\r' \
+                  | xargs -n 1 --delimiter='\n' emacsclient --no-wait
+          }
+          # list files with fd & select interactively with ugrep then edit
+          alias eu=_emacsclient_ugrep
+      fi
   fi
 #+end_src
 
