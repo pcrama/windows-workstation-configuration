@@ -20,10 +20,11 @@
   </mouse>
   <color>
     <profile id="50" name="#{d,1412}" file="CommanderStyle-Color-">#{d,1412}</profile>
-    <profile id="51" name="#{d,1413}" file="CommanderStyle-ColorDark-">#{d,1413}</profile>
+    <profile id="51" name="#{d,1413}" file="CommanderStyle-ColorDarkMode-">#{d,1413}</profile>
     <profile id="52" name="#{d,1414}" file="CommanderStyle-ColorNC-">#{d,1414}</profile>
-    <profile id="53" name="#{d,1415}" file="CommanderStyle-Alternating-">#{d,1415}</profile>
+    <profile id="53" name="#{d,1415}" file="CommanderStyle-ColorAlternating-">#{d,1415}</profile>
     <profile id="60" name="#{d,1432}" file="WindowsExplorer-Color-">#{d,1432}</profile>
+    <profile id="61" name="#{d,1436}" file="WindowsExplorer-ColorDarkMode-">#{d,1432}</profile>
     <profile id="0" name="#{d,1448}" file="-">#{d,1448}</profile>
   </color>
 </profiles>

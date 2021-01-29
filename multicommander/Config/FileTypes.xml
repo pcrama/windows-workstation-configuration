@@ -11,32 +11,32 @@
       <icon use="0" path="" index="-1"/>
       <extensions>*.ico *.cr2 *.nef *.dcr</extensions>
     </viewer>
+    <viewer name="FSViewer">
+      <program type="1" name="" path="${mcpath}\..\..\fsviewer\current\FSViewer.exe" args="&quot;${filepath}&quot;"/>
+      <icon use="0" path="" index="-1"/>
+      <extensions>*.jpg *.jpeg *.png *.bmp *.gif *.tif *.tiff</extensions>
+    </viewer>
     <viewer name="SumatraPDF">
       <program type="1" name="" path="${mcpath}\..\..\sumatrapdf\current\SumatraPDF.exe" args="&quot;${filepath}&quot;"/>
       <icon use="0" path="" index="-1"/>
-      <extensions>*.pdf *.epub *.mobi *.xps *.djvu *.chm *.cbz *.cpr</extensions>
-    </viewer>
-    <viewer name="ImageGlass">
-      <program type="1" name="" path="${mcpath}\..\..\imageglass\current\ImageGlass.exe" args="&quot;${filepath}&quot;"/>
-      <icon use="0" path="" index="-1"/>
-      <extensions>*.jpg *.jpeg *.png *.bmp *.gif *.tif *.tiff *.webp *.tga</extensions>
+      <extensions>*.pdf *.epub *.mobi *.azw *.fb2 *.fb2z *.zfb2 *.djv *.djvu *.chm *.xps *.oxps *.xod</extensions>
     </viewer>
   </view>
   <edit>
-    <editor name="Emacs" default="1">
-      <program type="1" name="" path="C:\msys64\mingw64\bin\emacsclientw.exe" args="-n --alternate-editor= &quot;${filepath}&quot;"/>
+    <editor name="Emacs or Notepad++" default="1">
+      <program type="1" name="" path="C:\msys64\mingw64\bin\emacsclientw.exe" args="-n --alternate-editor=&quot;${mcpath}\..\..\notepadplusplus\current\notepad++.exe&quot; &quot;${filepath}&quot;"/>
       <icon use="0" path="" index="-1"/>
       <extensions>*</extensions>
     </editor>
     <editor name="Default Picture Editor">
       <program type="3" name="" path="edit" args=""/>
       <icon use="0" path="" index="-1"/>
-      <extensions>*.ico</extensions>
+      <extensions>*.jpg *.jpeg *.png *.bmp *.gif *.tif *.tiff</extensions>
     </editor>
-    <editor name="Paint.Net">
-      <program type="1" name="" path="${mcpath}\..\..\paint.net\current\PaintDotNet.exe" args="&quot;${filepath}&quot;"/>
+    <editor name="PDF XChange editor">
+      <program type="1" name="" path="${mcpath}\..\..\pdf-xchange-editor\current\PDFXEdit.exe" args="&quot;${filepath}&quot;"/>
       <icon use="0" path="" index="-1"/>
-      <extensions>*.jpg *.jpeg *.png *.bmp *.gif *.tif *.tiff *.tga *.dds *.pdn</extensions>
+      <extensions>*.pdf</extensions>
     </editor>
   </edit>
   <run>

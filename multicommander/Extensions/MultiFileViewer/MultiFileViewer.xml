@@ -31,7 +31,7 @@
   <colorthemes>
     <colortheme id="" default="1" name="[Default]">
       <default text="000000" background="ffffff"/>
-      <selection text="ffffff" background="3399ff"/>
+      <selection text="ffffff" background="0078d7"/>
       <link text="0000dc" background="-1"/>
       <linkhover text="009b00" background="-1"/>
       <linenum text="fffee0" background="68838b"/>
@@ -56,7 +56,7 @@
       <gradient_begin value="bfe3f7"/>
       <gradient_end value="b3fdc9"/>
     </colortheme>
-    <colortheme id="cdf2126e2a1c4985b788db5b6987d115" name="Dark">
+    <colortheme id="a4eca2ec566b44caafc7e364e6f14e42" name="Dark">
       <default text="ffffe0" background="282828"/>
       <selection text="ffffff" background="317dfd"/>
       <link text="0000dc" background="-1"/>
@@ -83,7 +83,7 @@
       <gradient_begin value="000000"/>
       <gradient_end value="660000"/>
     </colortheme>
-    <colortheme id="1e71a4bdfb83440097d3d7b1d262f836" name="Blue">
+    <colortheme id="5194491e4a0d4edca646afbf6f8added" name="Blue">
       <default text="fefe94" background="0000a0"/>
       <selection text="0000a0" background="ffff94"/>
       <link text="ffffff" background="-1"/>
@@ -110,7 +110,7 @@
       <gradient_begin value="bfe3f7"/>
       <gradient_end value="b3fdc9"/>
     </colortheme>
-    <colortheme id="efbdd892c4fc4a45b3affbd4a6a1b377" name="Yellow">
+    <colortheme id="3ed3ca05554647b6b4954eb3b5a4a127" name="Yellow">
       <default text="0000ff" background="feff7f"/>
       <selection text="f8f9b5" background="425df5"/>
       <link text="1d11fe" background="-1"/>
