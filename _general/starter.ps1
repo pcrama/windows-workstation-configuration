@@ -59,7 +59,19 @@ $Env:PATH = (
 
 $Env:GRAPHVIZ_DOT = $Env:SCOOP + "\shims\dot.exe"
 
-Start-Process -WindowStyle Hidden -FilePath "c:\msys64\msys2_shell.cmd" -ArgumentList @("-mingw64", "-mintty", "-where", $Env:USERPROFILE, "-use-full-path", "-shell", "bash")
+Set-Location $Env:HOME
+
+try {
+    Write-Host "Trying to start wezterm"
+    # https://superuser.com/a/1297072: msys2/mingw64 shell setup for ConEmu, adapted for wezterm
+    $Env:CHERE_INVOKING = 1
+    $Env:MSYS2_PATH_TYPE = 'inherit'
+    $Env:MSYSTEM = 'MINGW64'
+    Start-Process -WindowStyle Hidden -FilePath ($Env:SCOOP + "\shims\wezterm.exe") -ArgumentList @('start', '--', 'c:\msys64\usr\bin\bash.exe', '--login', '-i')
+} catch {
+    Write-Host "Falling back on mintty"
+    Start-Process -WindowStyle Hidden -FilePath "c:\msys64\msys2_shell.cmd" -ArgumentList @("-mingw64", "-mintty", "-where", $Env:USERPROFILE, "-use-full-path", "-shell", "bash")
+}
 
 Wait-ProcessExistsP bash
 
