@@ -20,10 +20,10 @@
     <item type="text" value="b" text="#s1200" >
       <item type="text" text="#s1203" value="b">
         <item type="cmb" key="layout/toolbars/iconsize" attribute="value" default="1" text="#s1150" restartrequired="1">
-          <option text="#s1151" value="1"/>
-          <option text="#s1152" value="2"/>
-          <option text="#s1153" value="3"/>
-          <option text="#s1154" value="4"/>
+          <option text="#s1160" value="1"/>
+          <option text="#s1161" value="2"/>
+          <option text="#s1162" value="3"/>
+          <option text="#s1163" value="4"/>
           <item type="chk" key="layout/toolbars/autoscale" attribute="value" default="1" text="#s1158" tooltip="#s1158" restartrequired="1" />
         </item>
         <item type="chk" key="layout/toolbars/stdcommands" attribute="value" default="1" text="#s1134" tooltip="#s1134" restartrequired="1"/>

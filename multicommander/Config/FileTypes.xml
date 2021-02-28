@@ -23,11 +23,6 @@
     </viewer>
   </view>
   <edit>
-    <editor name="Emacs or Notepad++" default="1">
-      <program type="1" name="" path="C:\msys64\mingw64\bin\emacsclientw.exe" args="-n --alternate-editor=&quot;${mcpath}\..\..\notepadplusplus\current\notepad++.exe&quot; &quot;${filepath}&quot;"/>
-      <icon use="0" path="" index="-1"/>
-      <extensions>*</extensions>
-    </editor>
     <editor name="Default Picture Editor">
       <program type="3" name="" path="edit" args=""/>
       <icon use="0" path="" index="-1"/>
@@ -37,6 +32,11 @@
       <program type="1" name="" path="${mcpath}\..\..\pdf-xchange-editor\current\PDFXEdit.exe" args="&quot;${filepath}&quot;"/>
       <icon use="0" path="" index="-1"/>
       <extensions>*.pdf</extensions>
+    </editor>
+    <editor name="Emacs or Notepad++">
+      <program type="1" name="" path="C:\msys64\mingw64\bin\emacsclientw.exe" args="-n --alternate-editor=&quot;${mcpath}\..\..\notepadplusplus\current\notepad++.exe&quot; &quot;${filepath}&quot;"/>
+      <icon use="0" path="" index="-1"/>
+      <extensions>*</extensions>
     </editor>
   </edit>
   <run>

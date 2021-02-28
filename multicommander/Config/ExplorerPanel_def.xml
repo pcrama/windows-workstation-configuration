@@ -33,10 +33,10 @@
     <item type="text" text="#s202" value="b">
       <item type="chk" key="layout/Icons"  attribute="value" default="0" text="#s202" tooltip="#s202">
         <item type="cmb" key="layout/Icons/Size" attribute="value" value="0" default="1" text="#s285">
-          <option text="#s286" value="1" />
-          <option text="#s288" value="3" />
-          <option text="#s287" value="2" />
-          <option text="#s289" value="4" />
+          <option text="#s820" value="1" />
+          <option text="#s821" value="3" />
+          <option text="#s822" value="2" />
+          <option text="#s823" value="4" />
           <item type="chk" key="layout/Icons/AutoScale"     attribute="value" default="1" text="#s610" tooltip="#s610" restartrequired="1" />
         </item>
         <item type="chk" key="layout/Icons/Associated"    attribute="value" default="0" text="#s203" tooltip="#s203" />
@@ -201,6 +201,7 @@
     <item type="text" text="#s105" value="b">
       <item type="chk" key="layout/ShowLinkTargetInName"  attribute="value" default="1" text="#s216" tooltip="#s216" />
       <item type="chk" key="layout/AutoSizeColumns" attribute="value" default="0" text="#s223" />
+      <item type="chk" key="layout/HighlightSortColumn" attribute="value" default="0" text="#s284" tooltip="#s284"/>
       <item type="chk" key="layout/AutoSortOnRename" attribute="value" defualt="1" text="#s253" tooltip="#s253" />
       <item type="chk" key="layout/SortNatural" attribute="value" default="1" text="#s254" tooltip="#s254" />
       <item type="chk" key="layout/SortLanguageAware" attribute="value" default="0" text="#s252" tooltip="#s252" />
