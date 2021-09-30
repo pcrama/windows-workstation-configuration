@@ -23,6 +23,7 @@
     <language name="Lithuanian" localized="Lietuvių" langcode="lt" matching="lt,lt-LT"/>
     <language name="Korean" localized="한국어" langcode="ko" matching="ko, ko-KR" />
     <language name="Turkey" localized="Türkçe" langcode="tr" matching="tr,tr-TR" />
-    <language  name="Ukrainian" localized="Українська" langcode="uk" matching="uk, uk-UA" />
+    <language name="Ukrainian" localized="Українська" langcode="uk" matching="uk, uk-UA" />
+    <language name="Bulgarian" localized="Български" langcode="bg" matching="bg, bg-BG" />
   </languages>
 </config>

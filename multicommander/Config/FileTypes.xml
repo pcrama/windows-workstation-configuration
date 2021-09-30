@@ -23,6 +23,11 @@
     </viewer>
   </view>
   <edit>
+    <editor name="Notepad" default="1">
+      <program type="1" name="" path="Notepad.exe" args="&quot;${filepath}&quot;"/>
+      <icon use="0" path="" index="-1"/>
+      <extensions>*</extensions>
+    </editor>
     <editor name="Default Picture Editor">
       <program type="3" name="" path="edit" args=""/>
       <icon use="0" path="" index="-1"/>

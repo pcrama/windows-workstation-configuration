@@ -16,6 +16,7 @@
         <option text="#s1173" value="2"/>
       </item>
       <item type="chk" key="startup/startminimized"  attribute="value" default="0" text="#s1176" tooltip="#s1176" />
+      <item type="chk" key="startup/PreventWindowsAutoScaling" attribute="value" default="0" text="#s1179" tooltip="#s1179" />
     </item>
     <item type="text" value="b" text="#s1200" >
       <item type="text" text="#s1203" value="b">
@@ -225,11 +226,33 @@
       <item type="chk" key="filesystem/contextmenu/customcontextmenu" attribute="value" default="1" text="#s2452" tooltip="#s2452"/>
       <item type="chk" key="filesystem/contextmenu/windowsshellassubmenu" attribute="value" default="0" text="#s2453" tooltip="#s2453"/>
     </item>
+    <item type="text" value="b" text="#s2460">
+      <item type="cmb" key="filesystem/filetype/edit/multieditwarning" attribute="value" value="100" default="2" text="#s2461">
+        <option text="0 - Disabled" value="0"/>
+        <option text="1" value="1"/>
+        <option text="2" value="2"/>
+        <option text="3" value="3"/>
+        <option text="4" value="4"/>
+        <option text="5" value="5"/>
+        <option text="10" value="10"/>
+        <option text="15" value="15"/>
+      </item>
+    </item>
+
+    
     <item type="text" value="b" text="#s3291">
-      <item type="chk" key="filesystem/tweak/refreshviews_onactivate" attribute="value" default="1" text="#s3292" tooltip="#s3292" />
-      <item type="chk" key="filesystem/tweak/findfiles_virtualdevice" attribute="value" default="1" text="#s3294" tooltip="#s3294" />
-      <item type="edit2" key="filesystem/browse/timeout" attribute="value" default="1500" text="#s3293" restartrequired="1" />
-      <item type="chk" key="tweak/ProgressUIMainThread" attribute="value" default="1" text="(Expert) Use the new way to show progress windows (Do not change, Unless you have issue with progress UI)" restartrequired="1" />
+      <item type="text" value="b" text="FileSystem refresh">
+        <item type="chk" key="filesystem/tweak/refreshviews_onactivate" attribute="value" default="1" text="#s3292" tooltip="#s3292" />
+        <item type="edit2" key="filesystem/browse/timeout" attribute="value" default="1500" text="#s3293" restartrequired="1" />
+        <item type="cmb" key="filesystem/browse/refreshdelay" attribute="value" value="150" default="3" text="Refresh when detecting external changes" tooltip="Warning! - If filesytem is changed a lot very fast and settings is 'fast' or 'Very Fast' then MC will spend a lot of time just to constantly rescan and refresh UI">
+          <option text="Very fast" value="1" />
+          <option text="Fast" value="2" />
+          <option text="Default" value="3" />
+          <option text="Slow" value="4" />
+          <option text="Very Slow" value="5" />
+          <option text="None" value="0" />
+        </item>
+      </item>
       <item type="text" value="b" text="#s3339">
         <item type="cmb" key="filesystem/thumbnail/system" attribute="value" value="0" default="0" text="#s3341">
           <option text="#g220" value="0" />
@@ -265,6 +288,10 @@
           <option text="16" value="16" />
         </item>
         <item type="chk" key="filesystem/thumbnail/logging" attribute="value" default="0" text="#s3355" />
+      </item>
+      <item type="text" value="b" text="Other">
+        <item type="chk" key="filesystem/tweak/findfiles_virtualdevice" attribute="value" default="1" text="#s3294" tooltip="#s3294" />
+        <item type="chk" key="tweak/ProgressUIMainThread" attribute="value" default="1" text="(Expert) Use the new way to show progress windows (Do not change, Unless you have issue with progress UI)" restartrequired="1" />
       </item>
     </item>
   </section>
@@ -369,25 +396,24 @@
 
     <item type="text" value="b" text="#s3548" tooltip="#s3548">
       <item type="text" value="b" text="#s3552">
-        <item type="colorprogress" key="progressbar/colors/copy/statusbar" attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3565" default="$COLOR_3DDKSHADOW,#098BF5,#51A6E4,#EDF155,#01fb1a" />
-        <item type="colorprogress" key="progressbar/colors/copy/dialog"    attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3566" default="$COLOR_WINDOW,#7bbdff,#485296,#000000,#ffffff" />
+        <item type="colorprogress" key="progressbar/colors/copy/statusbar" attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3565" default="$COLOR_3DDKSHADOW,#098BF5,-1,#EDF155,#01fb1a" />
+        <item type="colorprogress" key="progressbar/colors/copy/dialog"    attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3566" default="$COLOR_WINDOW,#7bbdff,-1,#000000,#2c10b1" />
       </item>
       <item type="text" value="b" text="#s3553">
-        <item type="colorprogress" key="progressbar/colors/move/statusbar" attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3565" default="$COLOR_3DDKSHADOW,#1AC816,#6BF276,#00FF00,#1D17E7" />
-        <item type="colorprogress" key="progressbar/colors/move/dialog"    attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3566" default="$COLOR_WINDOW,16bd27,-1,#000000,#000000" />
+        <item type="colorprogress" key="progressbar/colors/move/statusbar" attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3565" default="$COLOR_3DDKSHADOW,#1AC816,-1,#00FF00,#1D17E7" />
+        <item type="colorprogress" key="progressbar/colors/move/dialog"    attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3566" default="$COLOR_WINDOW,#15c727,-1,#000000,#000000" />
       </item>
       <item type="text" value="b" text="#s3554">
-        <item type="colorprogress" key="progressbar/colors/delete/statusbar" attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3565" default="$COLOR_3DDKSHADOW,#C40E0E,#E6492D,#00FF00,#FEFE50" />
-        <item type="colorprogress" key="progressbar/colors/delete/dialog"    attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3566" default="#dadada,#92220e,-1,#000000,#f4f41f" />
+        <item type="colorprogress" key="progressbar/colors/delete/statusbar" attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3565" default="$COLOR_3DDKSHADOW,#C40E0E,-1,#00FF00,#FEFE50" />
+        <item type="colorprogress" key="progressbar/colors/delete/dialog"    attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3566" default="#dadada,#c40e0e,-1,#000000,#f4f41f" />
       </item>
       <item type="text" value="b" text="#s3555">
-        <!-- <item type="text" value="i" text="#s3557" /> -->
-        <item type="colorprogress" key="progressbar/colors/extract/statusbar" attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3565" default="$COLOR_3DDKSHADOW,#f49e35,#fbf258,#00FF00,#4F20EF" />
-        <item type="colorprogress" key="progressbar/colors/extract/dialog"    attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3566" default="$COLOR_WINDOW,#f1ba5e,-1,#000000,#1843f1" />
+        <item type="colorprogress" key="progressbar/colors/extract/statusbar" attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3565" default="$COLOR_3DDKSHADOW,#fbf52e,-1,#00FF00,#4F20EF" />
+        <item type="colorprogress" key="progressbar/colors/extract/dialog"    attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3566" default="$COLOR_WINDOW,#f5f530,-1,#000000,#0c34d4" />
       </item>
       <item type="text" value="b" text="#s3556">
-        <item type="colorprogress" key="progressbar/colors/test/statusbar" attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3565" default="$COLOR_3DDKSHADOW,#D624BF,#F584ED,#00FF00,#DFF771" />
-        <item type="colorprogress" key="progressbar/colors/test/dialog"    attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3566" default="$COLOR_WINDOW,#d624bf,-1,#000000,#f5f3ab" />
+        <item type="colorprogress" key="progressbar/colors/test/statusbar" attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3565" default="$COLOR_3DDKSHADOW,#428b6a,-1,#95efe6,#cefaf8" />
+        <item type="colorprogress" key="progressbar/colors/test/dialog"    attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3566" default="$COLOR_WINDOW,#428b6a,-1,#000000,#acebe1" />
       </item>
     </item>
   </section>

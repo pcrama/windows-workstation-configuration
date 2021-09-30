@@ -108,16 +108,6 @@
       <filename>FSFTP.dll</filename>
       <internal>N</internal>
     </module>
-    <module guid="1C3ABDCE6DE74E349335B9066144EAA1" enable="Y" type="FS">
-      <name>FS-Portable</name>
-      <path>FSPortable</path>
-      <filename>FSPortable.dll</filename>
-      <internal>N</internal>
-      <readparam value="0"/>
-      <writeparam value="0"/>
-      <ext>wpd</ext>
-      <byte/>
-    </module>
     <module guid="808459c150fb4f1cb7c574b9c02d0e0c" enable="Y" type="FS">
       <name>FS-RAR</name>
       <path>FSRAR</path>
@@ -127,6 +117,16 @@
       <writeparam value="0"/>
       <ext>rar,r??,001</ext>
       <byte>HEX:526172211A</byte>
+    </module>
+    <module guid="1C3ABDCE6DE74E349335B9066144EAA1" enable="Y" type="FS">
+      <name>FS-Portable</name>
+      <path>FSPortable</path>
+      <filename>FSPortable.dll</filename>
+      <internal>N</internal>
+      <readparam value="0"/>
+      <writeparam value="0"/>
+      <ext>wpd</ext>
+      <byte/>
     </module>
     <module guid="1D4E8D049873416d9828B2A40B72192A" enable="Y" type="PROP">
       <name>Registry Properties</name>

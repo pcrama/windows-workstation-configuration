@@ -6,6 +6,14 @@
     <item type="chk" key="layout/GridLines" attribute="value" default="0" text="#s200">
       <item type="chk" key="layout/GridLines/VLines" attribute="value" default="0" text="#s235" />
       <item type="chk" key="layout/GridLines/HLines" attribute="value" default="0" text="#s236" />
+      <item type="cmb" key="layout/GridLines/Type" attribute="value" value="0" default="0" text="#s190">
+        <option text="#s191" value="0" />
+        <option text="#s192" value="1" />
+        <option text="#s193" value="2" />
+        <option text="#s194" value="3" />
+        <option text="#s195" value="4" />
+      </item>
+
     </item>
     <item type="chk" key="layout/TagFolders" attribute="value" default="0" text="#s221" />
     <item type="chk" key="layout/FolderTagInSize" attribute="value" default="0" text="#s219" />
@@ -275,6 +283,12 @@
       <item type="edit2" key="layout/FolderTree/DevicesFilter" attribute="value" default="*" text="#s472" tooltip="#s472" />
     </item>
 
+    <item type="text" value="b" text="#s510" >
+      <item type="chk" key="startup/DelayUpdate" attribute="value" value="80" default="1" text="#s511" >
+        <item type="chk" key="startup/PefixDelayedTab" attribute="value" value="80" default="1" text="#s512" />
+      </item>
+    </item>
+    
     <item type="text" text="#s350" value="b" >
       <item type="chk" key="save/path" attribute="value" value="80" default="0" text="#s351" >
         <item type="chk" key="save/onlylocal" attribute="value" value="80" default="0" text="#s352" />
@@ -419,7 +433,11 @@
         <item type="chk" key="colors/forcefocusrect" attribute="value" default="0" text="#s333" />
         <item type="color" key="colors/focusrect" attribute="value" value="80,#s302,#s303" text="#s319" default="#FF0000" tooltip="#t319" />
       </item>
-      <item type="color" key="colors/gridline" attribute="value" value="80,#s302,#s303" text="#s318" default="#C0C0C0" />
+
+      <item type="text" text="#s318" value="b">
+         <item type="color" key="colors/gridline" attribute="value" value="80,#s302,#s303" text="#s307" default="#C0C0C0" />
+         <item type="color" key="colors/gridlineH" attribute="value" value="80,#s302,#s303" text="#s308" default="#C0C0C0" />
+      </item>
 
       <item type="text" text="#s309" value="b">
 
@@ -498,6 +516,7 @@
       <option text="#s59" value="8"/>
       <option text="#s60" value="10"/>
       <option text="#s61" value="11"/>
+      <option text="#s62" value="12"/>
       <option text="#s491" value="50"/>
       <option text="#s492" value="51"/>
       <option text="#s493" value="52"/>
