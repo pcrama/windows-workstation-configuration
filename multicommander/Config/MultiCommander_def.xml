@@ -2,7 +2,7 @@
 <settings_layout name="General Settings" use_sections="y" expand_all="y" >
   <section text="#s1000">
     <item type="text" value="b" text="#s1100">
-      <item type="cmb" key="system/language" text="#s1101" default="en" value="50,220" attribute="primary" externalsource="SupportedLanguages" restartrequired="1"/>
+      <item type="cmb" key="system/language" text="#s1101" default="en" value="220" attribute="primary" externalsource="SupportedLanguages" restartrequired="1"/>
       <item type="chk" key="system/checkfornewversion" attribute="value" default="1" text="#s1120">
         <item type="chk" key="system/checkunstableversion" attribute="value" default="0" text="#s1121"/>
       </item>
@@ -10,29 +10,26 @@
     </item>
     <item type="text" value="b" text="#s1102" >
       <item type="cmb" key="startup/autoloadtabsession" attribute="value" value="350" default="1" text="#s1170">
-        <option text="#s1171" value="0"/>
+        <option text
+                ="#s1171" value="0"/>
         <option text="#s1172" value="1"/>
         <option text="#s1173" value="2"/>
       </item>
-    <item type="chk" key="startup/startminimized"  attribute="value" default="0" text="#s1176" tooltip="#s1176" />
+      <item type="chk" key="startup/startminimized"  attribute="value" default="0" text="#s1176" tooltip="#s1176" />
     </item>
     <item type="text" value="b" text="#s1200" >
       <item type="text" text="#s1203" value="b">
-        <itemx type="cmb" key="layout/toolbars/toolbarstyle" attribute="value" value="220" default="2" text="#s1130" widthgroup="1" restartrequired="1">
-          <option text="#s1131" value="1"/>
-          <option text="#s1132" value="2"/>
-        </itemx>
-        <item type="cmb" key="layout/toolbars/iconsize" attribute="value" value="220" default="1" text="#s1150" widthgroup="1" restartrequired="1">
-          <option text="#s1151" value="1"/>
-          <option text="#s1152" value="2"/>
-          <option text="#s1153" value="3"/>
-          <option text="#s1154" value="4"/>
+        <item type="cmb" key="layout/toolbars/iconsize" attribute="value" default="1" text="#s1150" restartrequired="1">
+          <option text="#s1160" value="1"/>
+          <option text="#s1161" value="2"/>
+          <option text="#s1162" value="3"/>
+          <option text="#s1163" value="4"/>
           <item type="chk" key="layout/toolbars/autoscale" attribute="value" default="1" text="#s1158" tooltip="#s1158" restartrequired="1" />
-         </item>
+        </item>
         <item type="chk" key="layout/toolbars/stdcommands" attribute="value" default="1" text="#s1134" tooltip="#s1134" restartrequired="1"/>
         <item type="chk" key="layout/toolbars/launchbar" attribute="value" default="0" text="#s1135" tooltip="#s1134" restartrequired="1" />
         <item type="text" value="b" text="#s1136" >
-          <itemx type="cmb" key="layout/toolbars/cmdlinebar/location" attribute="value" value="220" default="1" text="Location : " widthgroup="1" restartrequired="1">
+          <itemx type="cmb" key="layout/toolbars/cmdlinebar/location" attribute="value" value="220" default="1" text="Location : " restartrequired="1">
             <option text="#s1211" value="1"/>
             <option text="#s1212" value="2"/>
           </itemx>
@@ -48,16 +45,17 @@
         </item>
       </item>
       <item type="text" text="#s1204" value="b">
-        <item type="cmb" key="layout/tablocation" attribute="value" value="70,65" default="0" text="#s1210">
+        <item type="cmb" key="layout/tablocation" attribute="value" default="0" text="#s1210">
           <option text="#s1211" value="1" />
           <option text="#s1212" value="0" />
         </item>
         <item type="chk" key="layout/allowtabcolor" attribute="value" default="1" text="#s1220" />
         <item type="chk" key="layout/showtabicons" attribute="value" default="1" text="#s1221" />
-        <item type="chk" key="layout/highlightactivepanel"  attribute="value" default="1" text="#s799" >
+        <item type="chk" key="layout/tab/activateondragover" attribute="value" default="1" text="#s1222" />
+        <item type="chk" key="layout/highlightactivepanel" attribute="value" default="1" text="#s799" >
           <item type="color" key="layout/activeframecolor" attribute="color" value="80,#s302,#s303" default="$COLOR_HIGHLIGHT" text="#s800" tooltip="#s800" />
         </item>
-        <item type="cmb" key="layout/focuspanelfocus" attribute="value" value="150" default="0" text="#s810">
+        <item type="cmb" key="layout/focuspanelfocus" attribute="value" value="0" default="0" text="#s810">
           <option text="#s811" value="0" />
           <option text="#s812" value="1" />
           <option text="#s813" value="2" />
@@ -67,7 +65,7 @@
         </item>
 
         <item type="text" text="#s1267" value="b">
-          <item type="cmb" key="layout/tab/tabwidth" attribute="value" value="200" default="0" text="#s1273">
+          <item type="cmb" key="layout/tab/tabwidth" attribute="value" value="0" default="0" text="#s1273">
             <option text="#s1268" value="0" />
             <option text="#s1269" value="1" />
             <option text="#s1270" value="2" />
@@ -76,8 +74,8 @@
           <item type="edit2" key="layout/tab/maxtextwidth" attribute="value" default="15" text="#s1272"  />
           <item type="chk" key="layout/tab/ellipsetabtext"  attribute="value" default="0" text="#s1275" tooltip="#s1275"/>
         </item>
-        
-         <item type="chk" key="layout/remembersplitsize" attribute="value" default="0" text="#s1240" tooltip="#s1240"/>
+
+        <item type="chk" key="layout/remembersplitsize" attribute="value" default="0" text="#s1240" tooltip="#s1240"/>
       </item>
       <item type="text" text="#s1245" value="b">
         <item type="cmb" key="layout/buttonpanel/rows" attribute="value" value="70,65" default="4" text="#s1246" tooltip="#s1246" restartrequired="1">
@@ -97,7 +95,7 @@
         <item type="chk" key="favoriteswindow/autocloseonlostfocus" attribute="value" default="1" text="#s1235" tooltip="#s1235"/>
         <item type="chk" key="favoriteswindow/rememberfilter" attribute="value" default="0" text="#s1236" tooltip="#s1236"/>
         <item type="chk" key="favoriteswindow/showpathasname" attribute="value" default="0" text="#s1237" tooltip="#s1237"/>
-        
+
       </item>
     </item>
     <item type="text" value="b" text="#s1250">
@@ -127,17 +125,17 @@
   </section>
   <section text="#s2000">
     <item type="text" value="b" text="#s2100">
-      <item type="cmb" key="filesystem/queue/copy" attribute="value" value="40,300" default="-1" text="#s2101">
+      <item type="cmb" key="filesystem/queue/copy" attribute="value" value="40,0" default="-1" text="#s2101">
         <option text="#s2110" value="-1" />
         <option text="#s2111" value="1" />
         <option text="#s2112" value="0" />
       </item>
-      <item type="cmb" key="filesystem/queue/move" attribute="value" value="40,300" default="-1" text="#s2102">
+      <item type="cmb" key="filesystem/queue/move" attribute="value" value="40,0" default="-1" text="#s2102">
         <option text="#s2110" value="-1" />
         <option text="#s2111" value="1" />
         <option text="#s2112" value="0" />
       </item>
-      <item type="cmb" key="filesystem/queue/delete" attribute="value" value="40,300" default="-1" text="#s2103">
+      <item type="cmb" key="filesystem/queue/delete" attribute="value" value="40,0" default="-1" text="#s2103">
         <option text="#s2110" value="-1" />
         <option text="#s2111" value="1" />
         <option text="#s2112" value="0" />
@@ -160,17 +158,17 @@
 
     </item>
     <item type="text" value="b" text="#s2300">
-      <item type="cmb" key="filesystem/fslinks/delete" attribute="value" default="2" value="140,280" text="#s2310">
+      <item type="cmb" key="filesystem/fslinks/delete" attribute="value" default="2" value="160,300" text="#s2310">
         <option text="#s2311" value="1"/>
         <option text="#s2312" value="2"/>
         <option text="#s2313" value="0"/>
       </item>
-      <item type="cmb" key="filesystem/fslinks/copymove" attribute="value" default="0" value="140,280" text="#s2320">
+      <item type="cmb" key="filesystem/fslinks/copymove" attribute="value" default="0" value="160,300" text="#s2320">
         <option text="#s2321" value="1"/>
         <option text="#s2322" value="2"/>
         <option text="#s2323" value="0"/>
       </item>
-      <item type="cmb" key="filesystem/fslinks/foldersizing" attribute="value" default="0" value="140,280" text="#s2330">
+      <item type="cmb" key="filesystem/fslinks/foldersizing" attribute="value" default="0" value="160,300" text="#s2330">
         <option text="#s2331" value="1"/>
         <option text="#s2332" value="0"/>
       </item>
@@ -216,25 +214,43 @@
       <item type="chk" key="filesystem/fileoperations/dropcopyshowdialog" attribute="value" default="1" text="#s2431"/>
       <item type="chk" key="filesystem/fileoperations/dropmoveshowdialog" attribute="value" default="1" text="#s2432"/>
       <item type="chk" key="filesystem/fileoperations/CompatibleFileDrop" attribute="value" default="0" text="#s2445" />
+      <item type="cmb" key="filesystem/fileoperations/DropAction" attribute="value" value="250" default="0" text="#s2446" tooltip="#s2446" >
+        <option text="#s2447" value="0"/>
+        <option text="#s2448" value="1"/>
+        <option text="#s2449" value="2"/>
+      </item>
     </item>
     <item type="text" value="b" text="#s2450">
       <item type="chk" key="filesystem/contextmenu/windowsshellcontextmenu" attribute="value" default="1" text="#s2451" tooltip="#s2451"/>
       <item type="chk" key="filesystem/contextmenu/customcontextmenu" attribute="value" default="1" text="#s2452" tooltip="#s2452"/>
       <item type="chk" key="filesystem/contextmenu/windowsshellassubmenu" attribute="value" default="0" text="#s2453" tooltip="#s2453"/>
     </item>
+    <item type="text" value="b" text="#s2460">
+      <item type="cmb" key="filesystem/filetype/edit/multieditwarning" attribute="value" value="100" default="2" text="#s2461">
+        <option text="0 - Disabled" value="0"/>
+        <option text="1" value="1"/>
+        <option text="2" value="2"/>
+        <option text="3" value="3"/>
+        <option text="4" value="4"/>
+        <option text="5" value="5"/>
+        <option text="10" value="10"/>
+        <option text="15" value="15"/>
+      </item>
+    </item>
+    
     <item type="text" value="b" text="#s3291">
       <item type="chk" key="filesystem/tweak/refreshviews_onactivate" attribute="value" default="1" text="#s3292" tooltip="#s3292" />
       <item type="chk" key="filesystem/tweak/findfiles_virtualdevice" attribute="value" default="1" text="#s3294" tooltip="#s3294" />
       <item type="edit2" key="filesystem/browse/timeout" attribute="value" default="1500" text="#s3293" restartrequired="1" />
       <item type="chk" key="tweak/ProgressUIMainThread" attribute="value" default="1" text="(Expert) Use the new way to show progress windows (Do not change, Unless you have issue with progress UI)" restartrequired="1" />
       <item type="text" value="b" text="#s3339">
-        <item type="cmb" key="filesystem/thumbnail/system" attribute="value" value="310" default="0" text="#s3341">
+        <item type="cmb" key="filesystem/thumbnail/system" attribute="value" value="0" default="0" text="#s3341">
           <option text="#g220" value="0" />
           <option text="#s3342" value="1" />
           <option text="#s3343" value="2" MinWinVer="60"/>
         </item>
 
-        <item type="cmb" key="filesystem/thumbnail/quality" attribute="value" value="100" default="0" text="#s3350">
+        <item type="cmb" key="filesystem/thumbnail/quality" attribute="value" value="0" default="0" text="#s3350">
           <option text="#s3351" value="2" />
           <option text="#s3352" value="1" />
           <option text="#s3353" value="0" />
@@ -242,7 +258,7 @@
 
         <item type="chk" key="filesystem/thumbnail/croptosquare" attribute="value" default="0" text="#s3360" tooltip="#s3360" />
 
-        <item type="cmb" key="filesystem/thumbnail/threads" attribute="value" value="100" default="0" text="#s3340">
+        <item type="cmb" key="filesystem/thumbnail/threads" attribute="value" value="60" default="0" text="#s3340">
           <option text="#g220" value="0" />
           <option text="1" value="1" />
           <option text="2" value="2" />
@@ -299,7 +315,7 @@
       </item>
     </item>
     <item type="text" value="b" text="#s3200">
-        <item type="chk" key="log/filesystemscanning/show" attribute="value" default="0" text="#s3101">
+      <item type="chk" key="log/filesystemscanning/show" attribute="value" default="0" text="#s3101">
         <item type="cmb" key="log/filesystemscanning/level" attribute="value" value="150" default="1" text="#s3110">
           <option text="#s3116" value="1" />
           <option text="#s3117" value="2" />
@@ -319,10 +335,10 @@
       <item type="color3" key="log/logwindow/color" attribute="background,foreground" value="80,#s302,#s303" text="#s3310" default="$COLOR_WINDOW,$COLOR_WINDOWTEXT" />
     </item>
   </section>
-    <section text="#s3290">
-      <item type="text" value="b" text="#s3300">
+  <section text="#s3290">
+    <item type="text" value="b" text="#s3300">
       <item type="chk" key="autosendcrashreport" attribute="value" default="1" text="#s3301"/>
-      <item type="cmb" key="crashdumpformat" attribute="value" value="130,300" default="2" text="#s3320">
+      <item type="cmb" key="crashdumpformat" attribute="value" value="0" default="2" text="#s3320">
         <option text="#s3321" value="0" />
         <option text="#s3322" value="1" />
         <option text="#s3323" value="2" />
@@ -344,26 +360,26 @@
       <item type="color3" key="favoriteswindow/colors/Status" attribute="background,text" value="80,#s302,#s303" text="#s3511"      default="-1,#534FF3" rules="defaultbg=favoriteswindow/colors, disablebackground" />
       <item type="color3" key="favoriteswindow/colors/Title" attribute="background,text" value="80,#s302,#s303" text="#s3505"       default="-1,#4B4B46" rules="defaultbg=favoriteswindow/colors, disablebackground"/>
     </item>
-    
+
     <item type="text" value="b" text="#s3520" tooltip="#s3520">
       <item type="text" value="b" text="#s3525">
         <item type="color3" key="tabs/explorerpanel/color" attribute="background,text" value="80,#s302,#s303" text="#s3521" default="#8CA5E7,$COLOR_BTNTEXT" rules="selectbackground"/>
-        <item type="chk"    key="tabs/explorerpanel/solid" attribute="value" default="0" text="#s3522" tooltip="#3522" />
+        <item type="chk"    key="tabs/explorerpanel/solid" attribute="value" default="1" text="#s3522" tooltip="#3522" />
       </item>
       <item type="text" value="b" text="#s3526">
         <item type="color3" key="tabs/settingspanel/color" attribute="background,text" value="80,#s302,#s303" text="#s3521"  default="#FA9D3B,$COLOR_BTNTEXT" rules="selectbackground"/>
-        <item type="chk"    key="tabs/settingspanel/solid" attribute="value" default="0" text="#s3522" tooltip="#s3522" />
+        <item type="chk"    key="tabs/settingspanel/solid" attribute="value" default="1" text="#s3522" tooltip="#s3522" />
       </item>
       <item type="text" value="b" text="#s3527">
         <item type="color3" key="tabs/filesearch/color" attribute="background,text" value="80,#s302,#s303" text="#s3521"  default="#8CFACD,$COLOR_BTNTEXT" rules="selectbackground"/>
-        <item type="chk"    key="tabs/filesearch/solid" attribute="value" default="0" text="#s3522" tooltip="#s3522" />
+        <item type="chk"    key="tabs/filesearch/solid" attribute="value" default="1" text="#s3522" tooltip="#s3522" />
       </item>
       <item type="text" value="b" text="#s3528">
         <item type="color3" key="tabs/checksum/color" attribute="background,text" value="80,#s302,#s303" text="#s3521"  default="#F5F096,$COLOR_BTNTEXT" rules="selectbackground"/>
-        <item type="chk"    key="tabs/checksum/solid" attribute="value" default="0" text="#s3522" tooltip="#s3522" />
+        <item type="chk"    key="tabs/checksum/solid" attribute="value" default="1" text="#s3522" tooltip="#s3522" />
       </item>
     </item>
-    
+
     <item type="text" value="b" text="#s3548" tooltip="#s3548">
       <item type="text" value="b" text="#s3552">
         <item type="colorprogress" key="progressbar/colors/copy/statusbar" attribute="background,bar,barstop,textonbk,textonbar" value="120,65,#s3567" text="#s3565" default="$COLOR_3DDKSHADOW,#098BF5,#51A6E4,#EDF155,#01fb1a" />
@@ -388,5 +404,4 @@
       </item>
     </item>
   </section>
-           
 </settings_layout>

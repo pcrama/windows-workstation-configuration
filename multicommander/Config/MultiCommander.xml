@@ -2,7 +2,7 @@
 <config global="1">
   <appinfo>
     <name>MultiCommander</name>
-    <version>9.6.1.2582</version>
+    <version>11.5.0.2842</version>
   </appinfo>
   <modules folder="Extensions"/>
   <filesystem>
@@ -101,8 +101,8 @@
       <extendedscanlog value="0"/>
       <save value="0"/>
     </filesystemscanning>
-    <logwindow>
-      <font FontName="Courier New" SizePt="9" Style=""/>
+    <logwindow remove="1">
+      <font FontName="Courier New" SizePt="9" Style="" SizePT="9"/>
       <color background="$COLOR_WINDOW" foreground="$COLOR_WINDOWTEXT"/>
     </logwindow>
   </log>
@@ -126,6 +126,7 @@
       <mouse>
         <dblclick_emptyarea value="a4c2985d9c7e4035a3221cfd600171d0"/>
       </mouse>
+      <font FontName="Segoe UI" SizePT="9" Style=""/>
     </tab>
     <ShowConfigProfilesAtStartup value="0"/>
     <filesystem>
@@ -137,8 +138,14 @@
     <closetabondoubleclick value="0"/>
     <confirmclosing value="0"/>
   </layout>
-  <autosendcrashreport value="1"/>
+  <favoriteswindow>
+    <colors remove="1"/>
+  </favoriteswindow>
+  <experimental>
+    <darkmode value="0"/>
+  </experimental>
   <editors>
     <editor name="Notepad" cmd="notepad.exe" parameters="${filepath}" ext="*"/>
   </editors>
+  <autosendcrashreport value="1"/>
 </config>

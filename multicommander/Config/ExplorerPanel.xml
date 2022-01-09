@@ -82,10 +82,10 @@
     <ShowLinkTargetInName value="1"/>
     <ShowFreespaceAs value="0"/>
     <fonts>
-      <FreeSpace FontName="Microsoft Sans Serif" SizePt="8" Style="" Size="11"/>
-      <Path FontName="Microsoft Sans Serif" SizePt="8" Style="" Size="11"/>
-      <FileList FontName="Microsoft Sans Serif" SizePt="8" Style="" Size="8"/>
-      <Status FontName="Microsoft Sans Serif" SizePt="8" Style="" Size="11"/>
+      <FreeSpace FontName="Segoe UI" SizePt="9" Style="" Size="9"/>
+      <Path FontName="Segoe UI" SizePt="9" Style="" Size="9"/>
+      <FileList FontName="Segoe UI" SizePt="10" Style="" Size="10"/>
+      <Status FontName="Segoe UI" SizePt="9" Style="" Size="9"/>
     </fonts>
     <SelectOnNavigate value="0"/>
     <UnselectOnSingleSelect value="0"/>
@@ -98,6 +98,7 @@
     <default/>
     <DbgSelection value="0"/>
     <SelectionRectangle value="1"/>
+    <HighlightSortColumn value="0"/>
     <RememberSelectedOnPathChange value="1"/>
     <RememberItemInFocusOnPathChange value="1"/>
     <SearchSubString value="0"/>
@@ -138,6 +139,10 @@
     <onlylocked value="0"/>
     <itemfocus value="1"/>
   </save>
+  <startup>
+    <DelayUpdate value="1"/>
+    <PefixDelayedTab value="1"/>
+  </startup>
   <selection>
     <comparefolders>
       <files value="1"/>
