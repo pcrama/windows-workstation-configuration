@@ -250,10 +250,31 @@ for password with popup dialog (also in =~/.bash_profile=, consider using
          PS1="\[\033[?7711h\]$PS1"
      fi
    #+end_src
+
+   WezTerm also [[https://wezfurlong.org/wezterm/config/lua/keyassignment/ScrollToPrompt.html][supports]] this assuming this [[https://gitlab.freedesktop.org/Per_Bothner/specifications/%2D/blob/master/proposals/prompts-data/shell-integration.bash][bash shell integration]] ([[https://gitlab.freedesktop.org/Per_Bothner/specifications/%2D/blob/4d2e1d75d4861a1d924895e106f8f016880e12a7/proposals/prompts-data/shell-integration.bash][permalink]]).
 5. Show the git branch on the command line, adapted from Git-for-Windows
    #+begin_src shell :exports code
      function parse_git_branch () {
-      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+         # Was initially just this, but fails on Windows if 2 branches in the
+         # repository differ only by their uppercase/lowercase spelling:
+         #
+         # git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+         #
+         # What I would like to write, but is slower than the implementation below
+         #
+         # _s=$(git symbolic-ref HEAD 2> /dev/null);
+         # if [ $? -eq 0 ]; then
+         #     echo "$_s" | cut --fields=1,2 --delimiter=/ --complement
+         # else
+         #     # This case is still needed e.g. in the case of a detached HEAD
+         #     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+         # fi
+         #
+         # I do not dare to use `set -o pipefail', so I have to put both calls to
+         # git inside the same sub-shell before piping to sed to transform either
+         # output.
+         (git symbolic-ref HEAD || git branch) 2> /dev/null | \
+             sed -n -e 's;^refs/heads/\(.*\);(\1);p' -e 's/^\* \(.*\)/(\1)/p'
      }
      PS1="$PS1 $FCYN\$(parse_git_branch)$RS\$ "
    #+end_src
@@ -399,17 +420,49 @@ This is actually a function, not an alias...
 
 ** Diffing with M-x ediff
 #+begin_src shell :exports code
+  function _ediff_function_leap_blindly {
+      emacsclient --eval "(ediff \"$(cygpath --mixed --absolute "$1")\" \"$(cygpath --mixed --absolute "$2")\")"
+  }
+
   function _ediff_function {
       left="$1"
       right="$2"
       if [ -r "$left" -a -r "$right" ] ; then
-          emacsclient --eval "(ediff \"$(cygpath --mixed --absolute "$left")\" \"$(cygpath --mixed --absolute "$right")\")"
+          _ediff_function_leap_blindly "$left" "$right"
+      elif [ "$3" = "and" -a -r "$2" -a -r "$4" ] ; then
+          # Handle output of `diff -q': Files x and y [differ]
+          _ediff_function_leap_blindly "$2" "$4"
+      elif [ "$2" = "and" -a -r "$1" -a -r "$3" ] ; then
+          # Handle output of `diff -q': Files x and y [differ] where the
+          # "Files" has not been copied into the command line
+          _ediff_function_leap_blindly "$1" "$3"
+      elif [ "$2 $3 $4" = 'and expected file' -a -r "$1" -a -r "$5" ] ; then
+          # see also specflow-cp
+          _ediff_function_leap_blindly "$1" "$5"
       else
-          [ -r "$left" ] || echo "Can't read '$left'"
-          [ -r "$right" ] || echo "Can't read '$right'"
+          [ -r "$left" ] || echo >&2 "Can't read '$left'"
+          [ -r "$right" ] || echo >&2 "Can't read '$right'"
       fi
   }
   alias ediff="_ediff_function"
+#+end_src
+
+** Exporting an environment variable from the shell to Emacs
+From https://philjackson.github.io//emacs/shell/2021/07/26/export-an-environment-variable-to-emacs/
+with some modifications (https://github.com/philjackson/philjackson.github.io/issues/1) to avoid
+problems with double quotes in the variable's value.
+
+#+begin_src shell :exports code
+  function export-emacs {
+      if [ "$(emacsclient -e t)" != 't' ]; then
+          return 1
+      fi
+
+      for name in "${@}"; do
+          value=$(eval echo \"\${${name}//\\\"/\\\\042}\")
+          emacsclient -e "(setenv \"${name}\" \"${value}\")" >/dev/null
+      done
+  }
 #+end_src
 
 ** docker
@@ -458,6 +511,22 @@ input.
           (rename-buffer "*stdin*" t))
   EOF
   fi
+
+  # Handle git output with 'a/file-name' and 'b/file-name' where 'a' and 'b' are actually just
+  # used to indicate various versions.
+  case "$1" in
+      ( [ab]/* )
+      if [ -r "$1" ] ; then
+          main "$@"
+      else
+          emacs-eval <<EOF
+          (let ((default-directory (locate-dominating-file "$(cygpath --mixed --absolute "$PWD")" ".git")))
+            (find-file (substring "$1" 2)))
+  EOF
+      fi ;;
+      ( * )
+      main "$@" ;;
+  esac
 #+end_src
 
 *** ~eu~: combine ~fd~ and ~ugrep~ to interactively select file to edit
@@ -472,6 +541,28 @@ input.
           }
           # list files with fd & select interactively with ugrep then edit
           alias eu=_emacsclient_ugrep
+      fi
+  fi
+#+end_src
+
+*** ~lu~: combine ~fd~ and ~ugrep~ to interactively select files to view with less or [[http://stahlworks.com/dev/depeche-view.html][dview]]
+#+begin_src shell :exports code
+  if type -p ugrep > /dev/null; then
+      if type -p fd > /dev/null; then
+          function _view_files_ugrep {
+              readarray -t to_view <<< $(fd --path-separator // "$@" \
+                                             | ugrep -Q \
+                                             | tr -d '\r')
+              if type -p dview.exe > /dev/null; then
+                  # dview comes from http://stahlworks.com/dev/depeche-view.html.
+                  # Install from https://github.com/pcrama/scoop-buckets with
+                  # 'scoop install dview'.
+                  dview.exe "${to_view[@]}"
+              else
+                  less "${to_view[@]}"
+              fi
+          }
+          alias lu=_view_files_ugrep
       fi
   fi
 #+end_src
@@ -553,39 +644,58 @@ scoop install hack-font
 PS C:\Users\cramaph1\scoop> scoop list
 Installed apps:
 
-  7zip 18.05
-  anaconda3 5.2.0 [extras]
-  anki 2.1.5 [extras]
-  autoit 3.3.14.5
-  bat 0.7.1
-  conemu 18.06.26 [extras]
-  ditto 3.21.258.0 [extras]
-  emax64 20180529 [scoop-buckets]
-  fd 7.1.0
-  flux 4.75 [extras]
-  foxit-reader 9.3.0.10826 [extras]
-  git 2.18.0.windows.1
-  graphviz 2.38
+  7zip 21.07 [main]
+  copyq 5.0.0 [extras]
+  deepgit 4.2.1 [extras]
+  delta 0.11.3 [main]
+  dngrep 2.9.189.0 [scoop-buckets]
+  dotnet-sdk 6.0.100 [main]
+  doublecmd 1.0.2 [extras]
+  duplicati-cli 2.0.5.1 [scoop-buckets]
+  dust 0.7.5 [main]
+  dview 1.7.3 [scoop-buckets]
+  fd 8.3.1 [main]
+  flutter 2.8.0 [extras]
+  flux 4.120 [extras]
+  fsviewer 7.5 [extras]
+  fzf 0.28.0 [main]
+  ghostscript 9.55.0 [main]
+  git 2.34.1.windows.1 [main]
+  gitui 0.19.0 [main]
+  graphviz 2.38 [main]
   greenshot 1.2.10.6 [extras]
-  hack-font 1.6.0 [extras]
-  innounp 0.47
-  keypirinha 2.19 [extras]
-  meld 3.18.2 [extras]
-  multicommander 8.3.0.2469 [scoop-buckets]
-  plantuml 1.2018.11 [extras]
-  pspad 5.0.0 [extras]
-  putty 0.70 [extras]
-  python27 2.7.15 [versions] {32bit}
-  qemu 3.0.0
-  ripgrep 0.10.0
-  smallcliutils 2 [scoop-buckets]
-  sumatrapdf 3.1.2 [extras]
-  unison 2.48.4 [scoop-buckets]
-  vcxsrv 1.20.1.3 [extras]
-  virtualbox-np 5.2.18 [nonportable]
-  wincompose 0.8.2 [extras]
-  workrave 1.10.1 [scoop-buckets]
-  zip 3.0
+  innounp 0.50 [main]
+  kdiff3 1.9.4 [extras]
+  lessmsi 1.10.0 [main]
+  multicommander 11.5.0.2842 [extras]
+  nodejs 17.3.0 [main]
+  notepadplusplus 8.2 [extras]
+  okular 21.12.0-862 [extras]
+  omnisharp 1.38.0 [main]
+  oraclejre8 8u311 [java]
+  paint.net 4.3.7 [extras]
+  pandoc 2.16.2 [main]
+  pdftk 2.02 [main]
+  pdf-xchange-editor 9.2.359.0 [extras]
+  plantuml 1.2021.16 [extras]
+  qrcp 0.8.4 [main]
+  rclone 1.57.0 [main]
+  restic 0.12.1 [main]
+  ripgrep 13.0.0 [main]
+  roughgrep 3.0 [extras]
+  smallcliutils 5 [scoop-buckets]
+  snoop 3.0.1 [extras]
+  sumatrapdf 3.3.3 [extras]
+  touchcursor 1.7.1 [extras]
+  ugrep 3.5.0 [main]
+  unison 2.51.2 [main]
+  vcxsrv 1.20.9.0 [extras]
+  vlc 3.0.16 [extras]
+  wincompose 0.9.6 [extras]
+  winmerge 2.16.16 [extras]
+  workrave 1.10.49 [extras]
+  zeal 0.6.1 [extras]
+  zoxide 0.8.0 [main]
 
 ** Tentative: Setting up with git-sdk-64
 Maybe see https://github.com/lambdaheart/Haskell-Guide/blob/master/DevelopmentEnvironment.md

@@ -61,17 +61,23 @@ $Env:GRAPHVIZ_DOT = $Env:SCOOP + "\shims\dot.exe"
 
 Set-Location $Env:HOME
 
-try {
-    Write-Host "Trying to start wezterm"
-    # https://superuser.com/a/1297072: msys2/mingw64 shell setup for ConEmu, adapted for wezterm
-    $Env:CHERE_INVOKING = 1
-    $Env:MSYS2_PATH_TYPE = 'inherit'
-    $Env:MSYSTEM = 'MINGW64'
-    Start-Process -WindowStyle Hidden -FilePath ($Env:SCOOP + "\shims\wezterm.exe") -ArgumentList @('start', '--', 'c:\msys64\usr\bin\bash.exe', '--login', '-i')
-} catch {
-    Write-Host "Falling back on mintty"
+# try {
+#     Write-Host "Trying to start wezterm"
+#     # https://superuser.com/a/1297072: msys2/mingw64 shell setup for ConEmu, adapted for wezterm
+#     $Env:CHERE_INVOKING = 1
+#     $Env:MSYS2_PATH_TYPE = 'inherit'
+#     $Env:MSYSTEM = 'MINGW64'
+#     # terminalpp attempt, but their command line parsing is off so I can't start a session with a space in the name.
+#     # I could still try to set 'mingw64 (msys2)' as the default choice, but since terminalpp is not faster than
+#     # mintty, I won't bother.
+#     # Start-Process -FilePath ($Env:SCOOP + "\apps\terminalpp\current\terminalpp.exe") -ArgumentList @("--here", "--session=mingw64 (msys2)")
+#     # Bug-To-Force-Starting-MinTTY-Start-Process -WindowStyle Hidden -FilePath ($Env:SCOOP + "\shims\wezterm.exe") -ArgumentList @('start', '--', 'c:\msys64\usr\bin\bash.exe', '--login', '-i')
+#     # Start-Process -WindowStyle Hidden -FilePath ($Env:SCOOP + "\shims\terminalpp.exe") -ArgumentList @("-e", "c:\msys64\msys2_shell.cmd", "-mingw64", "-defterm", "-where", $Env:USERPROFILE, "-use-full-path", "-shell", "bash")
+# } catch {
+#     Write-Host "Falling back on mintty"
     Start-Process -WindowStyle Hidden -FilePath "c:\msys64\msys2_shell.cmd" -ArgumentList @("-mingw64", "-mintty", "-where", $Env:USERPROFILE, "-use-full-path", "-shell", "bash")
-}
+    Start-Sleep 10
+# }
 
 Wait-ProcessExistsP bash
 
@@ -80,7 +86,8 @@ Foreach ($x in (@("flux", 10),
                 @("multicommander", 10),
                 @("copyq", 10),
                 @("WinCompose", 10),
-                @("stretchly", 10),
+                @(($Env:SCOOP + "\apps\workrave\current\lib\Workrave.exe"), 10, "workrave"),
+                @("touchcursor", 10),
                 @("greenshot", 10)
                )) {
     If (Start-OnceOnly $x[0]) {
