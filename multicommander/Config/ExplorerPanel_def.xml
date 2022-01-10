@@ -70,11 +70,11 @@
 
       <item type="text" value="b" text="#s460">
 
-        <item type="cmb" key="layout/default/sortby" attribute="value" value="200" default="0" text="#s671" widthgroup="4" >
-          <option text="#g2000" value="0" />
-          <option text="#g2001" value="1" />
-          <option text="#g2002" value="2" />
-          <option text="#g2003" value="3" />
+        <item type="cmb" key="layout/default/sortby" attribute="value" value="200" default="1" text="#s671" widthgroup="4" >
+          <option text="#g2000" value="1" />
+          <option text="#g2001" value="2" />
+          <option text="#g2002" value="3" />
+          <option text="#g2003" value="4" />
         </item>
 
         <item type="cmb" key="layout/default/sortorder" attribute="value" value="200" default="0" text="#s672" widthgroup="4" >

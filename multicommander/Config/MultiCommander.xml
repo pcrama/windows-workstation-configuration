@@ -2,7 +2,7 @@
 <config global="1">
   <appinfo>
     <name>MultiCommander</name>
-    <version>11.3.0.2822</version>
+    <version>11.5.0.2842</version>
   </appinfo>
   <modules folder="Extensions"/>
   <filesystem>
@@ -42,12 +42,27 @@
       <keepNTFSsubstreams value="0"/>
       <speedlimit value="128"/>
       <preset/>
+      <keepbroken value="-1"/>
+      <keepRO value="0"/>
       <autoclose value="1"/>
       <onlyautocloseshort value="1"/>
       <skipemptyfolders value="0"/>
-      <keepbroken value="-1"/>
-      <fslinks value="1"/>
-      <autoloadpreset value="1"/>
+      <autodetectrw value="1"/>
+      <playsound>
+        <finished value="1"/>
+        <error value="1"/>
+      </playsound>
+      <deletetorecyclebin value="1"/>
+      <delete>
+        <autoclose value="1"/>
+        <continueonerror value="0"/>
+        <deleteall value="0"/>
+      </delete>
+      <hidedeletedialog value="0"/>
+      <dropcopyshowdialog value="1"/>
+      <dropmoveshowdialog value="1"/>
+      <CompatibleFileDrop value="0"/>
+      <DropAction value="0"/>
     </fileoperations>
     <confirmation>
       <overwriting value="1"/>
@@ -61,6 +76,8 @@
     <tweak>
       <CacheFileItems value="1"/>
       <CacheIcons value="1"/>
+      <refreshviews_onactivate value="1"/>
+      <findfiles_virtualdevice value="1"/>
     </tweak>
     <queue>
       <copy value="-1"/>
@@ -80,7 +97,31 @@
     </fslinks>
     <browse>
       <updateparentsize_ondelete value="1"/>
+      <timeout value="1500"/>
+      <refreshdelay value="3"/>
     </browse>
+    <runasadmin>
+      <enable value="1"/>
+      <autoretry value="1"/>
+      <autostart value="0"/>
+    </runasadmin>
+    <contextmenu>
+      <windowsshellcontextmenu value="1"/>
+      <customcontextmenu value="1"/>
+      <windowsshellassubmenu value="0"/>
+    </contextmenu>
+    <filetype>
+      <edit>
+        <multieditwarning value="2"/>
+      </edit>
+    </filetype>
+    <thumbnail>
+      <system value="0"/>
+      <quality value="0"/>
+      <croptosquare value="0"/>
+      <threads value="0"/>
+      <logging value="0"/>
+    </thumbnail>
   </filesystem>
   <log>
     <application>
@@ -98,15 +139,22 @@
       <extended value="1"/>
     </filesystem>
     <logwindow remove="1">
-      <font FontName="Courier New" SizePT="9" Style=""/>
+      <font FontName="Courier New" SizePT="9" Style="" SizePt="0"/>
       <color background="$COLOR_WINDOW" foreground="$COLOR_WINDOWTEXT"/>
     </logwindow>
+    <filesystemscanning>
+      <show value="0"/>
+      <level value="1"/>
+      <extendedscanlog value="0"/>
+      <save value="0"/>
+    </filesystemscanning>
   </log>
   <system>
     <language primary="en" secondary="en"/>
     <settingsmod>8c86f4eff556499da0c8f1d5f60f7b3a</settingsmod>
     <checkfornewversion value="1"/>
     <checkunstableversion value="0"/>
+    <singleinstance value="0"/>
   </system>
   <aliases>
     <alias name="c">cd c:\</alias>
@@ -123,13 +171,67 @@
       <kilobyte value="1"/>
       <mebibyte value="0"/>
     </filesystem>
+    <toolbars>
+      <iconsize value="1"/>
+      <autoscale value="1"/>
+      <stdcommands value="1"/>
+      <launchbar value="0"/>
+      <cmdlinebar>
+        <btnbackfwd value="1"/>
+        <btnhistory value="1"/>
+        <btnhistory_sorted value="1"/>
+        <btnfavorites value="1"/>
+        <cmdlinefield value="1"/>
+        <hints value="1"/>
+        <launchbar value="1"/>
+      </cmdlinebar>
+    </toolbars>
+    <tablocation value="0"/>
+    <allowtabcolor value="1"/>
+    <showtabicons value="1"/>
+    <tab>
+      <activateondragover value="1"/>
+      <overridefont value="0"/>
+      <font FontName="Segoe UI" SizePt="12" Style="" SizePT="9"/>
+      <tabwidth value="0"/>
+      <fixedtabwidth value="120"/>
+      <maxtextwidth value="15"/>
+      <ellipsetabtext value="0"/>
+      <mouse>
+        <dblclick_emptyarea value="a4c2985d9c7e4035a3221cfd600171d0"/>
+      </mouse>
+    </tab>
+    <highlightactivepanel value="1"/>
+    <focuspanelfocus value="0"/>
+    <remembersplitsize value="0"/>
+    <buttonpanel>
+      <rows value="4"/>
+      <altcommandkb value="1"/>
+      <altcommandmouse value="1"/>
+      <undock value="0"/>
+      <flat value="1"/>
+    </buttonpanel>
     <showclosebuttonintab value="1"/>
     <closetabonmiddlebuttonclick value="1"/>
     <closetabondoubleclick value="0"/>
     <confirmclosing value="0"/>
+    <fileoperations>
+      <progress>
+        <filesize value="1"/>
+      </progress>
+    </fileoperations>
+    <tray>
+      <showtrayicon value="0"/>
+      <minimizetotray value="0"/>
+      <onlywhenminimized value="1"/>
+      <closetotray value="0"/>
+    </tray>
   </layout>
   <favoriteswindow>
     <colors remove="1"/>
+    <autocloseonlostfocus value="1"/>
+    <rememberfilter value="0"/>
+    <showpathasname value="0"/>
   </favoriteswindow>
   <experimental>
     <darkmode value="0"/>
@@ -138,4 +240,50 @@
     <editor name="Notepad" cmd="notepad.exe" parameters="${filepath}" ext="*"/>
   </editors>
   <autosendcrashreport value="0"/>
+  <startup>
+    <autoloadtabsession value="1"/>
+    <startminimized value="0"/>
+    <PreventWindowsAutoScaling value="0"/>
+  </startup>
+  <tweak>
+    <ProgressUIMainThread value="1"/>
+  </tweak>
+  <crashdumpformat value="2"/>
+  <tabs>
+    <explorerpanel>
+      <solid value="1"/>
+    </explorerpanel>
+    <settingspanel>
+      <solid value="1"/>
+    </settingspanel>
+    <filesearch>
+      <solid value="1"/>
+    </filesearch>
+    <checksum>
+      <solid value="1"/>
+    </checksum>
+  </tabs>
+  <progressbar>
+    <colors>
+      <copy>
+        <statusbar background="696969" bar="098bf5" barstop="-1" textonbk="edf155" textonbar="01fb1a"/>
+        <dialog background="ffffff" bar="7bbdff" barstop="-1" textonbk="000000" textonbar="2c10b1"/>
+      </copy>
+      <move>
+        <statusbar background="696969" bar="1ac816" barstop="-1" textonbk="00ff00" textonbar="1d17e7"/>
+        <dialog background="ffffff" bar="15c727" barstop="-1" textonbk="000000" textonbar="000000"/>
+      </move>
+      <delete>
+        <statusbar background="696969" bar="c40e0e" barstop="-1" textonbk="00ff00" textonbar="fefe50"/>
+      </delete>
+      <extract>
+        <statusbar background="696969" bar="fbf52e" barstop="-1" textonbk="00ff00" textonbar="4f20ef"/>
+        <dialog background="ffffff" bar="f5f530" barstop="-1" textonbk="000000" textonbar="0c34d4"/>
+      </extract>
+      <test>
+        <statusbar background="696969" bar="428b6a" barstop="-1" textonbk="95efe6" textonbar="cefaf8"/>
+        <dialog background="ffffff" bar="428b6a" barstop="-1" textonbk="000000" textonbar="acebe1"/>
+      </test>
+    </colors>
+  </progressbar>
 </config>
