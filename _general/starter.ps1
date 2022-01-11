@@ -1,18 +1,19 @@
 Function Start-OnceOnly {
     param (
-        [string]$shim
+        [string]$exe,
+        [string]$ProcessName
     )
     try {
-        $_ = Get-Process $shim -ErrorAction Stop
-        Write-Host "$shim already running"
+        $_ = Get-Process $ProcessName -ErrorAction Stop
+        Write-Host "$ProcessName already running"
         Return $False
     } catch {
-        Write-Host "Starting $shim"
+        Write-Host "Starting $exe"
         try {
-            . $shim
+            . $exe
             Return $True
         } catch {
-            Write-Host "Skipping $shim"
+            Write-Host "Skipping $ProcessName"
             Return $False
         }
     }
@@ -61,7 +62,9 @@ $Env:GRAPHVIZ_DOT = $Env:SCOOP + "\shims\dot.exe"
 
 Set-Location $Env:HOME
 
-# try {
+$HaveISlept = $false
+
+Try {
 #     Write-Host "Trying to start wezterm"
 #     # https://superuser.com/a/1297072: msys2/mingw64 shell setup for ConEmu, adapted for wezterm
 #     $Env:CHERE_INVOKING = 1
@@ -79,25 +82,35 @@ Set-Location $Env:HOME
     Start-Sleep 10
 # }
 
-Wait-ProcessExistsP bash
+    Wait-ProcessExistsP bash
 
-# Start other programs with a certain delay...
-Foreach ($x in (@("flux", 10),
-                @("multicommander", 10),
-                @("copyq", 10),
-                @("WinCompose", 10),
-                @(($Env:SCOOP + "\apps\workrave\current\lib\Workrave.exe"), 10, "workrave"),
-                @("touchcursor", 10),
-                @("greenshot", 10)
-               )) {
-    If (Start-OnceOnly $x[0]) {
-        if ($x[2] -eq $null) {
+    # Start other programs with a certain delay...
+    Foreach ($x in (@("flux", 10),
+                    @("multicommander", 10),
+                    @("copyq", 10),
+                    @("WinCompose", 10),
+                    @(($Env:SCOOP + "\apps\workrave\current\lib\Workrave.exe"), 10, "workrave"),
+                    @("touchcursor", 10),
+                    @("greenshot", 10)
+                   )) {
+        If ($x[2] -eq $null) {
             $procname = $x[0]
         } else {
             $procname = $x[2]
         }
-        Wait-ProcessExistsP $procname
-        Write-Host "Sleeping $($x[1])s after $($x[0]) started"
-        Start-Sleep $x[1]
+        If (Start-OnceOnly -exe $x[0] -ProcessName $procname) {
+            Wait-ProcessExistsP $procname
+            Write-Host "Sleeping $($x[1])s after $($x[0]) started"
+            Start-Sleep $x[1]
+            $HaveISlept = $true
+        }
     }
+    Write-Host "All done!"
+    Start-Sleep 1
+    If (-not $HaveISlept) {
+        Start-Sleep 9
+    }
+} Catch {
+    Write-Host "Caught an error: $_"
+    Pause
 }
