@@ -10,7 +10,12 @@ Function Start-OnceOnly {
     } catch {
         Write-Host "Starting $exe"
         try {
-            . $exe
+            $cmd = Get-Command -Name $exe
+            if ($cmd.CommandType -eq [System.Management.Automation.CommandTypes]::Application) {
+                Start-Process -FilePath $cmd.Path
+            } else {
+                . $cmd.Path
+            }
             Return $True
         } catch {
             Write-Host "Skipping $ProcessName"
