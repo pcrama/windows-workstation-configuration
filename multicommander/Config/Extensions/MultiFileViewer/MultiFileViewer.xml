@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<config>
+  <options>
+    <smartselection value="1">
+      <allow_dot value="1"/>
+      <allow_slash value="1"/>
+      <allow_backslash value="1"/>
+      <allow_numbers value="1"/>
+      <allow_underscore value="1"/>
+    </smartselection>
+    <buffersize value="512"/>
+    <bigfilelimit value="2048"/>
+    <wordwrapfixed value="1"/>
+    <wordwraplimit value="80"/>
+    <autocopyselection value="0"/>
+    <autocopyselection_onlyonsmart value="0"/>
+  </options>
+  <viewprofiles>
+    <viewprofile id="0" default="1" name="[Default]">
+      <hyperlinks value="-1"/>
+      <rowlines value="-1"/>
+      <strips value="-1"/>
+      <linenum value="-1"/>
+      <font value="Courier New,10"/>
+      <colortheme value=""/>
+      <fullpathfilter value="0"/>
+      <filter value=""/>
+      <formater value="auto"/>
+    </viewprofile>
+  </viewprofiles>
+  <colorthemes>
+    <colortheme id="" default="1" name="[Default]">
+      <default text="000000" background="ffffff"/>
+      <selection text="ffffff" background="0078d7"/>
+      <link text="0000dc" background="-1"/>
+      <linkhover text="009b00" background="-1"/>
+      <linenum text="fffee0" background="68838b"/>
+      <highlight1 text="000000" background="fefe94"/>
+      <highlight2 text="000000" background="00ffff"/>
+      <highlight3 text="000000" background="fe88fe"/>
+      <highlight4 text="000000" background="4cfe4c"/>
+      <highlight5 text="000000" background="7e7efe"/>
+      <syntax1 text="202fe9" background="-1"/>
+      <syntax2 text="3097ce" background="-1"/>
+      <syntax3 text="399b9b" background="-1"/>
+      <syntax4 text="cd24c4" background="-1"/>
+      <syntax5 text="2e8924" background="-1"/>
+      <syntax6 text="d1522d" background="-1"/>
+      <syntax7 text="6ccb26" background="-1"/>
+      <syntax8 text="a54d97" background="-1"/>
+      <rowlines value="c0c0c0"/>
+      <strips_even value="c0ffff"/>
+      <strips_odd value="afeeee"/>
+      <gradient value="0"/>
+      <gradient_style value="2"/>
+      <gradient_begin value="bfe3f7"/>
+      <gradient_end value="b3fdc9"/>
+    </colortheme>
+    <colortheme id="b0ce138646564905859b9aec63dc8d3f" name="Dark">
+      <default text="ffffe0" background="282828"/>
+      <selection text="ffffff" background="317dfd"/>
+      <link text="0000dc" background="-1"/>
+      <linkhover text="009b00" background="-1"/>
+      <linenum text="ffd700" background="a52a00"/>
+      <highlight1 text="000000" background="fdfd8b"/>
+      <highlight2 text="000000" background="5dfeff"/>
+      <highlight3 text="000000" background="ff5dfe"/>
+      <highlight4 text="000000" background="41ff41"/>
+      <highlight5 text="a9fbab" background="4a53fa"/>
+      <syntax1 text="458de6" background="-1"/>
+      <syntax2 text="55aede" background="-1"/>
+      <syntax3 text="41cbd3" background="-1"/>
+      <syntax4 text="c031bc" background="-1"/>
+      <syntax5 text="2eae1b" background="-1"/>
+      <syntax6 text="e9382a" background="-1"/>
+      <syntax7 text="5adb4f" background="-1"/>
+      <syntax8 text="e9df2d" background="-1"/>
+      <rowlines value="666666"/>
+      <strips_even value="320a0a"/>
+      <strips_odd value="422020"/>
+      <gradient value="0"/>
+      <gradient_style value="2"/>
+      <gradient_begin value="000000"/>
+      <gradient_end value="660000"/>
+    </colortheme>
+    <colortheme id="bbd0bfd2bea0414db76a3ad836d3ae7c" name="Blue">
+      <default text="fefe94" background="0000a0"/>
+      <selection text="0000a0" background="ffff94"/>
+      <link text="ffffff" background="-1"/>
+      <linkhover text="04ff04" background="-1"/>
+      <linenum text="02fa1a" background="00006a"/>
+      <highlight1 text="000000" background="e2933c"/>
+      <highlight2 text="000000" background="00ffff"/>
+      <highlight3 text="effda8" background="cc00cb"/>
+      <highlight4 text="000000" background="00ff00"/>
+      <highlight5 text="4209ba" background="27b0d7"/>
+      <syntax1 text="4de2f7" background="-1"/>
+      <syntax2 text="3ccbe4" background="-1"/>
+      <syntax3 text="72d896" background="-1"/>
+      <syntax4 text="ce39d6" background="-1"/>
+      <syntax5 text="009204" background="-1"/>
+      <syntax6 text="18ea01" background="-1"/>
+      <syntax7 text="f88e7f" background="-1"/>
+      <syntax8 text="d35ef1" background="-1"/>
+      <rowlines value="1e34d2"/>
+      <strips_even value="2c3ee2"/>
+      <strips_odd value="1322d9"/>
+      <gradient value="0"/>
+      <gradient_style value="2"/>
+      <gradient_begin value="bfe3f7"/>
+      <gradient_end value="b3fdc9"/>
+    </colortheme>
+    <colortheme id="a060bdfde94d4af8b4a7b1bb9748d24d" name="Yellow">
+      <default text="0000ff" background="feff7f"/>
+      <selection text="f8f9b5" background="425df5"/>
+      <link text="1d11fe" background="-1"/>
+      <linkhover text="04b400" background="-1"/>
+      <linenum text="000000" background="ffa143"/>
+      <highlight1 text="ffd700" background="8a0000"/>
+      <highlight2 text="000000" background="6afeff"/>
+      <highlight3 text="000000" background="fe6cfe"/>
+      <highlight4 text="000000" background="8eff8e"/>
+      <highlight5 text="0af4d1" background="005500"/>
+      <syntax1 text="202fe9" background="-1"/>
+      <syntax2 text="3097ce" background="-1"/>
+      <syntax3 text="399b9b" background="-1"/>
+      <syntax4 text="cd24c4" background="-1"/>
+      <syntax5 text="2e8924" background="-1"/>
+      <syntax6 text="d1522d" background="-1"/>
+      <syntax7 text="6ccb26" background="-1"/>
+      <syntax8 text="a54d97" background="-1"/>
+      <rowlines value="ffd700"/>
+      <strips_even value="ffd700"/>
+      <strips_odd value="ffff00"/>
+      <gradient value="0"/>
+      <gradient_style value="2"/>
+      <gradient_begin value="f8cc1f"/>
+      <gradient_end value="ffff06"/>
+    </colortheme>
+  </colorthemes>
+</config>

@@ -290,8 +290,7 @@
         <item type="chk" key="filesystem/thumbnail/logging" attribute="value" default="0" text="#s3355" />
       </item>
       <item type="text" value="b" text="Other">
-        <item type="chk" key="filesystem/tweak/findfiles_virtualdevice" attribute="value" default="1" text="#s3294" tooltip="#s3294" />
-        <item type="chk" key="tweak/ProgressUIMainThread" attribute="value" default="1" text="(Expert) Use the new way to show progress windows (Do not change, Unless you have issue with progress UI)" restartrequired="1" />
+        <item type="chk" key="tweak/ProgressUIMainThread" attribute="value" default="1" text="(Expert) Use the new way to handle progress windows (Do not change, Unless you have issue with progress UI)" restartrequired="1" />
       </item>
     </item>
   </section>
