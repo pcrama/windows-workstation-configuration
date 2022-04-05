@@ -372,13 +372,7 @@ needs ~winpty~:
 #+begin_src shell :exports code
   function unison ()
   {
-      if [ "$1" == "zettelkasten" ] ; then
-          # The unison binary on that host is still 2.48: I probably downloaded
-          # my windows client from https://www.irif.fr/~vouillon/unison/
-          unison="$HOME/opt/bin/unison-2.48.exe"
-      else
-          unison="$(type -fp unison)"
-      fi
+      unison="$(type -fp unison)"
       if [ -z "$unison" ] ; then
           echo "unison not found" >&2
       fi
