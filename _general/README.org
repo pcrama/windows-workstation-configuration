@@ -56,38 +56,56 @@
 
 ** SCOOP
 Some binaries will still be needed from Scoop:
+Installed apps:
 - 7zip
 - copyq
 - delta
-- dngrep
-- dust
+- dview
 - fd
 - flux
+- fsviewer
+- ghostscript
 - git
 - graphviz
 - greenshot
-- imageglass
+- kdiff3
 - multicommander
 - notepadplusplus
-- omnisharp
-- oraclejre8
+- okular
 - paint.net
-- pdftk
+- pandoc
 - pdf-xchange-editor
+- pdftk
 - plantuml
+- rclone
+- restic
 - ripgrep
 - smallcliutils
-- stretchly
-- sumatrapdf
+- touchcursor
+- ugrep
 - unison
 - wincompose
-- winmerge
-- zeal
+- workrave
 - zoxide
 
 Other apps to look at
-- DoubleCmd (Lua extensibility instead of home-grown language)
-- roughgrep (like dngrep but above ripgrep)
+- bat (e.g. for https://github.com/xwmx/nb)
+- deepgit (git history browser
+- dotnet-sdk
+- doublecmd
+- dust
+- fzf
+- gitui
+- julia (see also https://github.com/omlins/JustSayIt.jl)
+- mobaxterm
+- omnisharp
+- roughgrep
+- sioyek (PDF viewer for technical documentation)
+- sumatrapdf
+- vcxsrv
+- vlc
+- winmerge
+- zeal (documentation browser)
 
 *** Scoop installation
 See [[file:scoop.ps1][scoop.ps1]].
@@ -355,7 +373,8 @@ needs ~winpty~:
   function unison ()
   {
       if [ "$1" == "zettelkasten" ] ; then
-          # The unison binary on that host is still 2.48:
+          # The unison binary on that host is still 2.48: I probably downloaded
+          # my windows client from https://www.irif.fr/~vouillon/unison/
           unison="$HOME/opt/bin/unison-2.48.exe"
       else
           unison="$(type -fp unison)"
