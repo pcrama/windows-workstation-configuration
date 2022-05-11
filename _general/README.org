@@ -57,40 +57,46 @@
 ** SCOOP
 Some binaries will still be needed from Scoop:
 Installed apps:
-- 7zip
-- copyq
-- delta
-- dview
-- fd
-- flux
-- fsviewer
-- ghostscript
-- git
-- graphviz
-- greenshot
-- kdiff3
-- multicommander
-- notepadplusplus
-- okular
-- paint.net
-- pandoc
-- pdf-xchange-editor
-- pdftk
-- plantuml
-- rclone
-- restic
-- ripgrep
-- smallcliutils
-- touchcursor
-- ugrep
-- unison
-- wincompose
-- workrave
-- zoxide
+
+| Name               |          Version | Source        |    Updated |     Info |
+|--------------------+------------------+---------------+------------+----------|
+| 7zip               |            21.07 | main          | 2022-01-10 | 20:01:32 |
+| copyq              |            5.0.0 | extras        | 2021-11-07 | 21:11:43 |
+| delta              |           0.12.1 | main          | 2022-03-08 | 07:03:33 |
+| dview              |            1.7.3 | scoop-buckets | 2021-05-18 | 10:05:35 |
+| fd                 |            8.3.2 | main          | 2022-02-01 | 08:02:07 |
+| flux               |            4.120 | extras        | 2021-06-24 | 07:06:09 |
+| fsviewer           |              7.5 | extras        | 2021-01-12 | 07:01:13 |
+| ghostscript        |           9.55.0 | main          | 2021-09-29 | 07:09:13 |
+| git                | 2.36.0.windows.1 | main          | 2022-04-25 | 08:04:36 |
+| graphviz           |             2.38 | main          | 2020-01-15 | 10:01:18 |
+| greenshot          |         1.2.10.6 | extras        | 2020-01-13 | 12:01:05 |
+| kdiff3             |            1.9.5 | extras        | 2022-03-09 | 08:03:02 |
+| multicommander     |      11.6.0.2845 | extras        | 2022-01-25 | 07:01:57 |
+| notepadplusplus    |              8.4 | extras        | 2022-04-27 | 09:04:18 |
+| okular             |          21.12.3 | extras        | 2022-03-23 | 09:03:51 |
+| omnisharp          |           1.38.2 | main          | 2022-03-29 | 14:03:43 |
+| paint.net          |            4.3.7 | extras        | 2022-01-10 | 20:01:15 |
+| pandoc             |             2.18 | main          | 2022-04-06 | 08:04:19 |
+| pdf-xchange-editor |        9.3.361.0 | extras        | 2022-04-19 | 12:04:38 |
+| pdftk              |             2.02 | main          | 2020-01-13 | 12:01:21 |
+| plantuml           |         1.2022.4 | extras        | 2022-04-19 | 12:04:43 |
+| restic             |           0.12.1 | main          | 2021-09-27 | 15:09:30 |
+| ripgrep            |           13.0.0 | main          | 2021-06-21 | 09:06:48 |
+| sioyek             |            1.2.0 | extras        | 2022-04-06 | 08:04:08 |
+| smallcliutils      |                5 | scoop-buckets | 2021-12-02 | 12:12:17 |
+| sumatrapdf         |            3.3.3 | extras        | 2021-07-26 | 08:07:20 |
+| touchcursor        |            1.7.1 | extras        | 2021-11-30 | 10:11:25 |
+| ugrep              |            3.7.9 | main          | 2022-04-19 | 10:04:05 |
+| unison             |           2.52.0 | main          | 2022-03-28 | 11:03:21 |
+| wincompose         |            0.9.6 | extras        | 2020-12-06 | 10:12:57 |
+| winmerge           |          2.16.20 | extras        | 2022-04-28 | 07:04:52 |
+| workrave           |          1.10.50 | extras        | 2022-04-25 | 08:04:29 |
+| zoxide             |            0.8.1 | main          | 2022-04-25 | 09:04:29 |
 
 Other apps to look at
 - bat (e.g. for https://github.com/xwmx/nb)
-- deepgit (git history browser
+- deepgit (git history browser)
 - dotnet-sdk
 - doublecmd
 - dust
@@ -100,6 +106,7 @@ Other apps to look at
 - mobaxterm
 - omnisharp
 - roughgrep
+- rclone
 - sioyek (PDF viewer for technical documentation)
 - sumatrapdf
 - vcxsrv
@@ -163,8 +170,16 @@ All sharing the same gpg-agent, incorporated in =~/.bash_profile=:
       # gpg-connect-agent /bye, but then there's little difference with above
       # except that we use a high-level command rather than manipulating output
       # with sed.
-      gpg-connect-agent /bye # starts gpg-agent if needed
-      export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+      if [ -n "$MSYSTEM" ]; then
+          # Explicitly select MSYS2 gpg: otherwise -- if MINGW64 gpg is
+          # installed, too -- MINGW64 gpg is selected but doesn't work.
+          p=/usr/bin
+      else
+          p=""
+      fi
+      $p/gpg-connect-agent /bye # starts gpg-agent if needed
+      export SSH_AUTH_SOCK="$($p/gpgconf --list-dirs agent-ssh-socket)"
+      unset p
   fi
 #+end_src
 
@@ -184,12 +199,18 @@ for password with popup dialog (also in =~/.bash_profile=, consider using
       # works when called from cmd.exe (without valid PATH), too
       #
       ##!/bin/sh
-      #/usr/bin/cat <<EOF | /mingw64/bin/pinentry | /usr/bin/sed -n -e '/^OK/d' -e 's/^D //p'
-      #SETDESC $@
-      #SETPROMPT SSH Password
-      #GETPIN
-      #BYE
-      #EOF
+      # pinentry=$(type -fp pinentry)
+      # if [ -n "$pinentry" ]; then
+      #     /usr/bin/cat <<EOF | "$pinentry" | /usr/bin/sed -n -e '/^OK/d' -e 's/^D //p'
+      # SETDESC $@
+      # SETPROMPT SSH Password
+      # GETPIN
+      # BYE
+      # EOF
+      # else
+      #     echo "No pinentry program found" >&2
+      #     exit 1
+      # fi
   fi
   unset _ssh_askpass
 #+end_src
@@ -600,6 +621,8 @@ Evaluates its stdin or command line arguments.
   - ~SPI_SETMOUSEVANISH~
 - [[http://www.strichnet.com/edit-and-apply-registry-settings-via-powershell/][How to call SystemParametersInfo from Powershell]]
 
+** TODO git setup
+*** [[http://blog.binchen.org/posts/integrate-delta-into-git/][delta]] diff viewer
 * Firefox extensions
 - GhostText
 - Open in Browser
